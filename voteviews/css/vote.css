@@ -1,0 +1,240 @@
+
+.container {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background-color: .f8fafd;
+	margin-bottom: 1.3rem;
+}
+
+.bannerContainer {
+	width: 100%;
+	height: 3rem;
+	background-color: #D4F5FD;
+}
+
+.bannerContent {
+	width: 100%;
+	height: 2.84rem;
+	margin: auto;
+	background: url(../img/m_toupiao_banner_img.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+}
+
+.bannerContent .banner-title {
+	/* width: 32.93%; */
+	height: 0.34rem;
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(249, 224, 97, 1);
+	padding: 1.49rem 0rem 1.01rem 1.19rem;
+
+}
+
+.bannerContent .search-button {
+	width: 0.58rem;
+	height: 0.60rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.bannerContent .right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* 通知 */
+.content {
+	width: 90%;
+	margin: auto;
+}
+
+.noticeContainer {
+	width: 100%;
+	height: 1rem;
+	padding: 0.18rem 0;
+}
+
+.noticeContent {
+	width: 100%;
+	height: 0.6rem;
+	background: #fff;
+	padding: 0.17rem 0.17rem 0.16rem 0.17rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.noticeContent .center-content {
+	width: 4.76rem;
+	/* height: 28p/x; */
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+}
+
+.listContainer {
+	width: 100%;
+	margin: auto;
+	margin-bottom: 0.3rem;
+}
+
+.listContainer .item {
+	width: 100%;
+}
+
+.listContainer .item .top {
+	width: 100%;
+	height: 0.4rem;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.listContainer .item .top .top-title {
+	width: 0.65rem;
+	height: 0.21rem;
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: rgba(22, 83, 165, 1);
+	margin-left: 0.05rem;
+	padding-top: 0.1rem;
+}
+
+.listContainer .item .bottom {
+	width: 100%;
+	height: 1.88rem;
+	background: url(../img/m_no.1_bg_img.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.item .bottom .left {
+	padding: 0.3rem 0.42rem 0.4rem 0.45rem;
+}
+
+.item .bottom .left-logo {
+	width: 2rem;
+	height: 1.06rem;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0rem 0rem 0.24rem 0rem rgba(22, 83, 165, 0.25);
+	border-radius: 0.02rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.item .bottom .left-logo img {
+	filter: #fff;
+}
+
+.item .bottom .left-bottom {
+	position: absolute;
+	top: 0.69rem;
+	left: 0;
+}
+
+.item .bottom .center {
+	padding-top: 0.4rem;
+}
+
+.item .bottom .center .project-name {
+	/* width: 64rem; */
+	height: 0.31rem;
+	font-size: 0.32rem;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	margin-bottom: 0.29rem;
+}
+
+.item .bottom .center .votes {
+	/* width: 148rem; */
+	height: 0.27rem;
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(22, 83, 165, 1);
+}
+
+.item .bottom .right {
+	width: 1.4rem;
+	height: 0.6rem;
+	background: rgba(22, 83, 165, 1);
+	box-shadow: 0rem 0rem 0.16rem 0rem rgba(22, 83, 165, 0.45);
+	border-radius: 0.02rem;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.52rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.item .bottom .right .right-text {
+	width: 0.56rem;
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+
+.item .bottom-four {
+	background: url(../img/m_no.4_bg_img.png) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+
+.item .bottom .right-time {
+	width: 1.4rem;
+	height: 0.6rem;
+	background: rgba(206, 222, 239, 1);
+	border-radius: 0.02rem;
+}
+
+.item .bottom-eleven {
+	background: url(../img/m_no.11_bg_img.png) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+
+.footer {
+	width: 100%;
+	height: 1.2rem;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0rem 0rem 0.24rem 0rem rgba(141, 147, 159, 0.25);
+	padding: 0.21rem 0.7rem 0.2rem 0.58rem;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	bottom: 0;
+	margin-top: 0.5rem;
+}
+
+.firstPage {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.firstPage .firstPage-text {
+	/* width: 48rem; */
+	height: 0.24rem;
+	font-size: 0.24rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(122, 126, 147, 1);
+	margin-top: 0.09rem;
+	text-align: center;
+
+}

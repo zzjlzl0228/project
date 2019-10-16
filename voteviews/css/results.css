@@ -1,0 +1,169 @@
+.container {
+	width: 100%;
+	/* height: 18.18rem;
+	min-height: 100vh; */
+	background: url(../img/pprz_cxjgdt_img.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.content {
+	width: 100%;
+	margin: auto;
+	padding-top: 0.47rem;
+}
+
+.banner {
+	width: 72%;
+	height: 0.81rem;
+	margin: auto;
+	text-align: center;
+}
+
+.line {
+	width: 85.33%;
+	height: 0.85rem;
+	margin: auto;
+	margin-top: -0.26rem;
+	text-align: center;
+}
+
+.text {
+	width: 89.6%;
+	height: 1.35rem;
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	line-height: 0.34rem;
+	color: rgba(142, 167, 204, 1);
+	opacity: 1;
+	margin: auto;
+	display: flex;
+	align-items: center;
+}
+
+.testing {
+	margin-top: 0.5rem;
+	/* margin-bottom: 22rem; */
+}
+
+.testing .item {
+	width: 92%;
+	margin: auto;
+	height: 0.8rem;
+	background: rgba(3, 38, 100, 1);
+	border: 0.02rem solid rgba(1, 64, 201, 1);
+	opacity: 1;
+	border-radius: 0.4rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 0.2rem;
+	position: relative;
+	margin-bottom: 0.2rem;
+}
+
+.testing .zsbh {
+	width: 16.23%;
+	height: 0.4rem;
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	line-height: 0.14rem;
+	color: rgba(126, 163, 219, 1);
+	opacity: 1;
+	margin: 0 0.4rem;
+}
+
+.testing .zsid {
+	/* width: 32%; */
+	height: 0.4rem;
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	line-height: 0.14rem;
+	color: rgba(126, 163, 219, 1);
+	opacity: 1;
+}
+
+.item .right-img {
+	width: 2.06rem;
+	height: 2.3rem;
+	position: absolute;
+	right: 0;
+	z-index: 10;
+}
+
+.item:last-child {
+	margin-bottom: 0.22rem;
+}
+
+.zsfb {
+	width: 72%;
+	height: 0.81rem;
+	background: url(../img/CERTIFICATECOPY.png) no-repeat;
+	background-size: 100% 100%;
+	margin-left: 0.54rem;
+	/* padding: 20rem 0; */
+	margin-bottom: 0.21rem;
+	display: flex;
+	align-items: center;
+}
+
+.zsfb-text {
+	/* width: 1.28rem; */
+	height: 0.45rem;
+	font-size: 0.32rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	line-height: 0.36rem;
+	color: rgba(200, 227, 254, 1);
+	opacity: 1;
+	margin-left: 0.20rem;
+}
+
+.zsImg {
+	width: 86%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.zsImg img {
+	width: 41.87%;
+	height: 4.34rem;
+}
+
+.bottomText {
+	width: 23%;
+	margin: auto;
+	height: 0.40rem;
+	font-size: 0.28rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	line-height: 0.14rem;
+	color: rgba(200, 227, 254, 1);
+	opacity: 1;
+	padding-top: 0.4rem;
+	text-align: center;
+	padding-bottom: 1.37rem;
+}
+
+.showImg {
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+
+.img3,
+.img4 {
+	z-index: 100;
+	width: 95%;
+	/* height: 1300rem; */
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
