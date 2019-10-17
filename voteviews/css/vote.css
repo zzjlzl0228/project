@@ -4,7 +4,7 @@
 	height: 100%;
 	margin: 0 auto;
 	background-color: .f8fafd;
-	margin-bottom: 1.3rem;
+	margin-bottom: 1.5rem;
 }
 
 .bannerContainer {
@@ -33,15 +33,18 @@
 
 }
 
-.bannerContent .search-button {
+.bannerContent .search-button img {
 	width: 0.58rem;
 	height: 0.60rem;
-	position: absolute;
+	z-index: 999;
+	position: fixed;
 	left: 0;
 	top: 0;
 }
 
 .bannerContent .right {
+	width: 3.3rem;
+	height: 3.5rem;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -68,8 +71,14 @@
 	justify-content: space-between;
 	align-items: center;
 }
-
-
+.noticeContent img {
+	width: 1.08rem;
+	height: 0.26rem;
+}
+.noticeContent img:last-child {
+	width: 0.28rem;
+	height: 0.28rem;
+}
 .noticeContent .center-content {
 	width: 4.76rem;
 	/* height: 28p/x; */
@@ -95,7 +104,10 @@
 	display: flex;
 	justify-content: flex-start;
 }
-
+.listContainer .item .top img {
+	width: 0.4rem;
+	height: 0.4rem;
+}
 .listContainer .item .top .top-title {
 	width: 0.65rem;
 	height: 0.21rem;
@@ -133,10 +145,13 @@
 }
 
 .item .bottom .left-logo img {
-	filter: #fff;
+	width: 1.84rem;
+	height: 1.06rem;
 }
 
 .item .bottom .left-bottom {
+	width: 2.69rem;
+	height: 1.07rem;
 	position: absolute;
 	top: 0.69rem;
 	left: 0;
@@ -217,7 +232,14 @@
 	bottom: 0;
 	margin-top: 0.5rem;
 }
-
+.footer .back {
+	width: 100%;
+	height: 0.36rem;
+	position: absolute;
+	top: -0.3rem;
+	left: -0.06rem;
+	right: 0;
+}
 .firstPage {
 	width: 20%;
 	display: flex;
@@ -226,7 +248,10 @@
 	align-items: center;
 }
 
-
+.firstPage img {
+	width: 0.46rem;
+	height: 0.46rem;
+}
 .firstPage .firstPage-text {
 	/* width: 48rem; */
 	height: 0.24rem;

@@ -5,7 +5,6 @@ function yeMianShiPei(win) {
 
 	function refreshRem() {
 		var width = docEl.getBoundingClientRect().width
-		console.log(width)
 		if (width > 750) {
 			width = 750
 		}
