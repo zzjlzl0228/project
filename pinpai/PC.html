@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>非微信弹窗PC</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<style>
+		.container {
+			width: 1600px;
+			position: fixed;
+			bottom: 0;
+			/* top: 70%; */
+			/* right: 10%; */
+			right: 50%;
+			transform: translateX(50%);
+		}
+
+		/* @media (max-width: 768px) {
+			.container {
+				width: 100%;
+				right: 0;
+			}
+		} */
+
+		.bg {
+			width: 100%;
+			height: 100%;
+		}
+
+		.container .QRcode {
+			width: 7%;
+			position: absolute;
+			left: 27.5%;
+			top: 44.3%;
+		}
+
+		.container .share {
+			width: 10.5%;
+			position: absolute;
+			right: 26.5%;
+			top: 39%;
+		}
+
+		.close-icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 3%;
+		}
+
+		.count-down {
+			font-size: 20px;
+			position: absolute;
+			bottom: 74%;
+			right: 10px;
+
+		}
+
+		.icon-container {
+			display: none;
+			position: fixed;
+			top: 325px;
+			right: 10px;
+		}
+
+		@keyframes rotate {
+			0% {
+				transform: rotate(0deg) scale(0.85);
+				-ms-transform: rotate(0deg) scale(0.85);
+				/* IE 9 */
+				-moz-transform: rotate(0deg) scale(0.85);
+				/* Firefox */
+				-o-transform: rotate(0deg) scale(0.85);
+			}
+
+			50% {
+				transform: rotate(-180deg) scale(1);
+				-ms-transform: rotate(-180deg) scale(1);
+				/* IE 9 */
+				-moz-transform: rotate(-180deg) scale(1);
+				/* Firefox */
+				-o-transform: rotate(-180deg) scale(1);
+			}
+
+			100% {
+				transform: rotate(-360deg) scale(0.85);
+				-ms-transform: rotate(-360deg) scale(0.85);
+				/* IE 9 */
+				-moz-transform: rotate(-360deg) scale(0.85);
+				/* Firefox */
+				-o-transform: rotate(-360deg) scale(0.85);
+			}
+		}
+
+		@-webkit-keyframes rotate {
+			0% {
+				-moz-transform: rotate(0deg);
+			}
+
+			100% {
+				-moz-transform: rotate(-360deg);
+			}
+		}
+
+		.open-icon {
+			animation: rotate 1s linear infinite;
+			-webkit-animation: rotate 1s linear infinite;
+			/*Safari and Chrome*/
+		}
+
+		.icon-container .QRcode {
+			width: 70%;
+			position: absolute;
+			bottom: 15.5%;
+			left: 13.5%;
+			border: 2px solid #efcdb7;
+		}
+
+		@keyframes donghua2 {
+			0% {
+				transform: scale(0.9);
+			}
+
+			50% {
+				transform: scale(1);
+			}
+
+			100% {
+				transform: scale(0.9);
+
+			}
+		}
+
+		.icon-container p {
+			position: absolute;
+			bottom: -10%;
+			left: 17%;
+			font-size: 17px;
+			color: saddlebrown;
+			animation: donghua2 0.8s linear infinite;
+		}
+
+		@keyframes donghua3 {
+			0% {
+				transform: translateY(-5px);
+			}
+
+			50% {
+				transform: translateY(0);
+			}
+
+			100% {
+				transform: translateY(-5px);
+			}
+		}
+
+		.arrow {
+			position: absolute;
+			bottom: -21%;
+			left: 45%;
+			animation: donghua3 0.8s linear infinite;
+		}
+	</style>
+	<body>
+		<!-- 底部弹层 -->
+		<div class="container">
+			<img class="bg" src="./images/list_pc_img.png" alt="">
+			<!-- 二维码图片 -->
+			<img class="QRcode" src="http://pic.10pinping.com/201907/05/20190705044019591.png" alt="">
+			<img class="share" src="./images/list_pc_gif.gif" alt="">
+			<img class="close-icon" src="./images/icon_back_a.png" alt="">
+			<!-- 倒计时 -->
+			<div class="count-down">5s</div>
+		</div>
+
+		<!-- 右侧悬浮图标 -->
+		<div class="icon-container">
+
+			<img class="open-icon" src="./images/guangxiao.png" alt="">
+
+
+			<!-- 二维码图片 -->
+			<img class="QRcode" src="http://pic.10pinping.com/201907/05/20190705044019591.png" alt="">
+			<p class="text">微信扫码投票</p>
+			<img src="images/jaintou.png" class="arrow">
+
+		</div>
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		/* 点击关闭图标缩小宽度并向右上角移动 */
+		var num = 5;
+		var interval = setInterval(function() {
+			if(num == 0) {
+				clearInterval(interval)
+				// 模拟点击事件
+				$('.close-icon').click();
+				$('.count-down').css({
+					'display': 'none'
+				});
+			}
+			$('.count-down').html(num-- + 's') ;
+			
+		},1000);
+	
+		
+		$('.close-icon').on('click', function () {
+			$('.count-down').css({
+				'display': 'none'
+			});
+			var width = 1600;
+			var t = setInterval(function() {
+				// var width = $('.container').width();
+			
+				width -= 20;
+				$('.container').css('width', width);
+				if (width <= 0) {
+					clearInterval(t);
+				}
+			}, 5);
+			
+			$(".container").animate({
+			
+				bottom: "+=550px",
+				right: "-=50%"
+			}, 500);
+			
+			setTimeout(function() {
+				$('.icon-container').css({
+					'display': 'block'
+				});
+			}, 500);
+			// 当执行点击事件后必须要清掉倒计时得定时器
+			clearInterval(interval)
+
+		});
+
+		
+		
+		
+		/* 点击右侧悬浮图标逐渐显示 */
+		$('.icon-container').on('click', function() {
+			var width = 0;
+			var t = setInterval(function() {
+				width += 20;
+				$('.container').css('width', width);
+				if (width >= 1600) {
+					clearInterval(t);
+				}
+			}, 1);
+
+			$(".container").animate({
+				bottom: "-=550px",
+				right: "+=50%"
+			}, 500);
+
+			$('.icon-container').css({
+				'display': 'none'
+			});
+			
+		
+
+		});
+	</script>
+</html>

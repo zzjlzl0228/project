@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> -->
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<style type="text/css">
+			.container {
+				width: 100%;
+			}
+
+			.navContainer {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.anniu {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+
+			.button {
+				width: 120px;
+				height: 44px;
+				border-radius: 18px;
+				cursor: pointer;
+				font-size: 17px;
+				color: #616b7e;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.button img {
+				margin-right: 12px;
+			}
+
+			.btnactive {
+				background: #dfe9ff;
+				color: #006EFF;
+			}
+
+			.right {
+				font-size: 17px;
+				color: #006EFF;
+				font-weight: 500;
+			}
+
+			.content {
+				width: 100%;
+				margin: auto;
+				padding: 51px;
+				padding-bottom: 20px;
+			}
+
+			.box {
+				width: 100%;
+				height: 500px;
+				background: #fff;
+				display: flex;
+				justify-content: space-between;
+				padding: 20px 100px;
+			}
+
+			.box .prev,
+			.box .after {
+				display: flex;
+				align-items: center;
+			}
+
+			.box .chart {
+				width: 80%;
+			}
+
+			.barBox {
+				margin-top: 30px;
+				width: 100%;
+				height: 610px;
+			}
+
+			.barBoxTop {
+				width: 100%;
+				height: 70px;
+				background: #fff;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				margin-top: 30px;
+			}
+			.barBoxBottom {
+				width: 100%;
+				height: 500px;
+				background: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 30px;
+			}
+			.footer {
+				width: 100%;
+				height: 30px;
+				background: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+
+
+			<div class="container">
+				<div class="navContainer">
+					<div class="anniu">
+						<div class="button btnactive">
+							<img src="img/hangye2.png">
+							行业
+						</div>
+						<div class="button">
+							品牌
+						</div>
+					</div>
+					<div class="right">
+						项目每天行业统计
+					</div>
+				</div>
+				<div class="content">
+					<div class="box">
+						<div class="prev">
+							<img src="img/prev.png">
+							</img>
+						</div>
+						<!-- 放置图表 -->
+						<div class="chart">
+
+						</div>
+						<div class="after">
+							<img src="img/after.png">
+							</img>
+						</div>
+					</div>
+					<!-- 饼状图 -->
+					<div class="barBox">
+						<div class="barBoxTop">
+							<img src="../img/prev.png" class="first">
+							<div class="text">
+								项目指数统计
+							</div>
+							<img src="../img/after.png" class="last">
+						</div>
+						<div class="barBoxBottom">
+							<!-- 放置饼状图 -->
+							
+						</div>
+					</div>
+				</div>
+				<div class="footer">橙芽网络提供技术支持</div>
+			</div>
+		</div>
+	</body>
+</html>

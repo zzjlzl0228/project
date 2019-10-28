@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>非微信弹窗</title>
+</head>
+<style>
+	body{
+		margin: 0;
+	}
+	.container{
+		position: fixed;
+		bottom: 0.9rem;
+		left: 50%;
+		z-index: 10;
+		max-width: 640px;
+		min-width: 300px;
+		margin-left: -3.2rem;
+		text-align: right;
+		transform: translateX(-50%);
+	}
+	.bg{
+		width: 100%;
+	}
+	
+	.container .QRcode{
+		width: 12%;
+	    position: absolute;
+	    left: 11.5%;
+	    top: 55%;
+	}
+	.container .share{
+	    width: 19%;
+		position: absolute;
+		right: 6.5%;
+	    top: 49%;
+	}
+
+	.close-icon{
+		margin-right: 15px;
+	}
+
+
+</style>
+<body>
+	<!-- 底部弹层 -->
+	<div class="container">
+		<img class="close-icon" src="./images/icon_back_a.png" alt="">
+		<img class="bg" src="./images/toupiao_img_tanchuang.png" alt="">
+		<!-- 二维码图片 -->
+		<img class="QRcode" src="http://pic.10pinping.com/201907/05/20190705044019591.png" alt="">
+		<img class="share" src="./images/list_pc_gif.gif" alt="">	
+		 
+	</div>
+	
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+	/* 点击关闭按钮隐藏 */
+	$('.close-icon').on('click',function(){
+		
+		$(".container").css('display','none');
+		
+	});
+	
+</script>
+</html>

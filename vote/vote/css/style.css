@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+@font-face {
+	font-family: PingFang SC;
+	src: url('../PingFangSC.ttf');
+}
+
+input {
+	border: none;
+	outline: none;
+}
+
+li {
+	list-style: none;
+}
+.container{
+	max-width: 7.5rem;
+}
+.bg{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.head_help{
+    color:#333333;
+    font-size:0.36rem;
+    text-align:center;
+    width:7.5rem;
+    margin:0 auto;
+    line-height:0.8rem;
+    height:0.8rem;
+    background:rgba(242,242,242,1);
+    position:relative;
+}
+
+.head_back{
+    font-size:0.36rem!important;
+    color:#888888;
+    position:absolute;
+    left:0.3rem;
+    top:50%;
+	width:.15rem;
+	height:.28rem;
+    margin-top:-0.15rem;
+    cursor:pointer;
+	background: url(../img/icon_back_w.png)no-repeat;
+	background-size: 100% 100%;
+}
+
+.classification{
+    font-size:0.36rem!important;
+    color:#888;
+    position:absolute;
+    right:0.3rem;
+    top:50%;
+    margin-top:-0.38rem;
+    cursor:pointer;
+}

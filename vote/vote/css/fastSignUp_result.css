@@ -1,0 +1,198 @@
+.resultMain {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.resultMain>img {
+	display: block;
+	width: 1.26rem;
+	height: 1.34rem;
+	margin: 0.6rem auto 0.4rem;
+}
+
+.resultMain>h6 {
+	color: #0261B1;
+	font-size: 0.34rem;
+	text-align: center;
+	margin-bottom: 0.45rem;
+}
+
+.resultMain>div {
+	width: 5.32rem;
+	height: auto;
+	margin: 0 auto 0.35rem;
+	font-size: 0.22rem;
+	line-height: 0.5rem;
+	color: #333;
+}
+
+.resultMain>.check {
+	box-sizing: border-box;
+	background: rgba(245, 248, 250, 1);
+	border-radius: .1rem;
+	padding: .1rem .2rem;
+	width: 5.32rem;
+	height: auto;
+	margin: 0 auto 0.35rem;
+	font-size: 0.22rem;
+	color: #333;
+}
+
+.resultMain>div>span {
+	color: #15487E;
+}
+
+.resultMain>p {
+	font-size: 0.26rem;
+	line-height: 0.5rem;
+	color: #666;
+	width: 5.36rem;
+	height: auto;
+	margin: 0 auto 0.4rem;
+}
+
+.resultMain>p>span {
+	position: relative;
+	padding: 0 0.1rem;
+	z-index: 2;
+}
+
+.resultMain>p>span>i {
+	display: block;
+	width: 100%;
+	height: 0.16rem;
+	position: absolute;
+	background: #E6F2FF;
+	border-radius: 0.08rem;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.resultService {
+	width: 6rem;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.resultService>p {
+	width: 100%;
+	color: #15487E;
+	font-size: 0.26rem;
+	line-height: 0.62rem;
+	text-align: center;
+	border-bottom: 0.02rem solid #e6e6e6;
+	position: relative;
+}
+
+.resultService>p>span {
+	position: absolute;
+	width: 0.5rem;
+	height: 0.08rem;
+	background: #15487E;
+	border-radius: 4px;
+	left: 50%;
+	margin-left: -0.25rem;
+	bottom: -0.05rem;
+}
+
+.resultServiceBox {
+	width: 100%;
+	height: auto;
+	padding: 0 0.4rem 0.9rem;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.resultService_left {
+	float: left;
+	width: 1.7rem;
+	height: auto;
+	margin-top: 0.5rem;
+}
+
+.resultService_left>img {
+	display: block;
+	width: 1.7rem;
+	height: 1.7rem;
+}
+
+.resultService_left>p {
+	font-size: 0.26rem;
+	line-height: 0.5rem;
+	color: #15487E;
+	text-align: center;
+	margin-top: 0.26rem;
+}
+
+.resultService_right {
+	width: 3rem;
+	height: auto;
+	float: right;
+	margin-top: 0.84rem;
+}
+
+.resultService_right>button {
+	display: block;
+	width: 2.4rem;
+	height: 0.6rem;
+	outline: none;
+	border: none;
+	background: #15487E;
+	font-size: 0.28rem;
+	line-height: 0.6rem;
+	color: #fff;
+	border-radius: 0.1rem;
+	margin: 0 auto 0.24rem;
+}
+
+.resultService_right>p {
+	white-space: nowrap;
+	font-size: 0.22rem;
+	line-height: 0.5rem;
+	color: #15487E;
+	text-align: center;
+	margin-bottom: 0.1rem;
+}
+
+
+
+
+
+.interesting-industry {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.interesting-industry .title {
+	box-sizing: border-box;
+	padding-left: .4rem;
+	font-size: .26rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	width: 6.4rem;
+	height: .82rem;
+	line-height: .82rem;
+	background: #F9F9F9;
+}
+
+.interesting-industry .item {
+	width: 5.89rem;
+	height: .82rem;
+	line-height: .82rem;
+	font-size: .28rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 1);
+	background: url(../img/chenggong_aboutother_bg.png)no-repeat;
+	background-size: 100% 100%;
+	padding-left: .45rem;
+	box-sizing: border-box;
+	margin-bottom: .19rem;
+}

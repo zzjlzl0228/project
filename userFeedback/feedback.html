@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>用户反馈</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/feedback.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="feedbackContainer">
+			<div class="feedbackContent">
+				<div class="fbTitle">我要反馈</div>
+				<div class="fbTipsContent">
+					<div class="fbTips">
+						<img src="http://123.56.31.131:810/skin/default/guestbook/image/feedback.png">
+						<h3>反馈内容</h3>
+					</div>
+					<p class="info">建议您填写电话和留言对象信息，将有助于我们尽快解决您提出的问题，并及时与您沟通。</p>
+
+				</div>
+				<form method="POST" action="" onsubmit="" class="formContent">
+					<div class="textarea">
+						<textarea class="fb-mes" name="content" id="message" placeholder="请您留下您的意见和建议，必填"></textarea>
+					</div>
+					<div class="item">
+						<div class="section">
+							<label for="">是否匿名:</label>
+							<!-- 显示用户名 -->
+							<div class="showUsername">傻丫头</div>
+						</div>
+						<select name="anonymous" id="anonymous">
+							<option value="1">是</option>
+							<option value="2" selected="selected">否</option>
+						</select>
+					</div>
+					<div class="submit">
+						<input type="submit" name="submit" value="提 交">
+					</div>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('#anonymous').click(function(){
+				var options = $("#anonymous option:selected"); //获取当前选择项.
+				var obj = options.val(); //获取当前选择项的值.
+				// console.log(obj)
+				if (obj === '1') {
+					$('.showUsername').hide()
+				} else {
+					$('.showUsername').show()
+				}
+			})
+
+
+			function CheckPost() {
+				var message = document.all.message.value;
+				if (!message) {
+					alert("内容不能为空");
+					return false;
+				} else {
+					if (message.length > 500) {
+						alert("内容不能超过500个字");
+						return false;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

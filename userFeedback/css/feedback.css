@@ -1,0 +1,132 @@
+.feedbackContainer {
+	width: 100%;
+	max-width: 7.5rem;
+	margin: auto;
+	margin-top: 2rem;
+}
+
+.feedbackContent {
+	width: 100%;
+	height: 10.1rem;
+/* 	background: url(../img/back.jpg) no-repeat center;
+	background-size: 100% 100%; */
+}
+
+.fbTitle {
+	margin-top: 0.5rem;
+	height: 0.5rem;
+	font-size: 0.34rem;
+	font-weight: 800;
+	color: #333333;
+	line-height: 0.48rem;
+	text-align: center;
+}
+
+.fbTipsContent {
+	width: 100%;
+	padding: 0.3rem;
+	/* margin-top: 0.5rem; */
+}
+
+.fbTips {
+	width: 100%;
+	padding: 0.3rem;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.fbTips img {
+	width: 0.5rem;
+	height: 0.4rem;
+	margin-right: 0.3rem;
+}
+
+.fbTips h3 {
+	width: 100%;
+	font-size: 0.3rem;
+	color: #333;
+	font-weight: normal;
+}
+
+.fbTipsContent .info {
+	width: 90%;
+	margin: auto;
+	/* height: 0.3rem; */
+	font-size: 0.14rem;
+	color: #333;
+	font-weight: normal;
+}
+
+.formContent {
+	width: 100%;
+	padding: 0.3rem;
+}
+
+.textarea {
+	width: 90%;
+	margin: auto;
+	border: 1px solid #bdbdbd;
+	border-radius: 0.1rem;
+	height: 2rem;
+	/* padding: 0.3rem; */
+}
+
+.fb-mes {
+	display: block;
+	width: 100%;
+	height: 1.95rem;
+	border: none;
+	padding: 0.2rem 0.20rem;
+	font-size: 0.14rem;
+	line-height: 0.20rem;
+	font-family: "Microsoft YaHei", "\u5FAE\u8F6F\u96C5\u9ED1", "Arial", "SimSun", "\u5B8B\u4F53";
+	border-radius: 0.1rem;
+}
+
+.submit {
+	text-align: center;
+	margin: 0rem 0.5rem;
+}
+
+.submit input {
+	border-radius: 0.1rem;
+	width: 2.60rem;
+	height: 0.60rem;
+	line-height: 0.40rem;
+	color: #fff;
+	background-color: #ff8500;
+	border: none;
+	font-size: 0.20rem;
+	text-align: center;
+	font-family: "Microsoft YaHei", "\u5FAE\u8F6F\u96C5\u9ED1", "Arial", "SimSun", "\u5B8B\u4F53"
+}
+
+.item {
+	width: 100%;
+	padding: 0.3rem 0.5rem;
+	font-size: 0.16rem;
+}
+
+.section {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 0.3rem;
+}
+
+.item label {
+	float: left;
+	line-height: 0.5rem;
+	font-size: 0.2rem;
+	margin-right: 0.3rem;
+}
+
+.item select {
+	padding: 0rem 0.2rem;
+	width: 100%;
+	height: 0.6rem;
+	border: 1px solid #bdbdbd;
+	font-size: 0.16rem;
+	border-radius: 0.1rem;
+}

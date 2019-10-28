@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>积分统计</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.container {
+				width: 100%;
+				padding-top: 50px;
+				padding-left: 50px;
+				/* position: relative; */
+			}
+
+			.left_container {
+				width: 1030px;
+				height: 875px;
+				/* margin: auto; */
+				position: relative;
+			}
+
+			.left,
+			.right {
+				width: 491px;
+				/* height: 875px; */
+				margin-right: 48px;
+				float: left;
+			}
+
+			.right {
+				margin-right: 0;
+			}
+
+			.top {
+				width: 346px;
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
+
+			.center {
+				width: 814px;
+				margin: auto;
+				position: absolute;
+				top: 490px;
+				left: 0;
+				right: 0;
+			}
+
+			.left_text,
+			.right_text {
+				width: 271px;
+				height: 63px;
+				position: absolute;
+				top: 203px;
+				left: 111px;
+				right: 109px;
+				font-size: 64px;
+				font-family: Microsoft YaHei;
+				font-weight: bold;
+				color: rgba(151, 94, 19, 1);
+				float: left;
+			}
+
+			.right_text {
+				left: 654px;
+
+			}
+
+			.bottom_left_text,
+			.bottom_right_text {
+				width: 238px;
+				height: 55px;
+				font-size: 44px;
+				font-family: Microsoft YaHei;
+				font-weight: bold;
+				color: rgba(222, 195, 173, 1);
+				position: absolute;
+				top: 523px;
+				left: 186px;
+				right: 67px;
+				text-align: center;
+			}
+
+			.bottom_right_text {
+				left: 619px;
+			}
+
+			.needEllipsis {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				width: 238px;
+			}
+			
+			.right_container {
+				width: 600px;
+				height: 500px;
+				background: #006EFF;
+				position: absolute;
+				right: 0;
+				left: 50px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left_container">
+				<div class="left">
+					<img src="img/jifen_chengy_img.png">
+				</div>
+				<div class="right">
+					<img src="img/jifen_shanz_img.png">
+				</div>
+				<div class="top">
+					<img src="img/jifen_top_img.png">
+				</div>
+				<div class="center">
+					<img src="img/jifen_vs_img.png">
+				</div>
+				<div class="left_text">橙芽网络</div>
+				<div class="right_text">山舟网络</div>
+				<div class="bottom_left_text needEllipsis">00000000</div>
+				<div class="bottom_right_text needEllipsis">0000000</div>
+			</div>
+			<!-- <div class="right_container">
+				
+			</div> -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,145 @@
+#jumpLiDiv {
+	width: 96%;
+	height: 2.22rem;
+}
+
+#jumpLiDiv>li:nth-child(n+4) {
+	top: 2.22rem;
+	opacity: 0;
+}
+
+#jumpLiDiv>li:nth-child(3)>span {
+	/* background: rgba(22, 184, 178, 0.7); */
+}
+
+#jumpLiDiv>li:nth-child(3)>span>i {
+	color: #008B86;
+}
+
+#jumpLiDiv>li:first-of-type>span {
+	/* background: rgba(0, 118, 217, 0.7); */
+}
+
+#jumpLiDiv>li:first-of-type>span>i {
+	color: #075597;
+}
+
+#jumpLiDiv>li:nth-child(2)>span {
+	/* background: rgba(149, 109, 203, 0.7); */
+}
+
+#jumpLiDiv>li:nth-child(2)>span>i {
+	color: #4F2885;
+}
+
+#jumpLiDiv>li {
+	margin-top: 0.2rem;
+	position: absolute;
+}
+
+#jumpLiDiv>li:first-of-type {
+	top: 0;
+}
+
+#jumpLiDiv>li:nth-child(2) {
+	top: 0.74rem;
+}
+
+#jumpLiDiv>li:nth-child(3) {
+	top: 1.48rem;
+}
+
+#jumpLiDiv>li>span {
+	display: inline-block;
+	width: auto;
+	height: 0.6rem;
+	font-size: 0.24rem;
+	line-height: 0.6rem;
+	border-radius: 0.1rem;
+	padding: 0 0.18rem 0 0.1rem;
+	color: #fff;
+}
+
+#jumpLiDiv>li>span>i {
+	display: block;
+	float: left;
+	width: 1.5rem;
+	height: 0.34rem;
+	border-radius: 0.1rem;
+	background: #fff;
+	margin-top: 0.13rem;
+	font-size: 0.2rem;
+	line-height: 0.34rem;
+	text-align: center;
+	font-style: normal;
+	margin-right: 0.1rem;
+}
+
+#jumpLiDiv>li.firstAct {
+	opacity: 0 !important;
+	top: -0.74rem;
+	transition: all 1s linear;
+}
+
+#jumpLiDiv>li.secondAct {
+	transition: all 1s linear;
+	top: 0rem;
+}
+
+#jumpLiDiv>li.thirdAct {
+	transition: all 1s linear;
+	top: 0.74rem;
+}
+
+#jumpLiDiv>li.fourthAct {
+	opacity: 1;
+	transition: all 1s linear;
+	top: 1.48rem;
+}
+
+.swiper-rolling{
+	position: fixed;
+	left: 2%;
+	bottom: 18%;
+	width: 96%;
+	height: 2.22rem;
+}
+
+
+.your111 span{
+	background-image: url(../img/ppxq_join_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: -.27rem;
+	/* bottom: 0.5rem; */
+	/* bottom: 1.23rem; */
+	    /* bottom: 2rem; */
+		transition: bottom 1s linear;
+	width: 4.12rem;
+   left: -0.09rem;
+	height: 1rem;
+	font-size: 0.24rem;
+	line-height: 1rem;
+	border-radius: 0.1rem;
+	padding: 0 0.18rem 0 0.1rem;
+	display: block;
+	z-index: 100;
+}
+
+.your111 span>i {
+	display: block;
+	float: left;
+	width: 1.5rem;
+	height: 0.34rem;
+	border-radius: 0.1rem;
+	background: #fff;
+	margin-top: 0.32rem;
+	margin-left: .1rem;
+	font-size: 0.2rem;
+	line-height: 0.34rem;
+	text-align: center;
+	font-style: normal;
+	margin-right: 0.06rem;
+	color: #FF8B02;
+}

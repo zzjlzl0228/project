@@ -1,0 +1,284 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: Trajan;
+	src: url(./TrajanPro3-Regular.otf);
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+}
+
+.content {
+	width: 100%;
+	min-width: 1400px;
+	margin: auto;
+	height: 1081px;
+	background: url(img/jfzl_banner_img.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+}
+
+.top_text {
+	width: 160px;
+	margin: auto;
+	height: 40px;
+	font-size: 40px;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	line-height: 21px;
+	color: rgba(0, 228, 255, 1);
+	opacity: 1;
+	position: absolute;
+	top: 31px;
+	left: 0;
+	right: 0;
+}
+
+.bottom_content {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	top: 123px;
+}
+
+.left {
+	width: 38.54%;
+	margin: 0 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.integral {
+	width: 100%;
+	height: 290px;
+	margin: auto;
+	background: url(img/ssjf_banner_img.png) no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.texts{
+	width: 150px;
+	height: 42px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	position: absolute;
+	top: 5px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #d9edfd;
+}
+.integral #main-one {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#main-two,
+#main-three,
+#main-four,
+#main-five,
+#main-six,
+#main-seven {
+	display: flex;
+	justify-content: center;
+}
+
+.project-data {
+	width: 100%;
+	height: 320px;
+	background: url(img/xmsj_banner_img.png) no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.person-data {
+	width: 100%;
+	height: 290px;
+	background: url(img/rjsj-banner_img.png) no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+}
+
+.person-data .prev,
+.fiery-index .hr-prev {
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid rgba(39, 115, 229, 1);
+	position: absolute;
+	top: 50%;
+	left: 23px;
+	cursor: pointer;
+}
+
+.person-data .after,
+.fiery-index .hr-after {
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid rgba(39, 115, 229, 1);
+	position: absolute;
+	right: 23px;
+	top: 50%;
+	cursor: pointer;
+}
+
+.right {
+	width: 55.21%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 40px;
+}
+
+.right .integral-ratio {
+	width: 100%;
+	height: 126px;
+	padding: 27px 42px 0px 49px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 42px;
+
+}
+
+.right .integral-ratio .cywl {
+	width: 360px;
+	height: 126px;
+	background: url(img/cywl_dt_img.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.right .integral-ratio .cywl .cywl-text,
+.right .integral-ratio .szwl .szwl-text {
+	width: 104px;
+	margin: auto;
+	height: 26px;
+	font-size: 1.625rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	line-height: 17px;
+	color: rgba(255, 179, 0, 1);
+	opacity: 1;
+	position: absolute;
+	top: 22px;
+	left: 0;
+	right: 0;
+}
+
+.right .integral-ratio .cywl .cywl-num,
+.right .integral-ratio .szwl .szwl-num {
+	width: 100%;
+	height: 42px;
+	margin: auto;
+	font-size: 2.375rem;
+	font-family: Arial;
+	font-weight: 400;
+	line-height: 17px;
+	color: rgba(255, 179, 0, 1);
+	opacity: 1;
+	position: absolute;
+	top: 77px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.right .integral-ratio .vs {
+	width: 107px;
+	height: 78px;
+	font-size: 77px;
+	font-family: Trajan;
+	font-weight: bold;
+	line-height: 63px;
+	color: rgba(255, 179, 0, 1);
+	opacity: 1;
+	margin: 0 70px 0;
+}
+
+.right .integral-ratio .szwl {
+	width: 360px;
+	height: 126px;
+	background: url(img/szwl_dt_img.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.right .integral-ratio .szwl .szwl-text,
+.right .integral-ratio .szwl .szwl-num {
+	color: rgba(0, 241, 255, 1);
+}
+
+.right .project-share {
+	width: 100%;
+	height: 408px;
+	background: url(img/xmbl_banner_img.png) no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.right .fiery-index {
+	width: 100%;
+	height: 335px;
+	background: url(img/hrzs_banner_img.png) no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: space-around;
+	color: #386EB4;
+	position: relative;
+}
+
+.fiery-index .text {
+	width: 100px;
+}
+.fiery-index .text .blueLine {
+	width: 16px;
+	height: 2px;
+	background: rgba(39, 115, 229, 1);
+	opacity: 1;
+	position: absolute;
+	top: 33px;
+	left: 35px;
+}
+
+.fiery-index .text .title {
+	/* width: 25px; */
+	height: 16px;
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 14px;
+	color: rgba(39, 115, 229, 1);
+	letter-spacing: 5px;
+	opacity: 1;
+	position: absolute;
+	top: 27px;
+	left: 56px;
+}

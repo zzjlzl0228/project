@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="cn" style="font-size: 50px;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width">
+		<meta name="format-detection" content="telephone = no">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>纪念祖国70周年专题</title>
+		<!-- 引入js -->
+		<script src="http://mzhengyang.10brandcn.com:82/skin/v1/common/js/jquery-3.3.1.min.js"></script>
+		<!-- rem适配js -->
+		<script type="text/javascript" src="https://img.520wtp.com/skin/default/m/js/pingping-a.js"></script>
+		<!-- 使用复制功能引用的js -->
+		<script src="js/clipboard.min.js" type="text/javascript"></script>
+		<!-- 引入css -->
+		<!-- <link rel="stylesheet" href="./css/swiper.min.css"> -->
+		<link rel="stylesheet" href="./css/common.css">
+		<link rel="stylesheet" href="./css/brand_details_1.css">
+		<link rel="stylesheet" href="./css/index.css">
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<div class="container" id="container" style="background:radial-gradient(circle,rgba(6,82,146,1) 0%,rgba(10,38,79,1) 98%,rgba(11,51,109,1) 100%);
+">
+			<div class="content">
+				<div class="header">
+					<div class="colse" onclick="vote()">X</div>
+					<div class="title">品牌详情</div>
+					<div class="set">
+						<div class="dot"></div>
+						<div class="dot"></div>
+						<div class="dot"></div>
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="info">
+						<!-- 快速投票按钮 -->
+						<img class="fast-vote" src="img/toupiao_btn1.gif" >
+						<div class="item1">
+							<div class="title">
+								NO.1
+							</div>
+							<div class="logo">
+								农夫山泉
+							</div>
+							<div class="save-card">
+								长按保存名片
+							</div>
+						</div>
+						<div class="item2">
+							<div class="title">农夫山泉</div>
+							<div class="company-adrees">
+								<div class="left">
+									<div class="title2">
+										<div class="blue"></div>
+										<div class="name">公司名称</div>
+									</div>
+									<div class="adrees">农夫山泉股份有限公司股份有限 公司农夫山泉股份有限公司</div>
+								</div>
+								<div class="right">
+									<img src="./img/ppxq_xinxi_bg.png" >
+								</div>
+							</div>
+							<div class="company-adrees">
+								<div class="left">
+									<div class="title2">
+										<div class="blue"></div>
+										<div class="name">公司地址</div>
+									</div>
+									<div class="adrees">浙江省杭州市葛衙庄181号</div>
+								</div>
+							</div>
+							<div class="company-adrees" style="border-bottom:none">
+								<div class="left">
+									<div class="title2">
+										<div class="blue"></div>
+										<div class="name">公司网站</div>
+									</div>
+									<div class="adrees">http://www.nongfuspring.com</div>
+									
+									<div class="title2">
+										<div class="blue"></div>
+										<div class="name">投票链接：
+											<span id="foo">http://www.10pinping.com/</span>	
+											<button class="btn" data-clipboard-action="copy" data-clipboard-target="#foo" type="button">复制</button>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="brand-introduction">
+						<div class="item">
+							<div class="title3">
+								<div class="blue3"></div>
+								<div class="name3">品牌介绍</div>
+								<div class="edit" onclick="edit()">
+									<span>编辑</span>
+									<img src="img/ppxq_edit_icon.png" >
+								</div>
+							</div>
+							<div class="text">
+								<div style="display: none;">农夫山泉股份有限公司是中国饮料20强之一，专注于研发、推广饮用天然水、果蔬汁饮料、特殊用途饮料和茶饮料等各类软饮料。 我公司通</div>
+								<img src="img/details_ppjsk_img%20(1).png" >
+							</div>
+							<div class="btn" style="display: none;">
+								<span class="btn-txt">查看更多</span>
+								<img class="btn-img" src="img/ppxq_more_icon.png" alt="">
+							</div>
+						</div>
+					</div>
+					
+					<img class="bottom-img" src="img/ppxq_ggw_img.png">
+					<div class="disclaimer">
+						免责声明：<br/> 本站信息全部来源于网站会员个人自由发布，版权归原作者所有。如有侵权、虚假信息、错误信息或任何问题，请联系客服，我们
+					</div>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+		
+	<div class="swiper-rolling">
+		<div class="your111"><span ><i>36.*.*.154</i>（您）进入了活动</span></div>
+		<ul id="jumpLiDiv">
+			<li class="firstAct"><span style="background-color: rgba(22, 184, 178, 0.7);"><i style="color: rgba(22, 184, 178, 0.7);">139.*.*.92</i>对活动进行了助力</span></li>
+			<li class="secondAct"><span style="background-color: rgba(0, 118, 217, 0.7);"><i style="color: rgba(0, 118, 217, 0.7);">36.*.*.20</i>对活动进行了助力</span></li>
+			<li class="thirdAct"><span style="background-color: rgba(149, 109, 203, 0.7);"><i style="color: rgba(149, 109, 203, 0.7);">210.*.*.145</i>对活动进行了助力</span></li>	
+			<li class="your fourthAct"><span style="background-color: rgba(22, 184, 178, 0.7);"><i style="color: rgba(22, 184, 178, 0.7);">36.*.*.154</i>（您）进入了活动</span></li>
+		</ul>
+	</div>
+	
+
+	</body>
+</html>
+
+<!-- Swiper JS -->
+<script src="./js/swiper.min.js"></script>
+<script src="./js/index.js"></script>
+
+<script type="text/javascript">
+		//左侧气泡文字
+		var a = 0;
+		activeTextFn();
+		function activeTextFn() {
+		    var timer = setInterval(function () {
+				if($('#jumpLiDiv>li').eq(0).attr('class')=='your'){
+					console.log("111")
+					$('.your111 span').css('display','block');
+				}
+		        var num = $('#jumpLiDiv>li').length;
+		        var colorSpan1 = $('#jumpLiDiv>li').eq(0).children('span').css('backgroundColor');
+		        var colorSpan2 = $('#jumpLiDiv>li').eq(1).children('span').css('backgroundColor');
+		        var colorSpan3 = $('#jumpLiDiv>li').eq(2).children('span').css('backgroundColor');
+		        $('#jumpLiDiv>li').eq(0).addClass('firstAct');
+		        $('#jumpLiDiv>li').eq(1).children('span').css('backgroundColor', colorSpan2).children('i').css(
+		            'color', colorSpan2)
+		        $('#jumpLiDiv>li').eq(1).addClass('secondAct');
+		        $('#jumpLiDiv>li').eq(2).children('span').css('backgroundColor', colorSpan3).children('i').css(
+		            'color', colorSpan3)
+		        $('#jumpLiDiv>li').eq(2).addClass('thirdAct');
+		        $('#jumpLiDiv>li').eq(3).children('span').css('backgroundColor', colorSpan1).children('i').css(
+		            'color', colorSpan1)
+		        $('#jumpLiDiv>li').eq(3).addClass('fourthAct');
+		        setTimeout(function () {
+		            $('#jumpLiDiv').append($('#jumpLiDiv>li').eq(0))
+		            $('#jumpLiDiv>li').removeClass('firstAct secondAct thirdAct fourthAct');
+					if(a == 0){
+						$('.your111 span').css('bottom','0.5rem');
+						$('.your span').css('display','none');
+						a = 1 
+					}else if(a == 1){
+						$('.your111 span').css('bottom','1.23rem');
+						$('.your span').css('display','none');
+						a = 2 
+					}else if(a == 2){
+						$('.your111 span').css('bottom','2rem');
+						$('.your span').css('display','none');
+						a = 3 
+					}else{
+						$('.your span').css('display','block');
+					}
+		        }, 1990)
+		        if (num == 0) {
+		            clearInterval(timer);
+		            $('#jumpLiDiv').remove();
+		        }
+		    }, 2000)
+		}
+		function vote(){
+		$(window).attr('location','vote.html')
+		}
+		// 点击编辑进入品牌详情编辑页面
+		function edit() {
+			$(window).attr('location','editl.html')
+		}
+</script>

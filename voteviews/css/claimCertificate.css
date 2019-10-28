@@ -1,0 +1,316 @@
+.claimContainer {
+	width: 100%;
+	height: 100%;
+	min-height: 20.5rem;
+	margin: auto;
+	max-width: 7.5rem;
+	background: rgba(238, 238, 238, 1);
+}
+
+.claimContainer .banner {
+	width: 100%;
+	height: 6.1rem;
+	background: url(../img/receive_topbg_img.png) no-repeat center;
+	background-size: cover;
+	padding: 1.48rem 0.71rem 0.88rem;
+}
+
+.claimContainer .bannerText {
+	width: 6.08rem;
+	height: 0.82rem;
+	font-size: 0.36rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(230, 236, 242, 1);
+	line-height: 0.48rem;
+	text-align: center;
+}
+
+.claimContent {
+	width: 100%;
+	height: 14.4rem;
+	position: relative;
+}
+
+.apply {
+	width: 92%;
+	height: 8.64rem;
+	margin: auto;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 0.10rem;
+	position: absolute;
+	top: -2.92rem;
+	left: 0;
+	right: 0;
+	padding: 0.48rem 0.38rem 0 0.38rem;
+}
+
+.applyContent {
+	width: 92%;
+	min-height: 8.64rem;
+	margin: auto;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 0.1rem;
+	position: absolute;
+	top: -2.92rem;
+	left: 0;
+	right: 0;
+	padding: 0.48rem 0.4rem 0rem 0.39rem;
+	margin-bottom: 0.3rem;
+}
+
+.applyTop {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.49rem;
+}
+
+.applyTop img {
+	width: 2rem;
+	height: 0.1rem;
+}
+
+.applyTitle {
+	/* width: 1.32rem; */
+	height: 0.34rem;
+	font-size: 0.34rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	line-height: 0.3rem;
+}
+
+.applyProve {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	margin-bottom: 0.68rem;
+}
+
+.proveContent {
+	display: flex;
+	flex-direction: column;
+}
+
+.proveTitle {
+	/* width: 255rem; */
+	height: 0.29rem;
+	font-size: 0.30rem;
+	font-family: PingFang;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	line-height: 0.48rem;
+}
+
+.proveTitle::after {
+	content: '*';
+	margin: auto;
+	color: #C70000;
+	font-size: 0.3rem;
+	font-weight: 800;
+}
+
+.proveDesc {
+	/* width: 2.40rem; */
+	height: 0.21rem;
+	font-size: 0.22rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	line-height: 0.48rem;
+	margin: 0.17rem 0 0.68rem;
+}
+
+.proveBtn {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.proveBtn1,
+.proveBtn2 {
+	width: 1.10rem;
+	height: 0.46rem;
+	border: 0.01rem solid rgba(184, 201, 215, 1);
+	border-radius: 0.06rem;
+	font-size: 0.22rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(2, 97, 177, 1);
+	line-height: 0.48rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.proveBtn2 {
+	width: 1.4rem;
+	margin-left: 0.49rem;
+}
+
+.proveImg {
+	width: 2.42rem;
+	height: 1.80rem;
+	border: 0.01rem solid rgba(180, 189, 194, 1);
+	border-radius: 0.06rem;
+	padding: 0.2rem;
+	position: relative;
+}
+
+.proveImg img {
+	width: 100%;
+	height: 100%;
+}
+
+/* 手机验证 */
+.mobile {
+	width: 92%;
+	margin: auto;
+	min-height: 4.40rem;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 0.10rem;
+	position: absolute;
+	top: 6.02rem;
+	left: 0;
+	right: 0;
+	padding: 0.48rem 0.45rem;
+}
+
+.mobileContent {
+	width: 100%;
+	/* margin-top: 0.55rem; */
+}
+
+.iphone,
+.captcha {
+	width: 100%;
+	height: 0.8rem;
+	background: rgba(249, 249, 249, 1);
+	border: 0.01rem solid rgba(233, 233, 233, 1);
+	border-radius: 0.06rem;
+	display: flex;
+	align-items: center;
+}
+
+.iphone-left {
+	width: 0.8rem;
+	height: 0.4rem;
+	padding-left: 0.18rem;
+	font-size: 0.28rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	line-height: 0.48rem;
+	border-right: 0.01rem solid rgba(0, 0, 0, 0.1);
+}
+
+.cellphone {
+	width: 80%;
+	padding-left: 0.16rem;
+
+	height: 0.75rem;
+	background: rgba(249, 249, 249, 1);
+	border-radius: 0.06rem;
+}
+
+.errorText {
+	/* width: 218rem; */
+	height: 0.21rem;
+	font-size: 0.22rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(225, 39, 39, 1);
+	line-height: 0.48rem;
+	padding-top: 0.14rem;
+	padding-left: 0.09rem;
+}
+
+
+.captchaContent {
+	margin-top: 0.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.captcha {
+	width: 100%;
+	height: 0.80rem;
+	background: rgba(249, 249, 249, 1);
+	border: 0.01rem solid rgba(233, 233, 233, 1);
+	border-radius: 0.06rem 0rem 0rem 0.06rem;
+}
+
+.codeBtn {
+	width: 40%;
+	height: 0.80rem;
+	background: rgba(40, 87, 161, 1);
+	border-radius: 0rem 0.06rem 0.06rem 0rem;
+	font-size: 0.24rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 0.48rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tips {
+	width: 92%;
+	margin: auto;
+	height: 0.60rem;
+	font-size: 0.24rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	line-height: 0.36rem;
+	position: absolute;
+	/* top: 11.02rem; */
+	bottom: 2.7rem;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.claimBottom {
+	width: 92%;
+	margin: auto;
+	position: absolute;
+	bottom: 0.88rem;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.claimBottom img {
+	width: 0.9rem;
+	height: 0.9rem;
+}
+
+.submit {
+	width: 76%;
+	height: 0.90rem;
+	background: rgba(38, 80, 152, 1);
+	border-radius: 0.10rem;
+
+	font-size: 0.30rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 1);
+	line-height: 0.48rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.proveImg input {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	opacity: 0;
+}

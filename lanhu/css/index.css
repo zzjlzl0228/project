@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "PingFang SC", -apple-system, Roboto, "Microsoft YaHei";
+}
+
+.lanhu {
+	width: 100%;
+	min-width: 1260px;
+}
+
+.home {
+	width: 100%;
+	height: 60px;
+	background: url(https://homecdn.lanhuapp.com/img/topbar_bg_dsm_0.svg) no-repeat ;
+	background-size: 100% 100%;
+}
+.wenben {
+	width: 100%;
+	height: 60px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 60px;
+}
+#top {
+	margin-left: 100px;
+	color: #2878ff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.see-details {
+	width: 80px;
+	height: 28px;
+	margin-left: 70px;
+}
+.btn {
+	background-color: #2878ff;
+	font-size: 14px;
+	border: 1px solid #2878FF;
+	
+	font-weight: 300;
+	color: #ffffff;
+}
+.top {
+	width: 100%;
+	height: 978px;
+	background: url(../img/bg-1.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.nav {
+	width: 100%;
+	height: 60px;
+	position: relative;
+}
+.logo {
+	
+	margin-left: 50px;
+	padding-top: 10px;
+	box-sizing: border-box;
+}
+.logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.top_nav {
+	/* padding-top: 20px;
+	margin-right: 60px; */
+	position: absolute;
+  top: 20px;
+  left: 82%;
+  transform: translate(-50%, 0);
+}
+
+.top_nav li {
+	margin-right: 30px;
+	
+}
+.top_nav li:nth-child(4) a {
+	color: #2878FF;
+}
+.top_nav li:last-child {
+	margin-right: 0;
+}
+.top_nav a {
+	color: #FFFFFF;
+}
+.top_nav a:hover {
+	color: RGBA(255, 255, 255, 1);
+}
+
+.register {
+	width: 100px;
+	height: 36px;
+	border-radius: 4px;
+}
+
+.intro {
+	text-align: center;
+}
+.intro h1 {
+	font-size: 42px;
+	padding-top: 100px;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 2.55px;
+}
+
+.intro_text p {
+	color: white;
+  font-size: 17px;
+  font-weight: 200;
+	padding: 30px 0 27.2px 0;
+}
+
+.intro_btn .begin{
+	width: 128px;
+	height: 38px;
+	background: #FFFFFF;
+	border: 1px solid #2878FF;
+	border-radius: 4px;
+	color: #2878FF;
+}
+
+.video_main {
+	width: 775px;
+  padding-top: 50px;
+  margin: 45px auto 0 auto;
+}
+video {
+	width: 100%;
+  border-radius: 0 0 4px 4px;
+	margin-top: -4px;
+}
+.video_main img {
+	width: 100%;
+	height: 100%;
+}
+
+.tubiao {
+	height: 30px;
+  line-height: 30px;
+  width: 892px;
+  margin: 45px auto 0 auto;
+}
+
+.tubiao li {
+	margin-right: 100px;
+}
+
+.tubiao li:last-child {
+	margin-right: 0;
+}
+
+.home_sections {
+	width: 1190px;
+  margin: 0 auto;
+  padding-top: 100px;
+}

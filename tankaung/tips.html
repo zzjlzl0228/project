@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>投票提示弹框</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/code.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.tipsContainer {
+				width: 100%;
+				max-width: 7.5rem;
+				margin: auto;
+			}
+
+			.tipsContent {
+				width: 100%;
+				margin: auto;
+				/* height: 6.06rem; */
+				padding: 2.84rem 0.97rem 0rem 0.93rem;
+			}
+
+			.tipsTop {
+				width: 100%;
+				height: 2.9rem;
+				background: url(images/tanc_ditu_img.png) no-repeat;
+				background-size: 100% 100%;
+
+			}
+
+			.tipsImg {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 0.23rem;
+			}
+			
+			.tipsTop .tipsImg1 {
+				width: 1.8rem;
+				height: 1.87rem;
+				margin-left: 0.33rem;
+				margin-top: -0.35rem;
+			}
+			.tipsImg-right {
+				display: flex;
+				flex-direction: column;
+			}
+			.tipsClose {
+				width: 0.26rem;
+				height: 0.26rem;
+				margin-top: 0.26rem;
+				margin-left: 2rem;
+				
+			}
+			.tipsTitle {
+				width: 2.46rem;
+				height: 0.81rem;
+				margin-top: 0.78rem;
+				margin-right: 0.13rem;
+			}
+
+			.tips {
+				width: 85%;
+				margin: auto;
+				height: 0.29rem;
+				font-size: 0.3rem;
+				font-family: Microsoft YaHei;
+				font-weight: bold;
+				color: rgba(255, 255, 255, 1);
+				text-shadow: 0px 0.06rem 0.12rem rgba(24, 62, 120, 0.64);
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<div class="tipsContainer">
+			<div class="tipsContent">
+				<div class="tipsTop">
+					<div class="tipsImg">
+						<img src="images/tanc_jiangb2_img.png" class="tipsImg1">
+						<div class="tipsImg-right">
+							<img src="images/tanc_close_icon.png" class="tipsClose">
+							<img src="images/tanc_toupts_img.png" class="tipsTitle">
+						</div>
+					</div>
+					<div class="tips">
+						还有29分钟才能继续投票哦~
+					</div>
+				</div>
+				<div class="tipsCenter">
+					<div class="wangzhi">
+						<span class="needEllipsis">http://www.10pinping.com…</span>
+					</div>
+					<div class="copyBtn">
+						复制网址
+					</div>
+
+				</div>
+				<div class="tipsCenter-img"></div>
+				<div class="tipsBottom">
+					<div class="tipsBottom-top">
+						<img src="images/tanc_zhiwen_img.png">
+					</div>
+					<div class="tipsBottom-center">
+						<p>长按识别小程序</p>
+						<p>投票更方便</p>
+					</div>
+					<div class="tipsBottom-bottom">
+						<img src="images/erweima.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

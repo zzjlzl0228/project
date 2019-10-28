@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://www.chinagreentown.com/article/2646 -->
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="keywords" content="纷橙,网络,科技,纷橙网络,电商">
+		<meta name="description" content="纷橙网络科技有限公司，创建于2016年，以优质的产品品质和服务品质引领行业，致力于打造“电商网络”第一品牌。">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>纷橙新闻-纷橙网络</title>
+		<link rel="stylesheet" href="./newDetail_files/bootstrap.min.css">
+		<link rel="stylesheet" href="./newDetail_files/bootstrap-theme.min.css">
+		<link href="./newDetail_files/font-awesome.min.css" rel="stylesheet">
+		<script type="text/javascript" async="" src="./newDetail_files/ga.js"></script>
+		<script type="text/javascript" src="./newDetail_files/jquery.min.js"></script>
+		<script src="./newDetail_files/bootstrap.min.js"></script>
+
+
+		<script type="text/javascript" src="./newDetail_files/respond.min.js"></script>
+		<script type="text/javascript" src="./newDetail_files/html5shiv.min.js"></script>
+		<link rel="stylesheet" href="./newDetail_files/layui.css" media="all">
+		<script type="text/javascript" src="./newDetail_files/layui.js"></script>
+		<link href="./newDetail_files/main.css" rel="stylesheet">
+
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+		<style id="tsbrowser_video_independent_player_style" type="text/css">
+			[tsbrowser_force_max_size] {
+				width: 100% !important;
+				height: 100% !important;
+				left: 0px !important;
+				top: 0px !important;
+				margin: 0px !important;
+				padding: 0px !important;
+			}
+
+			[tsbrowser_force_fixed] {
+				position: fixed !important;
+				z-index: 9999 !important;
+				background: black !important;
+			}
+
+			[tsbrowser_force_hidden] {
+				opacity: 0 !important;
+				z-index: 0 !important;
+			}
+
+			[tsbrowser_hide_scrollbar] {
+				overflow: hidden !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid hidden-md hidden-lg" style="background:#006650;color:white">
+			<center><a href="index.html"><img src="logo.png" style="margin:10px auto; height:30px; width:auto"></a></center>
+			<div class="dropdown" style="margin-right:1em;position:absolute;top:15px; right:0px;font-size:16px;z-index:999">
+				<i id="top-control" class="fa fa-reorder dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></i>
+				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="for-Us.html">关于我们</a></li>
+					<li><a href="contactUs.html">联系我们</a></li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="container-fluid" style="position: relative;z-index: 99;background: white">
+			<div class="row">
+				<div class=" container hidden-sm hidden-xs" style="height:80px;line-height:80px;">
+					<div class="row ">
+						<div class="col-md-2" style="height:45px;">
+							<a href="index.html"><img src="logo.png" style="width:100%;height:auto"></a>
+						</div>
+						<div class="col-md-10 " style="height:45px;">
+							<ul class="top-menu">
+								<li class="nav" target="about"><a href="index.html">首页</a>
+
+								</li>
+								<li class="nav" target="news"><a href="for-Us.html">关于我们</a>
+
+								</li>
+								<li class="nav" target="video"><a href="contactUs.html">联系我们</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			(function() {
+				$("#joinus").click(function() {
+					if ($("#joinus-node").css("display") == "block") {
+						$("#joinus-node").fadeOut();
+					} else {
+						$("#joinus-node").fadeIn();
+					}
+
+				})
+
+				var nav = $(".nav")
+				var timeout = -1
+				var timeoutList = -1
+				nav.each(function(idx) {
+					var currEl = $(this)
+					if (currEl.attr("target")) {
+						var listEl = $("#sub-menu-" + currEl.attr("target"))
+						listEl.attr('idx', idx);
+						listEl.css({
+							left: currEl.offset().left - 5,
+							width: ($("body").width() - currEl.offset().left) + "px"
+						})
+						currEl.hover(function() {
+							currEl.addClass("on")
+						}, function() {
+							timeout = setTimeout(function() {
+								currEl.removeClass("on")
+								listEl.animate({
+									top: "0"
+								})
+								listEl.css({
+									height: '80px'
+								})
+								$("#joinus-node").css({
+									"display": "none"
+								});
+							}, 10);
+						})
+						listEl.hover(function() {
+
+							clearTimeout(timeout);
+						}, function() {
+							console.log(currEl)
+							nav.eq(parseInt(listEl.attr("idx"))).removeClass("on")
+							timeoutList = setTimeout(function() {
+								listEl.animate({
+									top: "0"
+								})
+								listEl.css({
+									height: '80px'
+								})
+								$("#joinus-node").css({
+									"display": "none"
+								});
+							}, 10);
+
+						})
+					} else {
+						currEl.hover(function() {
+							currEl.addClass("on")
+						}, function() {
+							currEl.removeClass("on")
+						})
+					}
+				})
+			})()
+		</script>
+		<style type="text/css">
+			.layui-breadcrumb {
+				height: 60px;
+				line-height: 70px;
+				display: block
+			}
+
+			ul.nav li {
+				padding: 10px 1em;
+				color: #666;
+				height: 60px;
+				line-height: 60px;
+				font-size: 14px;
+				float: left
+			}
+
+			ul.nav li a {
+				display: block;
+				height: 40px;
+				line-height: 40px;
+				font-size: 14px;
+				padding: 0;
+				cursor: pointer;
+			}
+
+			ul.nav li.on a {
+				border-bottom: 2px solid #417d52;
+				color: #417d52;
+				font-weight: 400
+			}
+
+			ul.nav li a:hover {
+				border-bottom: 2px solid #417d52;
+				color: #417d52;
+				background: transparent;
+			}
+		</style>
+		<div class="container-fluid">
+			<div class="row">
+				<img src="./newDetail_files/banner4.jpg" style="width:100%;height:auto">
+			</div>
+
+		</div>
+		<div class="container-fluid">
+			<div class="row" style="border-bottom: 1px solid #eee;">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-11 col-sm-11 col-md-3">
+							<span class="layui-breadcrumb fencheng" style="visibility: visible;">
+								<a href="javascript:;"> 纷橙网络<span class="layui-box">&gt;</span></a>
+								<a id="path"><cite>新闻中心</cite></a>
+							</span>
+						</div>
+						<div class="col-sm-1 col-xs-1 col-md-9" style="height: 60px;">
+
+							<style type="text/css">
+								.layui-nav {
+									padding: 0;
+									float: right;
+									background-color: white;
+									color: #333;
+								}
+
+								.layui-nav .layui-nav-item a {
+									padding: 0 15px;
+								}
+
+								.layui-nav .layui-nav-item a {
+									color: #333
+								}
+
+								.layui-nav .layui-nav-item a:hover {
+									color: #333
+								}
+
+								.layui-nav .layui-nav-item dd a {
+									padding-top: 10px;
+									padding-bottom: 10px;
+								}
+								.fencheng a:hover {
+									color: #000000 !important;
+									text-decoration:none;
+								}
+							</style>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid" style="background:#f6f6f6;">
+			<div class="row">
+				<div class="container">
+					<div class="row" style="background:white; border:1px solid #eee; " id="body-content">
+						<div class="col-md-10 col-md-offset-1 col-xs-12" style="padding-top:15px; padding-bottom: 15px;">
+							<div class="row">
+								<div class="col-xs-12 mt20" id="article">
+									<div class="col-xs-12  textac borded">
+										<h3 style="font-weight:600">十大网络科技预测</h3>
+									</div>
+
+
+									<div class="col-xs-12 mt15 mb20 c333">
+										<p style="text-indent: 2em;"><strong>【核心提示】</strong></p>
+										<p style="text-indent: 2em;">像前些年一样，对新一年网络科技可能的发展趋势，全球知名社群网络信息部落格Mashable创办人兼首席执行官Pete Cashmore又做出了预测，并且不多不少又是10个。对这位苏格兰“80后”IT精英的预测，人们绝不敢小视，业内人士期待从中捕捉创造新商业传奇的机会，广大消费者希望看到自己即将获得哪些令人欣喜的体验。</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>1.触控电脑</strong></p>
+										<p style="text-indent: 2em;">新输入模式将成为主流，触控科技可能取代鼠标，Windows 8与Mac OS XLion已应用于移动设备，采用触控屏幕来取代传统界面。</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>2.社交分享</strong></p>
+										<p style="text-indent: 2em;">社交媒体的沟通模式将成为主流。Facebook在2011年9月推出自动分享功能，一旦用户授权相关应用程序，无需按键就可以将所观赏的音乐或影片自动存入个人页面。不过，自动分享功能也可能让用户望而却步。</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>3.NFC及移动支付</strong></p>
+										<p style="text-indent: 2em;">移动支付技术不断创新崛起，2012年将成为近场通讯（NFC）大放异彩的一年，用户只要在商店或出租车的刷卡机上刷手机，消费金额就可自动从账户扣除。</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>4. 亚马逊有望超越iPad</strong></p>
+										<p style="text-indent: 2em;">假如触控电脑代表未来，iPad无疑是王者，但2011年底却出现强大竞争对手，亚马逊（Amazon）。其烈火牌平板电脑（Kindle Fire）销售可望在2012年超越iPad，因为亚马逊与iPad相比除了具有价格优势之外，还拥有完整的数字内容商店，涵盖电影、电子书、电视节目与其他媒体。</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>5.电视无所不在</strong></p>
+										<p style="text-indent: 2em;">随着移动设备的普及，掌上电视需求将大增，人们将能实现随时上网看电视。当然，他们将为此支付费用</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>6.声控技术</strong></p>
+										<p style="text-indent: 2em;">iPhone 4S的Siri让用户以声控来发送简讯、提醒记事并搜寻网络，开启了声控装置的新趋势。虽然声控技术已发展多年，Siri开启了新局面，让移动设备理解人类的话。其他设备可能陆续效法。</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>7.体感动作</strong></p>
+										<p style="text-indent: 2em;">体感动作已成为新输入方式，微软的Kinect已研发出体感动作界面，宛如电影关键报告，人们挥挥手就可以控制各项装置。</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>8.第二屏幕体验</strong></p>
+										<p style="text-indent: 2em;">电视及电影业者高层近来纷纷提倡“第二屏幕体验”，也就是让用户边看电视、边通过移动设备显示相关内容的信息，为观赏影片增加新的互动方式。</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>9.可折叠屏幕</strong></p>
+										<p style="text-indent: 2em;">许多人已迫不及待拿着可折叠屏幕来放大或缩小画面。诺基亚与三星双双暗示，将在2012年发表可折叠屏幕的手机。不过要看到薄如纸、可卷曲收进口袋的设备，恐怕要等好几年。</p>
+										<p><br></p>
+										<p style="text-indent: 2em;"><strong>10.HTML5</strong></p>
+										<p style="text-indent: 2em;">第五代超文本标记HTML标准，将让开发商创造更丰富、互动性更高的应用程序。</p>
+										<p style="text-indent: 2em;"><br></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$("title").text($("title").text().replace(/<br>/g,''))
+</script>
+		<div class="container-fluid">
+			<div class="row" style=" border-top:1px solid #eee;">
+				<div class="container" id="footer">
+					<div class="row hidden-xs hidden-sm">
+						<div class="col-md-10 col-sm-offset-1">
+		
+							<div style="padding-top:25px;width:100%;float:left">
+								<center>© 纷橙网络 </center>
+							</div>
+							<div style="padding-top:5px;margin-left:auto;margin-right:auto;float:left;width:100%;">
+								<center>全国客服热线：400-167-5198</center>
+							</div>
+							<div style="padding-top:5px;margin-left:auto;margin-right:auto;float:left;width:100%;">
+								<center>友情链接：
+									<a href="#">纷橙管理</a>
+									<a href="#">纷橙科技</a>
+									<a href="#">纷橙服务</a>
+									<a href="#">纷橙设计</a>
+									<a href="#">纷橙装饰</a>
+								</center>
+							</div>
+		
+						</div>
+					</div>
+					<div class="row  hidden-md hidden-lg">
+						<center>©2016 纷橙网络有限公司</center>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<style type="text/css">
+			.popover {
+				max-width: 400px
+			}
+			#footer center {
+				font-size: 13px;
+			}
+			#footer a:hover {
+				color: #00B7EE;
+			}
+		</style>
+		
+	</body>
+</html>

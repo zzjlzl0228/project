@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="echarts.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.container {
+				width: 100%;
+				margin: auto;
+			}
+
+			.content {
+				width: 1400px;
+				margin: auto;
+				height: 875px;
+				padding: 30px;
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.left_container {
+				width: 900px;
+				/* height: 875px; */
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.left,
+			.right {
+				width: 47%;
+
+			}
+
+			.top {
+				width: 364px;
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
+
+			.center {
+				width: 700px;
+				margin: auto;
+				position: absolute;
+				top: 490px;
+				left: -17px;
+				right: 0;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+
+			.left_text,
+			.right_text {
+				width: 271px;
+				height: 63px;
+				position: absolute;
+				top: 203px;
+				left: 56px;
+				right: 109px;
+				font-size: 64px;
+				font-family: Microsoft YaHei;
+				font-weight: bold;
+				color: rgba(151, 94, 19, 1);
+				float: left;
+			}
+
+			.right_text {
+				left: 472px;
+
+			}
+
+			.bottom_left_text,
+			.bottom_right_text {
+				width: 262px;
+				height: 55px;
+				font-size: 39px;
+				font-family: Microsoft YaHei;
+				font-weight: bold;
+				color: rgba(222, 195, 173, 1);
+				position: absolute;
+				top: 519px;
+				left: 63px;
+				right: 67px;
+				text-align: center;
+			}
+
+			.bottom_right_text {
+				left: 456px;
+			}
+
+
+			.right_container {
+				margin-left: 30px;
+				width: 600px;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.right_container .top_echarts,
+			.right_container .bottom_echarts {
+				width: 100%;
+				height: 400px;
+			}
+
+			.right_container .bottom_echarts {
+				margin-top: 20px;
+				width: 300px;
+				height: 200px;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<div class="left_container">
+					<div class="left">
+						<img src="img/jifen_chengy_img.png">
+					</div>
+					<div class="right">
+						<img src="img/jifen_shanz_img.png">
+					</div>
+					<div class="top">
+						<img src="img/jifen_top_img.png">
+					</div>
+					<div class="center">
+						<img src="img/jifen_vs_img.png">
+					</div>
+					<div class="left_text">橙芽网络</div>
+					<div class="right_text">山舟网络</div>
+					<div class="bottom_left_text">00000000000</div>
+					<div class="bottom_right_text">0000000000</div>
+				</div>
+
+				<div class="right_container">
+					<div class="top_echarts">
+						<div id="main" style="width: 500px;height:400px;"></div>
+					</div>
+					<div class="bottom_echarts">
+						<img src="img/expect1.png">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById('main'));
+
+			var colors = ['#5793f3', '#d14a61', '#675bba'];
+
+
+			option = {
+				color: colors,
+				title: {
+					text: '积分对比'
+				},
+				tooltip: {
+					trigger: 'none',
+					axisPointer: {
+						type: 'cross'
+					}
+				},
+				legend: {
+					data: ['2019 山舟网络', '2019 橙芽网络']
+				},
+				grid: {
+					top: 70,
+					bottom: 50
+				},
+				xAxis: [{
+						type: 'category',
+						axisTick: {
+							alignWithLabel: true,
+							inside: true,
+							length: 5
+						},
+						axisLine: {
+							onZero: false,
+							lineStyle: {
+								color: '#000000'
+							}
+						},
+						axisPointer: {
+							label: {
+								formatter: function(params) {
+									return '积分  ' + params.value +
+										(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+								}
+							}
+						},
+						data: ["09-15", "09-16", "09-17", "09-18", "09-19", "09-20"]
+					},
+					{
+						type: 'category',
+						axisTick: {
+							alignWithLabel: true
+							
+						},
+
+						axisPointer: {
+							label: {
+								formatter: function(params) {
+									return '积分  ' + params.value +
+										(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+								}
+							}
+						}
+					}
+				],
+				yAxis: [{
+					type: 'value',
+					axisTick: {
+						alignWithLabel: true,
+						inside: true,
+						length: 5
+					}
+				}],
+				series: [{
+						name: '2019 山舟网络',
+						type: 'line',
+						xAxisIndex: 1,
+						smooth: true,
+						itemStyle: {
+							normal: {
+								color: 'blue',
+								label: {
+									show: true,
+									position: 'bottom'
+								}
+							}
+						},
+						data: [600,420,250,500,368,489,628]
+					},
+					{
+						name: '2019 橙芽网络',
+						type: 'line',
+						smooth: true,
+						itemStyle: {
+							normal: {
+								color: 'orange',
+								label: {
+									show: true,
+									position: 'top'
+								}
+							}
+						},
+						data: [350,360,400,490,520,800]
+					}
+				]
+			};
+
+
+			myChart.setOption(option);
+		</script>
+	</body>
+</html>

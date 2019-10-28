@@ -1,0 +1,56 @@
+
+/*页面底部*/
+
+.index-footer {
+  position: absolute;
+  border: none;
+  width: 6.4rem;
+  height: .9rem;
+}
+
+.back_to_top {
+	position: fixed;
+	bottom: 2rem;
+	right: .6rem;
+	width: .68rem;
+	height: .68rem;
+	display: none;
+}
+
+.back_to_top img {
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+  height: .5rem;
+  width: 6.4rem;
+  background-color: #353535;
+  padding: .2rem 0;
+  text-align: center;
+  font-size: 0;
+}
+
+footer a:hover,
+footer a:focus,
+footer a:active {
+  color: #fff;
+}
+
+footer a,
+footer .copyright {
+  color: #fff;
+  font-size: .2rem;
+  line-height: .2rem;
+}
+
+footer a:nth-child(2) {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding: 0 .1rem;
+  margin: 0 .1rem;
+}
+
+footer .copyright {
+  margin-top: .1rem;
+}

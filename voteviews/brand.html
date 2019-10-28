@@ -26,7 +26,7 @@
 				</div>
 				<div class="searchContainer">
 					<form action="" method="" class="searchContent">
-						<input type="text" name="zscode" id="zscode" placeholder="输入您要查询的证书编码" />
+						<input type="text" name="zscode" id="zscode" placeholder="输入您要查询的证书编码"onkeyup="this.value=this.value.replace(/[^\w]/g,'')"/>
 						<img src="img/pinpairenzheng2(5).png" class="search-btn">
 					</form>
 				</div>
@@ -80,5 +80,15 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			var reg =  /(?!^\d+$)(?!^[a-zA-Z]+$)[0-9a-zA-Z]{4,23}/;
+			var zscode = $('#zscode').val()
+			if (reg.test(zscode)=== -1) {
+				console.log(err)
+			}else {
+				console.log(zscode)
+			}
+			
+		</script>
 	</body>
 </html>

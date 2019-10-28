@@ -1,0 +1,1193 @@
+/* 微信头 */
+.wxHead {
+	width: 0.8rem;
+	height: 0.52rem;
+	border-radius: 0.26rem;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 0.16rem 0 rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 0.18rem;
+	left: 0.3rem;
+	z-index: 100;
+}
+
+.wxHead>a {
+	display: block;
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
+.wxHead>a>img {
+	display: block;
+	width: 0.16rem;
+	height: 0.29rem;
+	margin: 0.115rem auto;
+}
+
+/* 主题内容 */
+.signUp {
+	width: 100%;
+	max-width: 6.4rem;
+	margin: 0 auto;
+	height: auto;
+	line-height: 0;
+	overflow: hidden;
+	background: #fff url("../img/enroll_topbg_img.png") top center no-repeat;
+	background-size: 6.4rem 6.92rem;
+}
+
+.signUp_jobBlock {
+	width: 3.3rem;
+	height: 0.48rem;
+	margin: 2.9rem auto 0;
+	text-align: center;
+	font-size: 0.28rem;
+	line-height: 0.5rem;
+	color: #222B56;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 中心 */
+.signUp_main {
+	width: 5.9rem;
+	height: auto;
+	background: #fff;
+	box-shadow: 0px 0.02rem 0.18rem 0px rgba(97, 129, 221, 0.25);
+	border-radius: 0.14rem;
+	margin: 0.6rem auto 0.24rem;
+	overflow: hidden;
+	text-align: center;
+	padding-bottom: 0.4rem;
+}
+
+/* 标题 */
+.signUp_main_title {
+	vertical-align: top;
+	display: inline-block;
+	height: 0.36rem;
+	margin: 0.42rem auto 0.4rem;
+	font-size: 0;
+}
+
+.title_left,
+.title_right,
+.title_icon {
+	display: inline-block;
+	height: 0.28rem;
+	background: url("../img/receive_wang_icon.png") no-repeat;
+	background-size: 3rem 0.28rem;
+	margin-top: 0.04rem;
+}
+
+.title_left,
+.title_right {
+	width: 0.52rem;
+	background-position: left center;
+}
+
+.title_right {
+	background-position: right center;
+}
+
+.title_icon {
+	width: 0.34rem;
+	margin-left: 0.1rem;
+	background-position: -0.62rem center;
+
+}
+
+.title_main {
+	vertical-align: top;
+	font-size: 0.3rem;
+	line-height: 0.36rem;
+	padding: 0 0.14rem;
+	color: #232F49;
+}
+
+/* 品牌信息 */
+.signUp_input {
+	width: 5.1rem;
+	height: auto;
+	margin: 0 auto 0.22rem;
+}
+
+.signUp_input_main {
+	width: 100%;
+	height: 0.7rem;
+	/*padding: 0.2rem 0;*/
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-radius: 0.1rem;
+}
+
+.input_icon {
+	display: block;
+	float: left;
+	width: 0.25rem;
+	height: 0.28rem;
+	margin: 0.21rem 0.16rem;
+	background: url("../img/enroll_icon.png") no-repeat;
+	background-size: 1.94rem 0.28rem;
+}
+
+/*.input_content {
+    display: block;
+    float: left;
+    width: 3.8rem;
+    font-size: 0.24rem;
+    height: 0.24rem;
+    padding: 0.03rem 0 0.03rem 0.2rem;
+    margin-top: 0.2rem;
+    border: none;
+    outline: none;
+    border-left: 1px solid #ccc;
+    
+}*/
+/*.input_content {
+    display: block;
+    float: left;
+    width: 3.8rem;
+    font-size: 0.24rem;
+    height: 0.24rem;
+    padding-left: 0.2rem;
+    margin-top: 0.23rem;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    border-left: 1px solid #ccc;
+}*/
+
+.input_content {
+	display: block;
+	float: left;
+	width: 3.8rem;
+	height: 0.3rem;
+	border: none;
+	outline: none;
+	margin-top: 0.2rem;
+	border-left: 1px solid #ccc;
+	padding-left: 0.2rem;
+	font-size: 0.24rem;
+	line-height: 0.3rem;
+	border-radius: 0;
+}
+
+.input_tips {
+	display: none;
+	float: right;
+	width: 0.2rem;
+	height: 0.2rem;
+	margin: 0.25rem 0.2rem 0.05rem 0.1rem;
+}
+
+.input_tips img,
+.input_error_icon img,
+.signUp_phoneReg_img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.signUp_input_error {
+	display: none;
+	width: 100%;
+	height: auto;
+	font-size: 0.24rem;
+	line-height: 0.34rem;
+	text-indent: 0.3rem;
+	text-align: left;
+	color: #CF473B;
+	background: url('../img/enroll_no_icon.png') left top 0.07rem no-repeat;
+	background-size: 0.2rem 0.2rem;
+	margin-top: 0.1rem;
+}
+
+.signUp_input.errorDiv .signUp_input_main .input_tips,
+.signUp_input.errorDiv .signUp_input_error {
+	display: block;
+}
+
+.signUp_input.lockDiv .signUp_input_main,
+.signUp_input.lockDiv .signUp_input_main .input_content {
+	background: #f5f5f5;
+	pointer-events: none;
+}
+
+/* 上传证件 */
+.signUp_upload_img {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0.4rem auto 0.3rem;
+	text-align: left;
+	font-size: 0;
+	line-height: 0;
+}
+
+.signUp_upload_img h6 {
+	font-size: 0.28rem;
+	line-height: 0.6rem;
+	text-align: left;
+	font-weight: 500;
+	padding: 0 0.4rem;
+	margin-bottom: 0.1rem
+}
+
+.signUp_upload_img h6 a {
+	color: #3C65C1;
+	float: right;
+	text-decoration: underline;
+}
+
+/* 上传div */
+.upload_main,
+.order_main {
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+
+/* 倍化时候的css */
+.upload_main_1X {
+	width: 100%;
+	height: 2.4rem;
+	margin-left: 0.14rem;
+}
+
+.upload_main_1halfX {
+	width: 98%;
+	margin-left: 0.3rem;
+	/* margin-bottom: 0.3rem */
+}
+
+.upload_main_2X {
+	width: 2.52rem;
+	margin-left: 0.16rem;
+}
+
+.upload_main_1X:first-of-type,
+.upload_main_2X:first-of-type {
+	margin-left: 0.36rem;
+}
+
+/* 审核未通过的时候 */
+.upload_main_error .upload_init,
+.upload_main_error .order_init {
+	border-color: #F01C1C;
+	border-style: dashed;
+}
+
+.upload_main_error .upload_tips,
+.upload_main_error .order_tips {
+	display: block;
+}
+
+/* 初始化状态 */
+.upload_main_1X .upload_init,
+.upload_main_1X .upload_ing,
+.upload_main_1X .upload_error,
+.upload_main_1X .upload_succ,
+.upload_main_1X .upload_pass,
+.upload_main_1X .order_init {
+	border-radius: 0.06rem;
+}
+
+.upload_main_1halfX .upload_init,
+.upload_main_1halfX .upload_ing,
+.upload_main_1halfX .upload_error,
+.upload_main_1halfX .upload_succ,
+.upload_main_1halfX .upload_pass {
+	border-radius: 0.08rem;
+}
+
+.upload_main_2X .upload_init,
+.upload_main_2X .upload_ing,
+.upload_main_2X .upload_error,
+.upload_main_2X .upload_succ,
+.upload_main_2X .upload_pass,
+.upload_main_2X .order_init {
+	height: 2rem;
+	border-radius: 0.1rem;
+}
+
+
+.upload_init,
+.upload_ing,
+.upload_error,
+.upload_succ,
+.upload_pass,
+.order_init {
+	width: 100%;
+	border: 1px solid #D6DBE6;
+	background: #F7F8FA;
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+}
+
+.upload_init_bg {
+	background: url('../img/baoming_shangchuan_zhucezheng.png') no-repeat center center;
+	margin: 0.1rem auto 0.05rem;
+}
+
+.upload_main_1X .upload_init_bg {
+	width: 1.34rem;
+	height: 0.91rem;
+	background-size: 1.34rem 0.91rem;
+}
+
+.upload_main_1halfX .upload_init_bg {
+	width: 1.7rem;
+	height: 1.14rem;
+	background-size: 1.7rem 1.14rem;
+}
+
+.upload_main_2X .upload_init_bg {
+	width: 2.08rem;
+	height: 1.44rem;
+	background-size: 2.08rem 1.44rem;
+}
+
+.upload_main_1X .upload_init_text {
+	font-size: 0.14rem;
+	line-height: 0.2rem;
+	text-align: center;
+	color: #9AA0AC;
+}
+
+.upload_main_1halfX .upload_init_text {
+	font-size: 0.18rem;
+	line-height: 0.25rem;
+	text-align: center;
+	color: #9AA0AC;
+}
+
+.upload_main_2X .upload_init_text {
+	font-size: 0.22rem;
+	line-height: 0.3rem;
+	text-align: center;
+	color: #9AA0AC;
+}
+
+.upload_init_file {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+/* 上传中状态 */
+.upload_ing,
+.upload_error,
+.upload_succ,
+.upload_pass {
+	width: 2.42rem;
+	height: 1.8rem;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 3.72rem;
+	z-index: 1;
+}
+
+.upload_main_1halfX .upload_ing,
+.upload_main_1halfX .upload_error,
+.upload_main_1halfX .upload_succ,
+.upload_main_1halfX .upload_pass {
+}
+
+.upload_ing_img {
+	width: 60%;
+	height: auto;
+	overflow: hidden;
+	margin: 25% auto 10%;
+}
+
+.upload_ing_img img,
+.upload_error_img img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.upload_main_ing .upload_ing {
+	display: block;
+}
+
+.upload_ing_text {
+	color: #9AA0AC;
+	text-align: center
+}
+
+.upload_main_1X .upload_ing_text {
+	font-size: 0.18rem;
+	line-height: 0.24rem;
+}
+
+.upload_main_1halfX .upload_ing_text {
+	font-size: 0.22rem;
+	line-height: 0.28rem;
+}
+
+.upload_main_2X .upload_ing_text {
+	font-size: 0.26rem;
+	line-height: 0.36rem;
+}
+
+/* 上传失败状态 */
+.upload_error {
+	z-index: 2;
+}
+
+.upload_main_bad .upload_error {
+	display: block;
+}
+
+
+.upload_error_img {
+	width: 20%;
+	height: auto;
+	margin: 10% auto 0;
+}
+
+.upload_error_text {
+	color: #CD3F31;
+	text-align: center;
+	line-height: 0.4rem;
+}
+
+.upload_main_1X .upload_error_text {
+	font-size: 0.18rem;
+}
+
+.upload_main_1halfX .upload_error_text {
+	font-size: 0.22rem;
+}
+
+.upload_main_2X .upload_error_text {
+	font-size: 0.26rem;
+	margin-top: 0.12rem;
+}
+
+.upload_error_btn {
+	display: block;
+	width: 70%;
+	text-align: center;
+	border: 1px solid #4084DB;
+	margin: 0 auto;
+	border-radius: 0.04rem;
+	color: #4084DB;
+}
+
+.upload_main_1X .upload_error_btn {
+	line-height: 0.28rem;
+	font-size: 0.18rem;
+}
+
+.upload_main_1halfX .upload_error_btn {
+	line-height: 0.32rem;
+	font-size: 0.22rem;
+	margin-top: 0.12rem;
+}
+
+.upload_main_2X .upload_error_btn {
+	width: 60%;
+	line-height: 0.36rem;
+	font-size: 0.26rem;
+	margin-top: 0.12rem;
+}
+
+
+
+
+
+/* 上传成功状态 */
+.upload_succ {
+	z-index: 3;
+}
+
+.upload_main_good .upload_succ {
+	display: block;
+}
+
+.upload_succ_img,
+.upload_pass_img {
+	width: 100%;
+	height: 100%;
+}
+
+.upload_succ_img img,
+.upload_pass_img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.upload_succ_nemu {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 0;
+	color: #fff;
+	overflow: hidden;
+	text-align: center;
+}
+
+.upload_main_1X .upload_succ_nemu {
+	height: 0.3rem;
+}
+
+.upload_main_1halfX .upload_succ_nemu {
+	height: 0.44rem;
+}
+
+.upload_main_2X .upload_succ_nemu {
+	height: 0.6rem;
+}
+
+.nemu_line {
+	display: inline-block;
+	vertical-align: top;
+	width: 1px;
+	background: #fff;
+}
+
+.upload_main_1X .nemu_line {
+	height: 0.2rem;
+	margin-top: 0.05rem;
+}
+
+.upload_main_1halfX .nemu_line {
+	height: 0.24rem;
+	margin-top: 0.1rem;
+}
+
+.upload_main_2X .nemu_line {
+	height: 0.3rem;
+	margin-top: 0.15rem;
+}
+
+.nemu_btn {
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+	height: 100%;
+}
+
+.removeBtn_icon,
+.uploadBtn_icon {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.upload_main_1X .removeBtn_icon,
+.upload_main_1X .uploadBtn_icon {
+	width: 0.18rem;
+	height: 0.18rem;
+	margin-top: 0.06rem;
+	margin-right: 0.05rem;
+}
+
+.upload_main_1halfX .removeBtn_icon,
+.upload_main_1halfX .uploadBtn_icon {
+	width: 0.22rem;
+	height: 0.22rem;
+	margin-top: 0.09rem;
+	margin-right: 0.08rem;
+}
+
+
+.upload_main_2X .removeBtn_icon,
+.upload_main_2X .uploadBtn_icon {
+	width: 0.26rem;
+	height: 0.26rem;
+	margin-top: 0.15rem;
+	margin-right: 0.1rem;
+}
+
+.removeBtn_icon img,
+.uploadBtn_icon img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.upload_main_1X .removeBtn_text,
+.upload_main_1X .uploadBtn_text {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0.18rem;
+	height: 0.3rem;
+	line-height: 0.3rem;
+}
+.upload_main_1halfX .removeBtn_text,
+.upload_main_1halfX .uploadBtn_text {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0.22rem;
+	height: 0.44rem;
+	line-height: 0.44rem;
+}
+
+.upload_main_2X .removeBtn_text,
+.upload_main_2X .uploadBtn_text {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0.26rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+}
+
+
+/* 审核通过状态 */
+.upload_pass {
+	z-index: 4;
+}
+
+.upload_main_pass .upload_pass {
+	display: block;
+}
+
+.upload_pass_text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	color: #fff;
+}
+
+.upload_main_1X .upload_pass_text {
+	height: 0.3rem;
+	font-size: 0.18rem;
+	line-height: 0.3rem;
+}
+
+.upload_main_1halfX .upload_pass_text {
+	height: 0.44rem;
+	font-size: 0.22rem;
+	line-height: 0.44rem;
+}
+
+.upload_main_2X .upload_pass_text {
+	height: 0.6rem;
+	font-size: 0.26rem;
+	line-height: 0.6rem;
+}
+
+/* 其他3项div */
+.order_title {
+	width: 100%;
+	text-align: center;
+	height: 0.3rem;
+	font-size: 0.24rem;
+	line-height: 0.3rem;
+	margin-top: 0.1rem;
+}
+
+.order_item {
+	height: auto;
+	font-size: 0;
+	text-align: center;
+}
+
+.upload_main_1X .order_item {
+	margin-top: 0.07rem;
+}
+
+.upload_main_2X .order_item {
+	margin-top: 0.08rem;
+}
+
+.upload_main_1X .order_item:first-of-type,
+.upload_main_2X .order_item:first-of-type {
+	margin-top: 0.12rem;
+}
+
+.order_content {
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #D6DBE6;
+	background: #FAFAFA;
+	line-height: 1;
+	color: #C2C7D3;
+}
+
+.order_icon_succ .order_content,
+.order_icon_error .order_content {
+	color: #3C455A;
+}
+
+.upload_main_1X .order_content {
+	font-size: 0.14rem;
+	padding: 0.05rem 0.15rem 0.02rem;
+	margin-right: 0.07rem;
+}
+
+.upload_main_2X .order_content {
+	font-size: 0.2rem;
+	padding: 0.08rem 0.25rem 0.08rem;
+	margin-right: 0.1rem;
+}
+
+.order_icon {
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid transparent;
+}
+
+.upload_main_1X .order_icon {
+	width: 0.14rem;
+	height: 0.14rem;
+	margin-top: 0.03rem;
+	background: url("../img/qita_shouci_yanzheng.png") no-repeat;
+	background-size: 0.62rem 0.14rem;
+}
+
+.upload_main_2X .order_icon {
+	width: 0.2rem;
+	height: 0.2rem;
+	margin-top: 0.08rem;
+	background: url("../img/qita_yanzheng_duicuo.png") no-repeat;
+	background-size: 0.8rem 0.2rem;
+}
+
+.order_icon_default .order_icon {
+	background-position: right center;
+}
+
+.order_icon_succ .order_icon {
+	background-position: left center;
+}
+
+.order_icon_error .order_icon {
+	background-position: center center;
+}
+
+.order_text {
+	text-align: center;
+	color: #9AA0AC;
+	margin-top: 0.1rem;
+}
+
+.upload_main_1X .order_text {
+	font-size: 0.14rem;
+	line-height: 0.2rem;
+}
+
+.upload_main_2X .order_text {
+	font-size: 0.22rem;
+	line-height: 0.3rem;
+}
+
+/* 标题  */
+.upload_title {
+	width: 100%;
+	height: 0.3rem;
+	font-size: 0;
+	text-align: center;
+	margin-top: 0.1rem;
+}
+
+.upload_title_icon {
+	vertical-align: top;
+	display: inline-block;
+	width: 0.14rem;
+	height: 0.16rem;
+	margin-top: 0.07rem;
+	margin-right: 0.08rem;
+}
+
+.upload_title_icon img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.upload_title_text {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0.24rem;
+	line-height: 0.3rem;
+	color: #232F49;
+}
+
+.upload_tips,
+.order_tips {
+	display: none;
+	color: #F01C1C;
+	font-size: 0.16rem;
+	line-height: 0.24rem;
+}
+
+/* 其他3项的弹出层 */
+.order_alert {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 101;
+}
+
+.order_alert_main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 5rem;
+	height: auto;
+	background: #fff;
+	border-radius: 0.16rem;
+	overflow: hidden;
+}
+
+.order_alert_main h6 {
+	font-size: 0.3rem;
+	line-height: 0.5rem;
+	margin: 0.3rem auto;
+	text-align: center;
+	font-weight: 500;
+}
+
+.alert_title {
+	width: 100%;
+	margin-bottom: 0.12rem;
+	text-align: left;
+}
+
+.upload_main_1halfX .upload_tips {
+	margin-top: 0.1rem;
+}
+
+.order_alert_btn {
+	display: block;
+	width: 3.6rem;
+	height: 0.72rem;
+	background: #0261B1;
+	margin: 0.2rem auto 0.4rem;
+	color: #fff;
+	font-size: 0.3rem;
+	text-align: center;
+	line-height: 0.72rem;
+	box-shadow: 0px 0.02rem 0.18rem 0px rgba(6, 81, 145, 0.25);
+	border-radius: 0.36rem;
+
+}
+
+
+
+
+/* 手机验证 */
+.signUp_phoneReg {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.signUp_phoneReg h6 {
+	font-size: 0.28rem;
+	line-height: 0.6rem;
+	color: #232F49;
+	text-align: center;
+	font-weight: 500;
+}
+
+.signUp_phoneReg_main {
+	margin-top: 0.15rem;
+}
+
+.signUp_phoneReg_main .signUp_input_main {
+	width: 55%;
+	float: left;
+}
+
+.signUp_phoneReg_main .input_content {
+	width: 1.5rem;
+}
+
+.signUp_phoneReg_img {
+	width: 40%;
+	height: 0.7rem;
+	float: right;
+	border: 1px solid #ccc;
+	border-radius: 0.1rem;
+	overflow: hidden;
+}
+
+/* 短信验证码 */
+.signUp_infoReg_main .signUp_input_main {
+	width: 70%;
+	float: left;
+}
+
+.signUp_infoReg_main .input_content {
+	width: 2.2rem;
+}
+
+.signUp_infoReg_img {
+	width: 1.4rem;
+	float: right;
+	height: 0.7rem;
+	background: #374769;
+	color: #fff;
+	text-align: center;
+	font-size: 0.24rem;
+	line-height: 0.7rem;
+	border-radius: 0.1rem;
+	border: 1px solid transparent;
+}
+
+/* 客服与提交 */
+.signUp_btn {
+	width: 100%;
+	height: auto;
+	/*overflow: hidden;*/
+	margin: 0.25rem auto 0;
+	font-size: 0;
+	text-align: left;
+}
+
+.signUp_btn_qq {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0.3rem;
+	width: 1.4rem;
+	height: 0.72rem;
+	border-radius: 0.36rem;
+	background: #CDAF79;
+	box-shadow: 0px 0.02rem 0.18rem 0px rgba(152, 113, 44, 0.25);
+	text-align: center;
+}
+
+.btn_qq_icon {
+	display: inline-block;
+	vertical-align: top;
+	width: 0.32rem;
+	height: 0.32rem;
+	background: url('../img/enroll_anniu_icon.png') left center no-repeat;
+	background-size: 1.58rem 0.32rem;
+	margin: 0.2rem 0.05rem 0.2rem 0;
+}
+
+.btn_qq_text {
+	display: inline-block;
+	font-size: 0.3rem;
+	height: 0.32rem;
+	line-height: 0.32rem;
+	margin: 0.2rem 0;
+	color: #fff;
+}
+
+.signUp_btn_submit {
+	display: inline-block;
+	width: 3.6rem;
+	height: 0.72rem;
+	background: #0261B1;
+	box-shadow: 0px 0.02rem 0.18rem 0px rgba(6, 81, 145, 0.25);
+	border-radius: 0.36rem;
+	outline: none;
+	border: none;
+	color: #fff;
+	font-size: 0.3rem;
+}
+
+/* 底部认证说明 */
+.signUp_bottom_text {
+	width: 5.5rem;
+	height: auto;
+	box-sizing: border-box;
+	padding: 0.18rem;
+	background: #f5f5f5;
+	margin: 0 auto 0.3rem;
+}
+
+.signUp_bottom_text p {
+	font-size: 0.2rem;
+	color: #666;
+	line-height: 0.42rem;
+}
+
+/* 证件示例 */
+.card_example {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	overflow: hidden;
+	z-index: 101;
+}
+
+.card_example_main {
+	width: 5.56rem;
+	height: 8.48rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border-radius: 0.16rem;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.card_example_main h6 {
+	font-size: 0.3rem;
+	line-height: 0.5rem;
+	margin: 0.18rem auto 0.4rem;
+	text-align: center;
+	font-weight: 500;
+	position: relative;
+}
+
+.card_example_main h6 img {
+	display: block;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.11rem;
+	width: 0.28rem;
+	height: 0.28rem;
+}
+
+.card_example_bigDiv {
+	display: inline-block;
+	vertical-align: top;
+	width: 2.3rem;
+	height: auto;
+	overflow: hidden;
+	margin-left: 0.32rem;
+	margin-bottom: 0.4rem;
+}
+
+.card_example_smDiv {
+	display: inline-block;
+	vertical-align: top;
+	width: 1.56rem;
+	height: auto;
+	overflow: hidden;
+	margin-left: 0.12rem;
+}
+
+.card_example_title {
+	font-size: 0;
+	width: 100%;
+	height: 0.3rem;
+	margin-bottom: 0.12rem;
+}
+
+.card_example_icon {
+	display: inline-block;
+	vertical-align: top;
+	width: 0.14rem;
+	height: 0.16rem;
+	margin-right: 0.05rem;
+	margin-top: 0.07rem;
+}
+
+.card_example_icon img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.card_example_text {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0.24rem;
+	line-height: 0.3rem;
+	color: #000;
+}
+
+.card_example_img {
+	width: 100%;
+	height: auto;
+}
+
+.card_example_img img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.clickShowPic {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 999;
+}
+
+.loadGif {
+	display: none;
+	position: absolute;
+	width: 2rem;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 0.3rem;
+	color: #0261B1;
+	text-align: center;
+	font-weight: 600;
+}
+
+.loadGif img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-bottom: 0.1rem;
+}
+
+.clickShowPic_main {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.clickShowPic_closebtn {
+	display: block;
+	width: 0.36rem;
+	height: 0.36rem;
+	position: absolute;
+	right: 0.5rem;
+	top: 0.5rem;
+}
+
+.clickShowPic_closebtn img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.clickShowPic_img {
+	display: block;
+	position: absolute;
+	width: 5rem;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}

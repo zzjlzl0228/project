@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://m.10pinping.com/venroll/baomingv2.php?sid=d23b7b07fa8d1e50&baoming=1 -->
+<html lang="en" style="font-size: 100px;">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>品牌报名-品牌网触屏版</title>
+		<meta name="keywords" content="十大品牌评选，最新揭晓的榜单,近期榜单，十大品牌评选近期榜单,发布媒体,送阅单位">
+		<meta name="description" content="品牌网，免费报名，公平，公正，公开">
+		<meta itemprop="name" content="品牌报名-品牌网触屏版">
+		<meta itemprop="description" name="description" content="品牌网，免费报名，公平，公正，公开">
+		<meta itemprop="image" content="http://img.10pinping.com/skin/10/186/images1/static/fxtt.jpg">
+		<link rel="stylesheet" type="text/css" href="./fast-signup_files/common.css">
+		<link rel="stylesheet" href="./fast-signup_files/iconfont.css">
+		<link rel="stylesheet" href="./fast-signup_files/pinping_header.css">
+		<!--头部使用-->
+		<link rel="stylesheet" href="./fast-signup_files/footer.css">
+
+		<script src="./fast-signup_files/hm.js"></script>
+		<script type="text/javascript" src="./fast-signup_files/rem.min.js"></script>
+		<script type="text/javascript" src="./fast-signup_files/jquery.min.js"></script>
+		<!--<script type="text/javascript" src="http://img.10pinping.com/file/script/jquery.js"></script>-->
+		<script type="text/javascript" src="./fast-signup_files/public.js"></script>
+		<script src="./fast-signup_files/pinping_header.js"></script>
+		<!--头部使用-->
+		<meta name="format-detection" content="telephone = no">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width">
+		<script>
+			// 禁止复制
+			document.oncontextmenu = function() {
+				event.returnValue = false;
+			}
+			document.onselectstart = function() {
+				event.returnValue = false;
+			}
+			document.oncopy = function() {
+				event.returnValue = false;
+			}
+
+			function rembig() {
+				setRemSize();
+				window.addEventListener("resize", setRemSize, false);
+
+				function setRemSize() {
+					var width = document.documentElement.clientWidth;
+					if (width > 640) {
+						width = 640;
+					}
+					var _clientWidth = width / 6.4 + 'px';
+					document.documentElement.style.fontSize = _clientWidth;
+				};
+			}
+			rembig();
+		</script>
+		<script type="text/javascript" src="./fast-signup_files/wap.reglogin.3.js"></script>
+		<link rel="stylesheet" type="text/css" href="./fast-signup_files/main.css">
+		<script type="text/javascript">
+			function backPath() {
+				if (confirm("确认要退出报名吗？")) {
+					$(window).attr('location','vote.html')
+				}
+
+			}
+		</script>
+	</head>
+
+
+
+
+
+	<!--头-->
+	<!--头-->
+	<body>
+		<div class="head_help">
+			<a href="javascript:void(0)" onclick="backPath()">
+				<i class="iconfont head_back"></i>
+				<!--返回图标-->
+			</a>
+			<p class="title_header">快速报名</p>
+		</div>
+		<!-- 主题内容 -->
+		<div class="signUp">
+			<div class="signUp_jobBlock" style="width:5rem;margin: 2.3rem auto 1.2rem;">
+				<img src="./fast-signup_files/enroll_topscl_img.png" style="padding:0.07rem 0;" alt="">
+				<span style="color:#F6E5BB;padding:0 0.1rem;font-size: 0.3rem;">鼓风机行业</span>
+				<img src="./fast-signup_files/enroll_topscr_img.png" style="padding:0.07rem 0;" alt="">
+			</div>
+			<!-- 中心 -->
+			<div class="signUp_main">
+				<!-- 标题 -->
+				<div class="signUp_main_title">
+					<span class="title_left"></span>
+					<span class="title_icon"></span>
+					<span class="title_main">品牌行业</span>
+					<span class="title_right"></span>
+				</div>
+				<form action="http://m.10pinping.com/venroll/baomingv2.php?sid=d23b7b07fa8d1e50&amp;baoming=1" id="dform">
+					<input type="hidden" name="action" value="add">
+					<input type="hidden" name="sid" value="d23b7b07fa8d1e50">
+					<!-- 品牌信息 
+                验证通过的加lockDiv,没有通过的加errorDiv -->
+					<div class="signUp_input">
+						<div class="signUp_input_main">
+							<span class="input_icon" style="background-position: -1.02rem center"></span>
+							<input type="text" name="homepage" id="homepage" class="input_content" placeholder="请输入官方网站">
+							<span class="input_tips"><img src="./fast-signup_files/enroll_no_icon.png" alt=""></span>
+						</div>
+						<p class="signUp_input_error">官网网站不存在，请重新输入！</p>
+					</div>
+					<!-- 上传证件 -->
+					<div class="signUp_upload_img">
+						<h6>上传证件<a href="javascript:;" class="trmove" onclick="$(&#39;.card_example&#39;).show();">示例</a></h6>
+						<!-- 上传div
+                        只有2个的时候加upload_main_1X;3个的时候加upload_main_2X
+                        审核没通过加 upload_main_error
+                        上传中加 upload_main_ing
+                        上传失败加 upload_main_bad
+                        上传成功加 upload_main_good
+                        审核通过加 upload_main_pass
+                        营业执照
+                     -->
+						<div class="upload_main upload_main_1X">
+							<!-- 初始化状态 -->
+							<div class="upload_init" data-type="1">
+								<div class="upload_init_bg"></div>
+								<p class="upload_init_text">点击上传</p>
+								<input type="hidden" name="yingye" id="yingye">
+								<input type="file" attr="yingye" class="upload_init_file">
+							</div>
+							<!-- 上传中状态 -->
+							<div class="upload_ing">
+								<div class="upload_ing_img">
+									<img src="./fast-signup_files/enroll_jiazaizhong_gif.gif" alt="">
+								</div>
+								<p class="upload_ing_text">上传中...</p>
+							</div>
+							<!-- 上传失败状态 -->
+							<div class="upload_error">
+								<div class="upload_error_img">
+									<img src="./fast-signup_files/enroll_shibai_icon.png" alt="">
+								</div>
+								<p class="upload_error_text">上传失败！</p>
+								<span class="upload_error_btn">重新上传</span>
+							</div>
+							<!-- 上传成功状态 -->
+							<div class="upload_succ">
+								<div class="upload_succ_img">
+									<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+								</div>
+								<div class="upload_succ_nemu">
+									<span class="nemu_btn nemu_btn_remove">
+										<span class="removeBtn_icon">
+											<img src="./fast-signup_files/enroll_remove_icon.png" alt="">
+										</span>
+										<span class="removeBtn_text">删除</span>
+									</span>
+									<span class="nemu_line"></span>
+									<span class="nemu_btn nemu_btn_upload">
+										<span class="uploadBtn_icon">
+											<img src="./fast-signup_files/enroll_upload_icon.png" alt="">
+										</span>
+										<span class="uploadBtn_text">上传</span>
+									</span>
+								</div>
+							</div>
+							<!-- 审核通过状态 -->
+							<div class="upload_pass">
+								<div class="upload_pass_img">
+									<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+								</div>
+								<p class="upload_pass_text">证件已上传</p>
+							</div>
+							<!-- 标题 -->
+							<div class="upload_title">
+								<span class="upload_title_icon">
+									<img src="./fast-signup_files/enroll_bit_icon.png" alt="">
+								</span>
+								<span class="upload_title_text">营业执照</span>
+							</div>
+							<!-- 错误提醒 -->
+							<p class="upload_tips">错误提示信息</p>
+						</div>
+						<!-- 商标注册证 -->
+						<div class="upload_main upload_main_1X">
+							<!-- 初始化状态 -->
+							<div class="upload_init" data-type="2">
+								<div class="upload_init_bg"></div>
+								<p class="upload_init_text">点击上传</p>
+								<input type="hidden" name="shangbiao" id="shangbiao">
+								<input type="file" attr="shangbiao" class="upload_init_file">
+							</div>
+							<!-- 上传中状态 -->
+							<div class="upload_ing">
+								<div class="upload_ing_img">
+									<img src="./fast-signup_files/enroll_jiazaizhong_gif.gif" alt="">
+								</div>
+								<p class="upload_ing_text">上传中...</p>
+							</div>
+							<!-- 上传失败状态 -->
+							<div class="upload_error">
+								<div class="upload_error_img">
+									<img src="./fast-signup_files/enroll_shibai_icon.png" alt="">
+								</div>
+								<p class="upload_error_text">上传失败！</p>
+								<span class="upload_error_btn">重新上传</span>
+							</div>
+							<!-- 上传成功状态 -->
+							<div class="upload_succ">
+								<div class="upload_succ_img">
+									<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+								</div>
+								<div class="upload_succ_nemu">
+									<span class="nemu_btn nemu_btn_remove">
+										<span class="removeBtn_icon">
+											<img src="./fast-signup_files/enroll_remove_icon.png" alt="">
+										</span>
+										<span class="removeBtn_text">删除</span>
+									</span>
+									<span class="nemu_line"></span>
+									<span class="nemu_btn nemu_btn_upload">
+										<span class="uploadBtn_icon">
+											<img src="./fast-signup_files/enroll_upload_icon.png" alt="">
+										</span>
+										<span class="uploadBtn_text">上传</span>
+									</span>
+								</div>
+							</div>
+							<!-- 审核通过状态 -->
+							<div class="upload_pass">
+								<div class="upload_pass_img">
+									<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+								</div>
+								<p class="upload_pass_text">证件已上传</p>
+							</div>
+							<!-- 标题 -->
+							<div class="upload_title">
+								<span class="upload_title_icon">
+									<img src="./fast-signup_files/enroll_bit_icon.png" alt="">
+								</span>
+								<span class="upload_title_text">商标注册证</span>
+							</div>
+							<!-- 错误提醒 -->
+							<p class="upload_tips">错误提示信息</p>
+						</div>
+						<!-- 其他3项div -->
+						<div class="order_main upload_main_1X">
+							<div class="order_init" onclick="$(&quot;.order_alert&quot;).show();">
+								<!-- icon的状态管理
+                                    .order_icon_default默认
+                                    .order_icon_succ正确
+                                    .order_icon_error错误
+                                 -->
+								<div class="order_item order_icon_default">
+									<span class="order_content">商标授权</span>
+									<span class="order_icon "></span>
+								</div>
+								<div class="order_item order_icon_default">
+									<span class="order_content">延展证明</span>
+									<span class="order_icon "></span>
+								</div>
+								<div class="order_item order_icon_default">
+									<span class="order_content">转让证明</span>
+									<span class="order_icon "></span>
+								</div>
+								<p class="order_text">点击上传</p>
+							</div>
+							<p class="order_title">其他</p>
+							<p class="order_tips">上传证件有误</p>
+						</div>
+					</div>
+					<!-- 其他3项的弹出层 -->
+					<div class="order_alert">
+						<div class="order_alert_main">
+							<h6>其他证明</h6>
+							<div class="upload_main upload_main_1halfX">
+								<!-- 标题 -->
+								<div class="alert_title">
+									<span class="upload_title_text">商标授权:</span>
+								</div>
+								<!-- 初始化状态 -->
+								<div class="upload_init" data-type="3">
+									<div class="upload_init_bg"></div>
+									<p class="upload_init_text">点击上传</p>
+									<input type="hidden" name="thumb1" id="thumb1">
+									<input type="file" attr="thumb1" class="upload_init_file">
+								</div>
+								<!-- 上传中状态 -->
+								<div class="upload_ing">
+									<div class="upload_ing_img">
+										<img src="./fast-signup_files/enroll_jiazaizhong_gif.gif" alt="">
+									</div>
+									<p class="upload_ing_text">上传中...</p>
+								</div>
+								<!-- 上传失败状态 -->
+								<div class="upload_error">
+									<div class="upload_error_img">
+										<img src="./fast-signup_files/enroll_shibai_icon.png" alt="">
+									</div>
+									<p class="upload_error_text">上传失败！</p>
+									<span class="upload_error_btn">重新上传</span>
+								</div>
+								<!-- 上传成功状态 -->
+								<div class="upload_succ">
+									<div class="upload_succ_img">
+										<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+									</div>
+									<div class="upload_succ_nemu">
+
+										<span class="nemu_btn nemu_btn_remove">
+											<span class="removeBtn_icon">
+												<img src="./fast-signup_files/enroll_remove_icon.png" alt="">
+											</span>
+											<span class="removeBtn_text">删除</span>
+										</span>
+										<span class="nemu_line"></span>
+										<span class="nemu_btn nemu_btn_upload">
+											<span class="uploadBtn_icon">
+												<img src="./fast-signup_files/enroll_upload_icon.png" alt="">
+											</span>
+											<span class="uploadBtn_text">上传</span>
+										</span>
+									</div>
+								</div>
+								<!-- 审核通过状态 -->
+								<div class="upload_pass">
+									<div class="upload_pass_img">
+										<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+									</div>
+									<p class="upload_pass_text">证件已上传</p>
+								</div>
+								<!-- 错误提醒 -->
+								<p class="upload_tips">错误提示信息</p>
+							</div>
+							<div class="upload_main upload_main_1halfX">
+								<!-- 标题 -->
+								<div class="alert_title">
+									<span class="upload_title_text">延展证明:</span>
+								</div>
+								<!-- 初始化状态 -->
+								<div class="upload_init" data-type="4">
+									<div class="upload_init_bg"></div>
+									<p class="upload_init_text">点击上传</p>
+									<input type="hidden" name="thumb2" id="thumb2">
+									<input type="file" attr="thumb2" class="upload_init_file">
+								</div>
+								<!-- 上传中状态 -->
+								<div class="upload_ing">
+									<div class="upload_ing_img">
+										<img src="./fast-signup_files/enroll_jiazaizhong_gif.gif" alt="">
+									</div>
+									<p class="upload_ing_text">上传中...</p>
+								</div>
+								<!-- 上传失败状态 -->
+								<div class="upload_error">
+									<div class="upload_error_img">
+										<img src="./fast-signup_files/enroll_shibai_icon.png" alt="">
+									</div>
+									<p class="upload_error_text">上传失败！</p>
+									<span class="upload_error_btn">重新上传</span>
+								</div>
+								<!-- 上传成功状态 -->
+								<div class="upload_succ">
+									<div class="upload_succ_img">
+										<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+									</div>
+									<div class="upload_succ_nemu">
+										<span class="nemu_btn nemu_btn_remove">
+											<span class="removeBtn_icon">
+												<img src="./fast-signup_files/enroll_remove_icon.png" alt="">
+											</span>
+											<span class="removeBtn_text">删除</span>
+										</span>
+										<span class="nemu_line"></span>
+										<span class="nemu_btn nemu_btn_upload">
+											<span class="uploadBtn_icon">
+												<img src="./fast-signup_files/enroll_upload_icon.png" alt="">
+											</span>
+											<span class="uploadBtn_text">上传</span>
+										</span>
+									</div>
+								</div>
+								<!-- 审核通过状态 -->
+								<div class="upload_pass">
+									<div class="upload_pass_img">
+										<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+									</div>
+									<p class="upload_pass_text">证件已上传</p>
+								</div>
+								<!-- 错误提醒 -->
+								<p class="upload_tips">错误提示信息</p>
+							</div>
+							<div style="clear: both;"></div>
+							<div class="upload_main upload_main_1halfX">
+								<!-- 标题 -->
+								<div class="alert_title">
+									<span class="upload_title_text">转让证明:</span>
+								</div>
+								<!-- 初始化状态 -->
+								<div class="upload_init" data-type="5">
+									<div class="upload_init_bg"></div>
+									<p class="upload_init_text">点击上传</p>
+									<input type="hidden" name="thumb3" id="thumb3">
+									<input type="file" attr="thumb3" class="upload_init_file">
+								</div>
+								<!-- 上传中状态 -->
+								<div class="upload_ing">
+									<div class="upload_ing_img">
+										<img src="./fast-signup_files/enroll_jiazaizhong_gif.gif" alt="">
+									</div>
+									<p class="upload_ing_text">上传中...</p>
+								</div>
+								<!-- 上传失败状态 -->
+								<div class="upload_error">
+									<div class="upload_error_img">
+										<img src="./fast-signup_files/enroll_shibai_icon.png" alt="">
+									</div>
+									<p class="upload_error_text">上传失败！</p>
+									<span class="upload_error_btn">重新上传</span>
+								</div>
+								<!-- 上传成功状态 -->
+								<div class="upload_succ">
+									<div class="upload_succ_img">
+										<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+									</div>
+									<div class="upload_succ_nemu">
+										<span class="nemu_btn nemu_btn_remove">
+											<span class="removeBtn_icon">
+												<img src="./fast-signup_files/enroll_remove_icon.png" alt="">
+											</span>
+											<span class="removeBtn_text">删除</span>
+										</span>
+										<span class="nemu_line"></span>
+										<span class="nemu_btn nemu_btn_upload">
+											<span class="uploadBtn_icon">
+												<img src="./fast-signup_files/enroll_upload_icon.png" alt="">
+											</span>
+											<span class="uploadBtn_text">上传</span>
+										</span>
+									</div>
+								</div>
+								<!-- 审核通过状态 -->
+								<div class="upload_pass">
+									<div class="upload_pass_img">
+										<img src="./fast-signup_files/u=3300305952,1328708913&amp;fm=27&amp;gp=0.jpg" alt="">
+									</div>
+									<p class="upload_pass_text">证件已上传</p>
+								</div>
+								<!-- 错误提醒 -->
+								<p class="upload_tips">错误提示信息</p>
+							</div>
+							<div style="clear: both;"></div>
+							<span class="order_alert_btn">确认</span>
+						</div>
+					</div>
+					<!-- 客服和提交报名 -->
+					<div class="signUp_btn">
+						<!-- <div class="signUp_btn_qq pinping_kefu" style="cursor: pointer;">
+							<span class="btn_qq_icon"></span>
+							<span class="btn_qq_text">客服</span>
+						</div> -->
+						<input type="button" value="提交报名" onclick="check()" class="signUp_btn_submit">
+					</div>
+				</form>
+			</div>
+			<!-- 认证说明 -->
+			<div class="signUp_bottom_text">
+				<p>认证说明：</p>
+				<p>1、请保证证件的真实有效性。</p>
+				<p>2、审核预计需半个工作日，报名结果将以短信的方式通知您。</p>
+			</div>
+		</div>
+		<script>
+			$('.trmove').click(function() {
+				preventDefaultFn('.card_example'); //蒙层部分
+				preventDefaultFn('.card_example_main'); //弹窗部分
+			});
+		</script>
+		<!-- 证件示例 -->
+		<div class="card_example">
+			<div class="card_example_main">
+				<h6>示例<img src="./fast-signup_files/shili_icon_guanbi.png" alt="" class="card_example_close" onclick="$(&quot;.card_example&quot;).hide();"></h6>
+				<div class="card_example_bigDiv">
+					<p class="card_example_title">
+						<span class="card_example_icon">
+							<img src="./fast-signup_files/enroll_bit_icon.png" alt="">
+						</span>
+						<span class="card_example_text">营业执照</span>
+					</p>
+					<div class="card_example_img">
+						<img src="./fast-signup_files/shili_img_yingyezhizhao.png" alt="">
+					</div>
+				</div>
+				<div class="card_example_bigDiv">
+					<p class="card_example_title">
+						<span class="card_example_icon">
+							<img src="./fast-signup_files/enroll_bit_icon.png" alt="">
+						</span>
+						<span class="card_example_text">商标注册证</span>
+					</p>
+					<div class="card_example_img">
+						<img src="./fast-signup_files/shili_img_shangbiaozhuce.png" alt="">
+					</div>
+				</div>
+				<div class="card_example_smDiv" style="margin-left: 0.32rem;">
+					<p class="card_example_title">
+						<span class="card_example_text">商标授权</span>
+					</p>
+					<div class="card_example_img">
+						<img src="./fast-signup_files/shili_img_shangbiaoshouquan.png" alt="">
+					</div>
+				</div>
+				<div class="card_example_smDiv">
+					<p class="card_example_title">
+						<span class="card_example_text">延展证明</span>
+					</p>
+					<div class="card_example_img">
+						<img src="./fast-signup_files/shili_img_yanzhenzhengming.png" alt="">
+					</div>
+				</div>
+				<div class="card_example_smDiv">
+					<p class="card_example_title">
+						<span class="card_example_text">转让证明</span>
+					</p>
+					<div class="card_example_img">
+						<img src="./fast-signup_files/shili_img_zhuanrangzhengming.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 点击放大图片 -->
+		<div class="clickShowPic">
+			<!-- 加载div -->
+			<div class="loadGif">
+				<img src="./fast-signup_files/loading.gif" alt="">
+				<p>加载中...</p>
+			</div>
+			<!-- 显示大图 -->
+			<div class="clickShowPic_main">
+				<a href="javascript:;" class="clickShowPic_closebtn" onclick="$(&quot;.clickShowPic&quot;).hide();$(&quot;.clickShowPic_main&quot;).hide();">
+					<img src="./fast-signup_files/shili_icon_guanbi_white.png" alt="">
+				</a>
+				<img src="./fast-signup_files/shili_img_yingyezhizhao.png" alt="" class="clickShowPic_img">
+			</div>
+		</div>
+		<script type="text/javascript">
+			var iGongSiRenZheng = 0; // 0 首次报名 1 再次报名
+			var edit = 0; //是否修改
+			var flag = true;
+			function check() {
+               // window.location.href="status.html";  //本地跳转
+				f = 'homepage';
+				l = Dd(f).value.length;
+				if (l < 5) {
+					alert('请填写官方网站');
+				
+					return false;
+				} else if (l > 255) {
+					alert("官方网站格式填写不正确！");
+				}
+
+				f = 'yingye';
+				l = Dd(f).value.length;
+				if (l < 10) {
+					alert('请上传营业执照');
+					return false;
+				}
+				f = 'shangbiao';
+				l = Dd(f).value.length;
+				if (l < 10) {
+					alert('请上传商标注册证！');
+					return false;
+				}
+				if (flag) {
+					flag = false;
+					var staturl = "http://m.10pinping.com/v/p.php?s=d23b7b07fa8d1e50";
+					//ajax上传数据
+					var data = $("#dform").serialize();
+					$.ajax({
+						type: 'POST',
+						url: '?',
+						data: data,
+						dataType: 'json',
+						cache: false,
+						async: false,
+						success: function(data) {
+							flag = true;
+							if (data.status == 0) {
+								alert(data.data);
+							} else {
+								//成功
+								dataInfo = data.data;
+								mobile = dataInfo.username;
+								password = dataInfo.password;
+								registerUser = dataInfo.registerUser;
+								// window.location.href = "http://m.10pinping.com/venroll/baomingresult.php?mobile=" + mobile + "&password=" +  //提交成功跳转页面
+								$(window).attr('location','status.html')//本地跳转
+									password + "&register=" + registerUser + "&sid=d23b7b07fa8d1e50";
+							}
+						},
+						error: function(e) {
+							flag = true;
+							alert("请求失败");
+						}
+					});
+				}
+			}
+		</script>
+		<script type="text/javascript" src="./fast-signup_files/jhuadong.js"></script>
+		<div class="wrap">
+			<footer>
+				<a href="http://m.10pinping.com/about/contact.php">关于我们</a>
+				<a href="http://m.10pinping.com/help/help_center.php" style="border:none;">帮助中心</a>
+				<a href="http://m.10pinping.com/guestbook/">问题反馈</a>
+				<p class="copyright">Copyright@2019 品牌网</p>
+			</footer>
+			<a href="javascript:;" id="scollTopBox">
+				<div class="back_to_top  back-top" id="back-top" style="display: none;">
+					<img src="./fast-signup_files/m_dingb_icon.png">
+				</div>
+			</a>
+			<!-- 微信客服 -->
+			<!-- <div class="pinping_model" style="display:none;">
+        <div class="pinping_kefukuang">
+            <h6><span></span>微信客服<span></span></h6>
+            <img src="" alt="">
+            <span>长按识别二维码</span>
+            <p>客服热线：400-187-8707</p>
+        </div>
+        <img src="http://img.10pinping.com/skin/10/186/images1/static/icon_back_a.png" alt="" style="width:0.6rem;height:0.6rem;cursor:pointer;display:block;position:fixed;left:50%;margin-left:-0.3rem;top:8rem;" class="pinping_bacha">
+    </div>
+    <div class="pinping_kefu pinping_kefu_p" style="background: url(http://img.10pinping.com/skin/10/186/images/static/m_kefuk_img.png) no-repeat;background-size:0.78rem 1.85rem;width:0.78rem;height:1.85rem;position:fixed;right:0;top:3rem;z-index:1000;cursor:pointer;"></div> -->
+			<!-- QQ客服 -->
+			<div class="pinping_model" style="display:none;">
+				<div class="pinping_kefukuang">
+					<a href="http://m.10pinping.com/brand/baoming.php" target="_blank">
+						<p style="color:#0261b1;font-size:0.34rem;text-align:Center;line-height:0.7rem;padding-top:0.22rem;">品牌报名流程</p>
+					</a>
+					<p style="font-size:0.28rem;color:#353535;line-height:0.64rem;text-align:Center;">热线：400-187-8707</p>
+
+					<a data-qq="3067064935" href="http://wpa.qq.com/msgrd?v=3&amp;uin=3067064935&amp;site=qq&amp;menu=yes" target="_blank">
+						<img src="./fast-signup_files/m_kfqq1_img.png" alt="" style="width:2.8rem;height:0.66rem;display:table;margin:auto;margin-top:0.3rem;">
+					</a>
+					<a data-qq="171178174" href="http://wpa.qq.com/msgrd?v=3&amp;uin=171178174&amp;site=qq&amp;menu=yes" target="_blank">
+						<img src="./fast-signup_files/m_kfqq2_img.png" alt="" style="width:2.8rem;height:0.66rem;display:table;margin:auto;margin-top:0.06rem;">
+					</a>
+				</div>
+				<img src="./fast-signup_files/m_kfgb_icon.png" alt="" style="width:0.44rem;height:0.44rem;cursor:pointer;display:block;position:fixed;left:50%;margin-left:-0.22rem;top:7.8rem;"
+				 class="pinping_bacha">
+			</div>
+			<div class="pinping_kefu pinping_kefu_p" style="background: url(http://img.10pinping.com/skin/10/186/images/static/m_kefuk_img.png) no-repeat;background-size:0.78rem 1.85rem;width:0.78rem;height:1.85rem;position:fixed;right:0;top:3rem;z-index:1000;cursor:pointer;"></div>
+		</div>
+		<script type="text/javascript">
+			// 回到顶部
+			function backTop() {
+				$(window).scroll(function() {
+					var height = Math.abs($(this).scrollTop());
+					if (height > 150) {
+						$('#back-top').fadeIn()
+					}
+					if (height < 150) {
+						$('#back-top').fadeOut()
+					}
+				})
+			}
+			backTop();
+			// 客服栏js
+			$(function() {
+				$('.pinping_kefu').click(function() {
+					$('.pinping_model').css('display', 'block')
+					//禁止滑动
+					preventDefaultFn('.pinping_model'); //蒙层部分
+					preventDefaultFn('.pinping_kefukuang'); //弹窗部分
+				})
+				$('.pinping_bacha, .pinping_model').click(function() {
+					$('.pinping_model').css('display', 'none')
+				})
+				$('#scollTopBox').on('click', function() {
+					$("html,body").animate({
+						scrollTop: 0
+					}, 100);
+				})
+			})
+		</script>
+		<!--百度商桥-->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?54a0788fec161f0476e41c6a89cf9520";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+		<div style="display:none;">
+			<script src="./fast-signup_files/z_stat.php" language="JavaScript"></script>
+			<script src="./fast-signup_files/core.php" charset="utf-8" type="text/javascript"></script><a href="https://www.cnzz.com/stat/website.php?web_id=1261204169"
+			 target="_blank" title="站长统计">站长统计</a>
+		</div>
+
+		<style>
+			/*微信客服css*/
+			/*.pinping_model{
+        width:100%;
+        height:100%;
+        background: rgba(0,0,0,0.7);
+        z-index:2000;
+        position:fixed;
+        left:0rem;
+        top:0rem;
+    }
+    .pinping_kefukuang{
+        position:fixed;
+        left:50%;
+        margin-left:-2rem;
+        top:2.7rem;
+        width:4rem;
+        height:5rem;
+        background: #fff;
+        border-radius: 0.06rem;
+    }*/
+			/*QQ客服css*/
+			.pinping_model {
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.3);
+				z-index: 2000;
+				position: fixed;
+				left: 0rem;
+				top: 0rem;
+			}
+
+			.pinping_kefukuang {
+				position: fixed;
+				left: 50%;
+				margin-left: -2.4rem;
+				top: 2.5rem;
+				width: 4.8rem;
+				height: 3.7rem;
+				background: url(http://img.10pinping.com/skin/10/186/images/static/m_kefubg_img.png) no-repeat;
+				background-size: 4.8rem 5rem;
+				padding-top: 1.3rem;
+			}
+
+			.pinping_kefukuang h6 {
+				font-size: 0.34rem;
+				color: #000;
+				width: 100%;
+				font-weight: 600;
+				height: 0.4rem;
+				line-height: 0.4rem;
+				padding: 0.4rem 0 0.3rem;
+				text-align: center;
+			}
+
+			.pinping_kefukuang h6 span {
+				float: left;
+				display: inline-block;
+				width: 1.15rem;
+				height: 0.02rem;
+				background: #ddd;
+				margin-top: 0.19rem;
+			}
+
+			.pinping_kefukuang h6 span:last-of-type {
+				float: right;
+			}
+
+			.pinping_kefukuang>img {
+				display: block;
+				width: 2.8rem;
+				height: 2.8rem;
+				border: 1px solid #f6f6f6;
+				margin: 0 auto;
+			}
+
+			.pinping_kefukuang>span {
+				display: block;
+				font-size: 0.22rem;
+				color: #666;
+				margin: 0.02rem auto 0.25rem;
+				text-align: center;
+			}
+
+			.pinping_kefukuang>p {
+				font-size: 0.24rem;
+				color: #000;
+				text-align: center;
+			}
+		</style>
+		<script src="./fast-signup_files/main1.1.js"></script>
+		<script>
+			var ssid = 39; //分享分类的id
+			var catname = "拼接处理器"; //行业名称
+			var mark = "d23b7b07fa8d1e50";
+			var date = new Date(); //获取一个时间对象
+			var year = date.getFullYear(); // 获取完整的年份(4位,1970)
+			console.log(year + 'mmm')
+		</script>
+	</body>
+</html>

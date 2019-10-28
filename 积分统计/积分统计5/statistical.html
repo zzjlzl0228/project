@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="statistical.css" />
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="echarts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="infographic.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<div class="top_text">
+					<div class="title">积分预览</div>
+				</div>
+				<div class="bottom_content">
+					<div class="left">
+						<!-- 实时积分 -->
+						<div class="integral">
+							<div class="texts">实时积分</div>
+							<div id="main-one" style="width: 90%; height: 90%;"></div>
+						</div>
+						<!-- 项目数据 -->
+						<div class="project-data">
+							<div class="texts">项目数据</div>
+							<div id="xmsj" style="width: 90%; height: 90%;"></div>
+						</div>
+						<!-- 人均数据 -->
+						<div class="person-data">
+							<div class="texts">人均数据</div>
+							<div id="main-three" style="width: 45%; height: 90%;"></div>
+							<div id="main-six" style="width: 45%; height: 90%;margin-left: -10%;"></div>
+							<div class="prev"></div>
+							<div class="after"></div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="integral-ratio">
+							<div class="cywl">
+								<div class="cywl-text">橙芽网络</div>
+								<div class="cywl-num">0000000000</div>
+							</div>
+							<div class="vs">
+								VS
+							</div>
+							<div class="szwl">
+								<div class="szwl-text">山舟网络</div>
+								<div class="szwl-num">0000000000</div>
+							</div>
+						</div>
+						<!-- 项目占比 -->
+						<div class="project-share">
+							<div class="texts">项目占比</div>
+							<div id="main-two" style="width: 50%; height: 90%;margin-left: 50px;"></div>
+							<div id="main-seven" style="width: 50%; height: 90%;"></div>
+						</div>
+						<!-- 火热指数 -->
+						<div class="fiery-index">
+							<div class="text">
+								<div class="blueLine"></div>
+								<div class="title">按天</div>
+							</div>
+							<div class="texts">火热指数</div>
+							<div id="main-four" style="width: 45%; height: 90%;"></div>
+							<div id="main-five" style="width: 45%; height: 90%;"></div>
+							<div class="hr-prev"></div>
+							<div class="hr-after"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// 实时积分折线图
+				var myChart = echarts.init(document.getElementById('main-one'), 'infographic');
+				var option = {
+					tooltip: {
+						trigger: 'axis',
+						formatter: '{b0}: {c0}<br />{b1}: {c1}'
+					},
+					xAxis: {
+						type: 'category',
+						boundaryGap: false,
+						data: ['09.12', '09.13', '09.14', '09.15', '09.16', '09.17', '09.18', '09.19']
+					},
+					yAxis: {
+						type: 'value',
+						nameGap: '60'
+					},
+					series: [{
+							data: [1820, 2932, 4901, 5334, 5890, 8330, 10320, 12000],
+							type: 'line',
+							areaStyle: {}
+						},
+						{
+							data: [, , 1100, 1830, 2050, 2560, 3000, 4020],
+							type: 'line',
+							areaStyle: {}
+						}
+					]
+				};
+				myChart.setOption(option);
+
+				// 项目占比 饼状图左 -- 橙芽
+				var myChart2 = echarts.init(document.getElementById('main-two'),
+					option = {
+						tooltip: {
+							trigger: 'item',
+							formatter: "{a} <br/>{b} : {c} ({d}%)"
+						},
+						legend: {
+							x: 'center',
+							y: 'bottom',
+							textStyle: {
+								color: ['#4B4BFF', '#F42281', '#3096DB', '#B231CD']
+							},
+							data: ['品牌网', '中企品牌', '共享投票', '520微投']
+						},
+						series: [{
+							name: '橙芽网络',
+							type: 'pie',
+							radius: '55%',
+							center: ['50%', '60%'],
+							label: {
+								textStyle: {
+									color: ['#4B4BFF', '#F42281', '#3096DB', '#B231CD']
+								}
+							},
+							data: [{
+									value: 335,
+									name: '品牌网',
+									itemStyle: {
+										normal: { //颜色渐变
+											color: new echarts.graphic.LinearGradient(
+												0, 0, 0, 1,
+												[{
+														offset: 0,
+														color: 'rgba(90,64,255,1)'
+													},
+													{
+														offset: 1,
+														color: 'rgba(63,83,254,1)'
+													}
+												]
+											)
+										}
+									},
+								},
+								{
+									value: 310,
+									name: '中企品牌',
+									itemStyle: {
+										normal: { //颜色渐变
+											color: new echarts.graphic.LinearGradient(
+												0, 0, 0, 1,
+												[{
+														offset: 0,
+														color: 'rgba(251,32,119,1)'
+													},
+													{
+														offset: 0.3,
+														color: 'rgba(216,40,170,1)'
+													},
+													{
+														offset: 1,
+														color: 'rgba(125,62,254,1)'
+													}
+												]
+											),
+
+										}
+									},
+								},
+								{
+									value: 234,
+									name: '共享投票',
+									itemStyle: {
+										normal: { //颜色渐变
+											color: new echarts.graphic.LinearGradient(
+												0, 0, 0, 1,
+												[{
+														offset: 0,
+														color: 'rgba(33,209,218,1)'
+													},
+													{
+														offset: 1,
+														color: 'rgba(26,247,174,1)'
+													}
+												]
+											)
+										}
+									},
+								},
+								{
+									value: 135,
+									name: '520微投',
+									itemStyle: {
+										normal: { //颜色渐变
+											color: new echarts.graphic.LinearGradient(
+												0, 0, 0, 1,
+												[{
+														offset: 0,
+														color: 'rgba(255,62,52,1)'
+													},
+													{
+														offset: 0.53,
+														color: 'rgba(255,122,34,1)'
+													},
+													{
+														offset: 1,
+														color: 'rgba(243,201,44,1)'
+													}
+												]
+											)
+										}
+									}
+								}
+							],
+						}]
+					});
+
+
+				myChart2.setOption(option);
+
+				// 项目占比 饼状图右--山舟
+				var myChart7 = echarts.init(document.getElementById('main-seven'),
+					option = {
+						tooltip: {
+							trigger: 'item',
+							formatter: "{a} <br/>{b} : {c} ({d}%)"
+						},
+						legend: {
+							x: 'center',
+							y: 'bottom',
+							data: ['品牌中网', '品牌排行'],
+							textStyle: {
+								color: ['#FFF978', '#FB2077'],
+							},
+						},
+						series: [{
+							name: '山舟网络',
+							type: 'pie',
+							radius: '55%',
+							center: ['50%', '60%'],
+							label: {
+								textStyle: {
+									color: ['#FFF978', '#FB2077'],
+								}
+							},
+							data: [{
+									value: 30,
+									name: '品牌中网',
+									itemStyle: {
+										normal: { //颜色渐变
+											color: new echarts.graphic.LinearGradient(
+												0, 0, 0, 1,
+												[{
+														offset: 0,
+														color: 'rgba(255,249,120,1)'
+													},
+													{
+														offset: 1,
+														color: 'rgba(230,195,57,1)'
+													}
+												]
+											)
+										}
+									},
+								},
+								{
+									value: 50,
+									name: '品牌排行',
+									itemStyle: {
+										normal: { //颜色渐变
+											color: new echarts.graphic.LinearGradient(
+												0, 0, 0, 1,
+												[{
+														offset: 0,
+														color: '#36A0DC'
+													},
+													{
+														offset: 1,
+														color: '#1B70DA'
+													}
+												]
+											)
+										}
+									},
+								}
+
+							]
+						}]
+					});
+				myChart7.setOption(option);
+
+				// 人均数据 折线图左--橙芽
+// 				var myChart3 = echarts.init(document.getElementById('main-three'));
+// 				colors = ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22'];
+// 				option = {
+// 					color: colors,
+// 					tooltip: {
+// 						trigger: 'axis',					
+// 					},
+// 
+// 					legend: {
+// 						x: 'center',
+// 						y: 'bottom',
+// 						data: ["品牌", "中企", "共享", "520", "中网", "排行"],
+// 						textStyle: {
+// 							color: ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22']
+// 						}
+// 					},
+// 					grid: {
+// 						top: 70,
+// 						bottom: 80
+// 					},
+// 					xAxis: [{
+// 							type: 'category',
+// 							axisTick: {
+// 								alignWithLabel: true,
+// 								inside: true,
+// 								length: 5
+// 							},
+// 							axisLine: {
+// 								onZero: false,
+// 								lineStyle: {
+// 									color: '#675bba'
+// 								}
+// 							},
+// 							axisPointer: {
+// 								label: {
+// 									formatter: function(params) {
+// 										return '积分  ' + params.value +
+// 											(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+// 									}
+// 								}
+// 							},
+// 							data: ["09-21", "09-22", "09-23", "09-24", "09-25", "09-26"],
+// 
+// 						},
+// 						{
+// 							type: 'category',
+// 							axisTick: {
+// 								alignWithLabel: true
+// 
+// 							},
+// 
+// 							axisPointer: {
+// 								label: {
+// 									formatter: function(params) {
+// 										return '积分  ' + params.value +
+// 											(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+// 									}
+// 								}
+// 							}
+// 						}
+// 					],
+// 					yAxis: [{
+// 						type: 'value',
+// 						axisTick: {
+// 							alignWithLabel: true,
+// 							inside: true,
+// 							length: 1
+// 						},
+// 						axisLine: {
+// 							onZero: false,
+// 							lineStyle: {
+// 								color: '#675bba'
+// 							}
+// 						},
+// 					}],
+// 					series: [{
+// 							name: '品牌',
+// 							type: 'line',
+// 							xAxisIndex: 1,
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#3F53FE',
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [60, 0, 0, 0, 0, 0, 0],
+// 						},
+// 						{
+// 							name: '中企',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#F42281'
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [35, 0, 0, 0, 0, 0]
+// 						},
+// 						{
+// 							name: '共享',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#3096DB'
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [30, 0, 0, 0, 0, 0]
+// 						},
+// 						{
+// 							name: '520',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#B231CD',
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [20, 0, 0, 0, 0, 0]
+// 						},
+// 						{
+// 							name: '中网',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#F3C92C',
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [15, 0, 0, 0, 0, 0]
+// 						},
+// 						{
+// 							name: '排行',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#FF7A22',
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [10, 0, 0, 0, 0, 0]
+// 						}
+// 					]
+// 				};
+// 				myChart3.setOption(option);
+// 
+				// 人均数据 柱状图 右---山舟
+// 				var myChart6 = echarts.init(document.getElementById('main-six'));
+// 				colors = ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22'];
+// 				option = {
+// 					color: colors,
+// 					tooltip: {
+// 						trigger: 'axis',
+// 						// formatter: '{b0}: {c0}<br />{b1}: {c1}'
+// 					},
+// 
+// 					legend: {
+// 						x: 'center',
+// 						y: 'bottom',
+// 						data: ["品牌", "中企", "共享", "520", "中网", "排行"],
+// 						textStyle: {
+// 							color: ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22']
+// 						}
+// 					},
+// 					grid: {
+// 						top: 70,
+// 						bottom: 80
+// 					},
+// 					xAxis: [{
+// 							type: 'category',
+// 							axisTick: {
+// 								alignWithLabel: true,
+// 								inside: true,
+// 								length: 5
+// 							},
+// 							axisLine: {
+// 								onZero: false,
+// 								lineStyle: {
+// 									color: '#675bba'
+// 								}
+// 							},
+// 							axisPointer: {
+// 								label: {
+// 									formatter: function(params) {
+// 										return '积分  ' + params.value +
+// 											(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+// 									}
+// 								}
+// 							},
+// 							data: ["09-21", "09-22", "09-23", "09-24", "09-25", "09-26"],
+// 
+// 						},
+// 						{
+// 							type: 'category',
+// 							axisTick: {
+// 								alignWithLabel: true
+// 
+// 							},
+// 
+// 							// axisPointer: {
+// 							// 	label: {
+// 							// 		formatter: function(params) {
+// 							// 			return '积分  ' + params.value +
+// 							// 				(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+// 							// 		}
+// 							// 	}
+// 							// }
+// 						}
+// 					],
+// 					yAxis: [{
+// 						type: 'value',
+// 						axisTick: {
+// 							alignWithLabel: true,
+// 							inside: true,
+// 							length: 1
+// 						},
+// 						axisLine: {
+// 							onZero: false,
+// 							lineStyle: {
+// 								color: '#675bba'
+// 							}
+// 						},
+// 					}],
+// 					series: [{
+// 							name: '品牌',
+// 							type: 'line',
+// 							xAxisIndex: 1,
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#3F53FE',
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [600, 420, 250, 500, 368, 489, 628]
+// 						},
+// 						{
+// 							name: '中企',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#F42281'
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [350, 360, 400, 490, 520, 800]
+// 						},
+// 						{
+// 							name: '共享',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#3096DB'
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [300, 100, 200, 530, 700, 600]
+// 						},
+// 						{
+// 							name: '520',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#B231CD',
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [50, 110, 100, 210, 350, 600]
+// 						},
+// 						{
+// 							name: '中网',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#F3C92C',
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [100, 160, 300, 490, 500, 700]
+// 						},
+// 						{
+// 							name: '排行',
+// 							type: 'line',
+// 							smooth: true,
+// 							itemStyle: {
+// 								normal: {
+// 									color: '#FF7A22',
+// 								}
+// 							},
+// 							symbol: 'circle',
+// 							data: [150, 200, 350, 490, 520, 620]
+// 						}
+// 					]
+// 				};
+// 				myChart6.setOption(option);
+
+				// 火热指数 左侧柱状图
+				var myChart4 = echarts.init(document.getElementById('main-four')),
+					colors = ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22'];
+				option = {
+					color: colors,
+					tooltip: {
+						trigger: 'none',
+						axisPointer: {
+							type: 'cross'
+						}
+					},
+
+					legend: {
+						x: 'center',
+						y: 'bottom',
+						data: ["品牌", "中企", "共享", "520", "中网", "排行"],
+						textStyle: {
+							color: ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22']
+						}
+					},
+					grid: {
+						top: 70,
+						bottom: 80
+					},
+					xAxis: [{
+							type: 'category',
+							axisTick: {
+								alignWithLabel: true,
+								inside: true,
+								length: 5
+							},
+							axisLine: {
+								onZero: false,
+								lineStyle: {
+									color: '#675bba'
+								}
+							},
+							axisPointer: {
+								label: {
+									formatter: function(params) {
+										return '积分  ' + params.value +
+											(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+									}
+								}
+							},
+							data: ["09-21", "09-22", "09-23", "09-24", "09-25", "09-26"],
+
+						},
+						{
+							type: 'category',
+							axisTick: {
+								alignWithLabel: true
+
+							},
+
+							axisPointer: {
+								label: {
+									formatter: function(params) {
+										return '积分  ' + params.value +
+											(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+									}
+								}
+							}
+						}
+					],
+					yAxis: [{
+						type: 'value',
+						axisTick: {
+							alignWithLabel: true,
+							inside: true,
+							length: 1
+						},
+						axisLine: {
+							onZero: false,
+							lineStyle: {
+								color: '#675bba'
+							}
+						},
+					}],
+					series: [{
+							name: '品牌',
+							type: 'line',
+							xAxisIndex: 1,
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#3F53FE',
+								}
+							},
+							symbol: 'circle',
+							data: [600, 420, 250, 500, 368, 489, 628]
+						},
+						{
+							name: '中企',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#F42281'
+								}
+							},
+							symbol: 'circle',
+							data: [350, 360, 400, 490, 520, 800]
+						},
+						{
+							name: '共享',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#3096DB'
+								}
+							},
+							symbol: 'circle',
+							data: [300, 100, 200, 530, 700, 600]
+						},
+						{
+							name: '520',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#B231CD',
+								}
+							},
+							symbol: 'circle',
+							data: [50, 110, 100, 210, 350, 600]
+						},
+						{
+							name: '中网',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#F3C92C',
+								}
+							},
+							symbol: 'circle',
+							data: [100, 160, 300, 490, 500, 700]
+						},
+						{
+							name: '排行',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#FF7A22',
+								}
+							},
+							symbol: 'circle',
+							data: [150, 200, 350, 490, 520, 620]
+						}
+					]
+				};
+				myChart4.setOption(option);
+
+
+
+				// 火热指数 右侧柱状图
+				var myChart5 = echarts.init(document.getElementById('main-five')),
+					colors = ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22'];
+				option = {
+					color: colors,
+					tooltip: {
+						trigger: 'none',
+						axisPointer: {
+							type: 'cross'
+						}
+					},
+
+					legend: {
+						x: 'center',
+						y: 'bottom',
+						data: ["品牌", "中企", "共享", "520", "中网", "排行"],
+						textStyle: {
+							color: ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22']
+						}
+					},
+					grid: {
+						top: 70,
+						bottom: 80
+					},
+					xAxis: [{
+							type: 'category',
+							axisTick: {
+								alignWithLabel: true,
+								inside: true,
+								length: 5
+							},
+							axisLine: {
+								onZero: false,
+								lineStyle: {
+									color: '#675bba'
+								}
+							},
+							axisPointer: {
+								label: {
+									formatter: function(params) {
+										return '积分  ' + params.value +
+											(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+									}
+								}
+							},
+							data: ["09-21", "09-22", "09-23", "09-24", "09-25", "09-26"],
+
+						},
+						{
+							type: 'category',
+							axisTick: {
+								alignWithLabel: true
+
+							},
+
+							axisPointer: {
+								label: {
+									formatter: function(params) {
+										return '积分  ' + params.value +
+											(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+									}
+								}
+							}
+						}
+					],
+					yAxis: [{
+						type: 'value',
+						axisTick: {
+							alignWithLabel: true,
+							inside: true,
+							length: 1
+						},
+						axisLine: {
+							onZero: false,
+							lineStyle: {
+								color: '#675bba'
+							}
+						},
+					}],
+					series: [{
+							name: '品牌',
+							type: 'line',
+							xAxisIndex: 1,
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#3F53FE',
+								}
+							},
+							symbol: 'circle',
+							data: [600, 420, 250, 500, 368, 489, 628]
+						},
+						{
+							name: '中企',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#F42281'
+								}
+							},
+							symbol: 'circle',
+							data: [350, 360, 400, 490, 520, 800]
+						},
+						{
+							name: '共享',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#3096DB'
+								}
+							},
+							symbol: 'circle',
+							data: [300, 100, 200, 530, 700, 600]
+						},
+						{
+							name: '520',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#B231CD',
+								}
+							},
+							symbol: 'circle',
+							data: [50, 110, 100, 210, 350, 600]
+						},
+						{
+							name: '中网',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#F3C92C',
+								}
+							},
+							symbol: 'circle',
+							data: [100, 160, 300, 490, 500, 700]
+						},
+						{
+							name: '排行',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#FF7A22',
+								}
+							},
+							symbol: 'circle',
+							data: [150, 200, 350, 490, 520, 620]
+						}
+					]
+				};
+				myChart5.setOption(option);
+			})
+
+			// 项目数据
+			var xmsj = echarts.init(document.getElementById('xmsj'), 'infographic'),
+				colors = ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22'];
+			option = {
+				color: colors,
+				tooltip: {
+					trigger: 'none',
+					axisPointer: {
+						type: 'cross'
+					}
+				},
+
+				legend: {
+					x: 'center',
+					y: 'bottom',
+					data: ["品牌", "中企", "共享", "520", "中网", "排行"],
+					textStyle: {
+						color: ['#3F53FE', '#F42281', '#3096DB', '#B231CD', '#F3C92C', '#FF7A22']
+					}
+				},
+				grid: {
+					top: 70,
+					bottom: 80
+				},
+				xAxis: [{
+						type: 'category',
+						axisTick: {
+							alignWithLabel: true,
+							inside: true,
+							length: 5
+						},
+						axisLine: {
+							onZero: false,
+							lineStyle: {
+								color: '#675bba'
+							}
+						},
+						axisPointer: {
+							label: {
+								formatter: function(params) {
+									return '积分  ' + params.value +
+										(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+								}
+							}
+						},
+						data: ["09-21", "09-22", "09-23", "09-24", "09-25", "09-26"],
+
+					},
+					{
+						type: 'category',
+						axisTick: {
+							alignWithLabel: true
+
+						},
+
+						axisPointer: {
+							label: {
+								formatter: function(params) {
+									return '积分  ' + params.value +
+										(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+								}
+							}
+						}
+					}
+				],
+				yAxis: [{
+					type: 'value',
+					axisTick: {
+						alignWithLabel: true,
+						inside: true,
+						length: 1
+					},
+					axisLine: {
+						onZero: false,
+						lineStyle: {
+							color: '#675bba'
+						}
+					},
+				}],
+				series: [{
+						name: '品牌',
+						type: 'line',
+						xAxisIndex: 1,
+						smooth: true,
+						itemStyle: {
+							normal: {
+								color: '#3F53FE',
+							}
+						},
+						symbol: 'circle',
+						data: [600.55, 420.545, 250.55, 500.64, 368.95, 489.85, 628.33]
+					},
+					{
+						name: '中企',
+						type: 'line',
+						smooth: true,
+						itemStyle: {
+							normal: {
+								color: '#F42281'
+							}
+						},
+						symbol: 'circle',
+						data: [350.56, 360.5, 400.4, 490.5, 520.5, 800.5]
+					},
+					{
+						name: '共享',
+						type: 'line',
+						smooth: true,
+						itemStyle: {
+							normal: {
+								color: '#3096DB'
+							}
+						},
+						symbol: 'circle',
+						data: [300, 100, 200, 530, 700, 600]
+					},
+					{
+						name: '520',
+						type: 'line',
+						smooth: true,
+						itemStyle: {
+							normal: {
+								color: '#B231CD',
+							}
+						},
+						symbol: 'circle',
+						data: [50.5, 11.08, 100.95, 210, 350, 600]
+					},
+					{
+						name: '中网',
+						type: 'line',
+						smooth: true,
+						itemStyle: {
+							normal: {
+								color: '#F3C92C',
+							}
+						},
+						symbol: 'circle',
+						data: [100, 160, 300, 490, 500, 700]
+					},
+					{
+						name: '排行',
+						type: 'line',
+						smooth: true,
+						itemStyle: {
+							normal: {
+								color: '#FF7A22',
+							}
+						},
+						symbol: 'circle',
+						data: [150, 200, 350, 490, 520, 620]
+					}
+				]
+			};
+			xmsj.setOption(option);
+		</script>
+		
+		<script type="text/javascript">
+		
+			
+			function loadTwoLine() {
+				var myChart = echarts.init(document.getElementById('main-three'));
+				colors = ['#3F53FE', '#F42281', '#3096DB', '#B231CD'];
+				// 显示标题，图例和空的坐标轴
+				myChart.setOption({
+					color: colors,
+					tooltip: {
+						trigger: 'axis',
+					},
+		
+					legend: {
+						x: 'center',
+						y: 'bottom',
+						data: ["one", "two", "three", "four"],
+						textStyle: {
+							color: ['#3F53FE', '#F42281', '#3096DB', '#B231CD']
+						}
+					},
+					grid: {
+						top: 70,
+						bottom: 80
+					},
+					xAxis: [{
+							type: 'category',
+							axisTick: {
+								alignWithLabel: true,
+								inside: true,
+								length: 5
+							},
+							axisLine: {
+								onZero: false,
+								lineStyle: {
+									color: '#675bba'
+								}
+							},
+							axisPointer: {
+								label: {
+									formatter: function(params) {
+										return '积分  ' + params.value +
+											(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+									}
+								}
+							},
+							// data: ["09-21", "09-22", "09-23", "09-24", "09-25", "09-26"],
+							data: []
+						},
+						{
+							type: 'category',
+							axisTick: {
+								alignWithLabel: true
+		
+							},
+		
+							axisPointer: {
+								label: {
+									formatter: function(params) {
+										return '积分  ' + params.value +
+											(params.seriesData.length ? '：' + params.seriesData[0].data : '');
+									}
+								}
+							}
+						}
+					],
+					yAxis: [{
+						type: 'value',
+						axisTick: {
+							alignWithLabel: true,
+							inside: true,
+							length: 1
+						},
+						axisLine: {
+							onZero: false,
+							lineStyle: {
+								color: '#675bba'
+							}
+						},
+						name: ''
+					}],
+					series: [{
+							name: 'one',
+							type: 'line',
+							xAxisIndex: 1,
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#3F53FE',
+								}
+							},
+							symbol: 'circle',
+							data: [],
+						},
+						{
+							name: 'two',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#F42281'
+								}
+							},
+							symbol: 'circle',
+							data: []
+						},
+						{
+							name: 'three',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#3096DB'
+								}
+							},
+							symbol: 'circle',
+							data: []
+						},
+						{
+							name: 'four',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: '#B231CD',
+								}
+							},
+							symbol: 'circle',
+							data: []
+						}
+					]
+				});
+				myChart.showLoading(); //数据加载完之前先显示一段简单的loading动画
+				var names = []; //类别数组（实际用来盛放X轴坐标值）    
+				var series1 = [];
+				var series2 = [];
+				var series3 = [];
+				var series4 = [];
+				$.ajax({
+					type: 'get',
+					url: 'personData.json', //请求数据的地址
+					dataType: "json", //返回数据形式为json
+					success: function(result) {
+						var length = result.day.length;
+						var n = length - 1
+						//请求成功时执行该函数内容，result即为服务器返回的json对象           
+						bianli(result,n);
+						
+						// 点击前一天的按钮
+						$('.prev').click(function() {
+							n--;
+							if (n <= 0) {
+								n=0;
+								$('.prev').css('opacity', '.3')
+								$('.after').css('opacity', '1')
+							} else {
+								
+								$('.after').css('opacity', '1')
+								$('.prev').css('opacity', '1')
+							}
+							bianli(result, n);
+						});
+						
+						// 点击后一天的按钮
+						$('.after').click(function() {
+							n++;
+							if (n >= length - 1) {
+								n = length - 1;
+								$('.after').css('opacity', '.3')
+								$('.prev').css('opacity', '1')
+							} else {
+								
+								$('.prev').css('opacity', '1')
+								$('.after').css('opacity','1')
+							}
+							bianli(result, n);
+						
+						})
+						
+					},
+					error: function(errorMsg) {
+						//请求失败时执行该函数
+						alert("图表请求数据失败!");
+						myChart.hideLoading();
+					}
+				});
+				function bianli(result,n){
+					var names = []; //类别数组（实际用来盛放X轴坐标值）    
+					var series1 = [];
+					var series2 = [];
+					var series3 = [];
+					var series4 = [];
+					$.each(result.day[n].one, function(index, item) {
+						names.push(item.AREA); //挨个取出类别并填入类别数组
+						series1.push(item.LANDNUM);
+					});
+					$.each(result.day[n].two, function(index, item) {
+						series2.push(item.LANDNUM);
+					});
+					$.each(result.day[n].three, function(index, item) {
+						series3.push(item.LANDNUM);
+					});
+					$.each(result.day[n].four, function(index, item) {
+						series4.push(item.LANDNUM);
+					});
+					myChart.hideLoading(); //隐藏加载动画
+					myChart.setOption({ //加载数据图表
+						xAxis: {
+							data: names
+						},
+						series: [{
+								data: series1
+							},
+							{
+								data: series2
+							},
+							{
+								data: series3
+							},
+							{
+								data: series4
+							}
+					
+						]
+					});
+				}
+			};
+			loadTwoLine()
+		</script>
+	
+	</body>
+
+</html>

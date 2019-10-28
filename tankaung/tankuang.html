@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>投票验证弹框</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/code.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.tkContainer {
+				width: 100%;
+				max-width: 7.5rem;
+				margin: auto;
+			}
+
+			.tkContent {
+				width: 100%;
+				margin: auto;
+			}
+
+			.tkTop {
+				width: 100%;
+				height: 3.32rem;
+				margin: auto;
+			}
+
+			.tk-center {
+				width: 100%;
+				margin: auto;
+				height: 5.54rem;
+			}
+
+			.tkbanner {
+				width: 74%;
+				height: 2.9rem;
+				margin: auto;
+				background: url(images/tanc_ditu_img.png) no-repeat;
+				background-size: 100% 100%;
+				/* position: relative; */
+			}
+
+			.tkbanner-top {
+				width: 1005;
+				margin-left: 0.22rem;
+				display: flex;
+				justify-content: space-between;
+			}	
+			.jiangbei {
+				width: 1.38rem;
+				height: 1.45rem;
+				margin-top: -0.36rem;
+			}
+			.tkbanner-bottom {
+				width: 100%;
+				padding-left: 0.29rem;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+
+			.tkbanner-bottom img {
+				width: 2rem;
+				height: 1.06rem;
+
+			}
+
+			.tkbanner-text {
+				/* width: 138px; */
+				height: 0.33rem;
+				font-size: 0.34rem;
+				font-family: Microsoft YaHei;
+				font-weight: bold;
+				color: rgba(255, 255, 255, 1);
+				text-shadow: 0rem 0.04rem 0.10rem rgba(24, 62, 120, 0.38);
+				margin-left: 0.3rem;
+			}
+
+			.tkBottom-content {
+				width: 100%;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: -0.21rem;
+			}
+
+			.tkInput {
+				width: 2.76rem;
+				height: 0.88rem;
+				background: rgba(238, 245, 255, 1);
+				border: 1px solid rgba(198, 201, 204, 1);
+				border-radius: 0.06rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#smscode {
+				width: 85%;
+				height: 0.30rem;
+				font-size: 0.30rem;
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: rgba(153, 153, 153, 1);
+				line-height: 0.36rem;
+				border: none;
+				outline: none;
+				background: #EEF5FF;
+			}
+
+			.tkcode {
+				width: 1.9rem;
+				height: 0.88rem;
+				border-radius: 0.06rem;
+				margin-left: 0.22rem;
+				position: relative;
+			}
+
+			.toupiao {
+				width: 3.63rem;
+				height: 0.99rem;
+				margin: auto;
+				margin-top: 0.66rem;
+				background: url(images/tanc_toup_btn.png) no-repeat;
+				background-size: 100% 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 0.32rem;
+				font-family: Microsoft YaHei;
+				font-weight: 400;
+				color: rgba(255, 255, 255, 1);
+				line-height: 0.36rem;
+				padding: 0.24rem 0 0.44rem;
+			}
+			#verifyCanvas {
+				width: 1.6rem;
+				height: 0.88rem;
+				position: absolute;
+				right: 4px;
+				border: 1px solid rgba(198, 201, 204, 1);
+				border-radius: 0.06rem;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 弹框容器 -->
+		<div class="tkContainer">
+			<div class="tkContent">
+				<div class="tkTop">
+					<img src="images/tanc_yanz_img.png">
+				</div>
+				<div class="tk-center">
+					<div class="tkbanner">
+						<div class="tkbanner-top">
+							<img src="images/tanc_jiangbei_img.png" class="jiangbei">
+							<img src="images/tanc_close_icon.png" class="success-close">
+						</div>
+						<div class="tkbanner-bottom">
+							<img src="images/sanhua.png">
+							<div class="tkbanner-text">蒙牛乳业</div>
+						</div>
+					</div>
+					<div class="tkBottom-content">
+						<div class="tkInput">
+							<input type="text" name="yanzheng" id="smscode" placeholder="请输入验证码" />
+						</div>
+						<div class="tkcode" id="v_container" style="width: 1.66rem;height: 0.88rem;">
+
+						</div>
+					</div>
+					<div class="toupiao">投票</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				// 定义：存储验证码
+				var verifyCode = new GVerify("v_container");
+			});
+			
+			$('.tkContainer').on('touchend', function(el) {
+				if(el.target.tagName != 'INPUT') {
+					$('input').blur()
+				}
+			})
+		</script>
+	</body>
+</html>

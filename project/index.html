@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> -->
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="js/rem.js" type="text/javascript" charset="utf-8"></script> -->
+		<style type="text/css">
+			.main {
+				width: 100%;
+				min-height: 100vh;
+				height: 100%;
+			}
+
+			.main-content {
+				width: 100%;
+			}
+
+			.iframe_mx {
+				width: 100%;
+				height: 100%;
+				border: 0;
+			}
+
+			.anniu {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+
+			.button {
+				width: 120px;
+				height: 44px;
+				border-radius: 18px;
+				cursor: pointer;
+				font-size: 17px;
+				color: #616b7e;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.button img {
+				margin-right: 12px;
+			}
+
+			.btnactive {
+				background: #dfe9ff;
+				color: #006EFF;
+			}
+
+			.right {
+				font-size: 17px;
+				color: #006EFF;
+				font-weight: 500;
+			}
+
+			.content {
+				width: 100%;
+				margin: auto;
+				padding: 51px;
+
+			}
+
+			.box {
+				width: 100%;
+				height: 790px;
+				background: #fff;
+				display: flex;
+				justify-content: space-between;
+				padding: 190px;
+			}
+
+			.box .prev,
+			.box .after {
+				display: flex;
+				align-items: center;
+			}
+
+			.box .chart {
+				width: 80%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+
+
+			<div class="nav-wrapper">
+				<ul class="lists">
+					<li class="active">
+						<a href="link/index.html" class="iframe_link"><img src="img/rili.png">每日行业</a>
+					</li>
+					<li>
+						<a href="link/index.html" class="iframe_link">每月行业</a>
+					</li>
+					<li>
+						<a href="link/index.html" class="iframe_link">每月不重复行业</a>
+					</li>
+					<li>
+						<a href="link/index.html" class="iframe_link">员工人数对比</a>
+					</li>
+					<li>
+						<a href="link/demo.html" class="iframe_link">工资对比</a>
+					</li>
+					<li>
+						<a href="link/demo.html" class="iframe_link">现金账对比</a>
+					</li>
+					<li>
+						<a href="link/demo.html" class="iframe_link">项目统计对比</a>
+					</li>
+					<li>
+						<a href="link/demo.html" class="iframe_link">每日项目统计对比</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="main" style="background: #f4f6fa;height: 100%;">
+				<div class="main-content" style="height: 100%;">
+					<iframe src="link/index.html" class="iframe_mx uicss-cn" ></iframe>
+				</div>
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('.button').click(function(index, item) {
+				$(this).parent().find('.button').removeClass('btnactive')
+				$(this).addClass('btnactive')
+			})
+			$(".iframe_link").on("click", function() { 
+				$(this).parent().parent().find('li').removeClass('active')
+				$(this).parent().addClass('active')
+				//左侧a链接直接导入右侧iframe
+				var url = $(this).attr("href");
+				$(".iframe_mx").attr("src", url);
+				return false;
+			});
+		</script>
+		
+	</body>
+</html>

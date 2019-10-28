@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="swiper.css" />
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="swiper.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.ranking-container {
+				width: 1500px;
+				padding: 33px 0 31px;
+				border-bottom: 2px solid rgba(226, 226, 226, 1);
+				margin-bottom: 15px;
+				display: flex;
+				justify-content: space-around;
+				margin: auto;
+			}
+
+			.content {
+				width: 1260px;
+				margin: auto;
+				position: relative;
+			}
+
+			.arrow-btn {
+				width: 32px;
+				height: 266px;
+				line-height: 266px;
+				font-size: 30px;
+				font-weight: 300;
+				color: rgba(255, 255, 255, 1);
+				background: rgba(0, 0, 0, 1);
+				display: inline-block;
+				text-align: center;
+				cursor: pointer;
+				position: absolute;
+				top: 50px;
+			}
+
+
+
+			.swiper-container {
+				width: 1200px;
+				height: 275px;
+				margin: auto;
+			}
+
+			.swiper-wrapper {
+				margin-top: 30px;
+			}
+
+			.swiper-slide {
+				width: 276px;
+				margin-left: 15px;
+			}
+
+			.swiper-slide:last-child {
+				margin-right: 35px;
+			}
+
+			#fav-container {
+				margin-top: 30px;
+			}
+
+			.shop {
+				width: 273px;
+				height: 266px;
+				background: rgba(255, 255, 255, 1);
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				margin-left: 10px;
+				margin-right: 20px;
+				margin-bottom: 50px;
+			}
+
+			.shop:hover {
+				top: -10px;
+				box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+			}
+
+			.shop-banner {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			.shop-img {
+				width: 273px;
+				height: 156px;
+				cursor: pointer;
+			}
+
+			.shop-title {
+				width: 273px;
+				font-size: 18px;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+				margin: 10px 9px 0 12px;
+				cursor: pointer;
+			}
+
+			.needEllipsis {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			.shop-ranking {
+				margin: 20px 9px 0 12px;
+			}
+
+			.shop-ranking img {
+				position: relative;
+				top: 2px;
+			}
+
+			.ranking-title {
+				width: 212px;
+				height: 266px;
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 28px;
+				padding: 0 38px;
+			}
+
+			.ranking-title-contianer {
+				position: relative;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				margin-top: 50px;
+			}
+
+			.ranking-title-text {
+				font-size: 26px;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+				line-height: 32px;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			.ranking-title-static {
+				font-size: 18px;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+				line-height: 43px;
+				text-align: center;
+				margin-top: 20px;
+			}
+
+
+
+			.ranking-slider {
+				/* width: 1170px; */
+				padding: 0 20px;
+				min-height: 275px;
+				display: inline-block;
+				vertical-align: top;
+				overflow: hidden;
+				white-space: nowrap;
+				position: relative;
+			}
+
+			.not-found {
+				color: rgba(51, 51, 51, 1);
+				text-align: center;
+				padding: 20px 0;
+				display: none;
+			}
+
+			#loading {
+				width: 100px;
+				position: relative;
+				height: 100px;
+				top: 35px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				display: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="ranking-container">
+			<div class="ranking-title" style="background:url(type_1.png)">
+				<div class="ranking-title-contianer">
+					<div class="ranking-title-text" id="75">19年<span style="color: #FF5A00">广</span>州市房产中介</div>
+					<div class="ranking-title-static">十大商家排行榜</div>
+				</div>
+			</div>
+			<div class="container">
+
+				<div class="content">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;">
+									<img class="shop-img go" id="ranking-2326" src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2326">
+										<span style="color: #FF5A00">广</span>东邦华集团有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title="">
+										<img class="shop-icon" src="">
+										<span>暂未填写</span>
+									</div>
+								</div>
+
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;">
+									<img class="shop-img go" id="ranking-2326" src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2326">
+										<span style="color: #FF5A00">广</span>东邦华集团有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title="">
+										<img class="shop-icon" src="">
+										<span>暂未填写</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;"> <img class="shop-img go" id="ranking-2328"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2328">合富辉煌(中国)房地产顾问有限公司 </div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2304"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2304"><span style="color: #FF5A00">广</span>东链家房地产经纪有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;"> <img class="shop-img go" id="ranking-2329"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2329"><span style="color: #FF5A00">广</span>州方圆地产顾问有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2314"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2314">保利地产投资顾问有限公司 </div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2330"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2330"><span style="color: #FF5A00">广</span>州中地行房产代理有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2321"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2321"><span style="color: #FF5A00">广</span>州美联港置房地产代理有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2327"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2327"><span style="color: #FF5A00">广</span>州市乐有家房产经纪有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 如果需要导航按钮 -->
+					<div class="swiper-button-prev arrow-btn">&lt;</div>
+					<div class="swiper-button-next arrow-btn">&gt;</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ranking-container">
+			<div class="ranking-title" style="background:url(type_1.png)">
+				<div class="ranking-title-contianer">
+					<div class="ranking-title-text" id="75">19年<span style="color: #FF5A00">广</span>州市房产中介</div>
+					<div class="ranking-title-static">十大商家排行榜</div>
+				</div>
+			</div>
+			<div class="container">
+		
+				<div class="content">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;">
+									<img class="shop-img go" id="ranking-2326" src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2326">
+										<span style="color: #FF5A00">广</span>东邦华集团有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title="">
+										<img class="shop-icon" src="">
+										<span>暂未填写</span>
+									</div>
+								</div>
+		
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;">
+									<img class="shop-img go" id="ranking-2326" src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2326">
+										<span style="color: #FF5A00">广</span>东邦华集团有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title="">
+										<img class="shop-icon" src="">
+										<span>暂未填写</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;"> <img class="shop-img go" id="ranking-2328"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2328">合富辉煌(中国)房地产顾问有限公司 </div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+		
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2304"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2304"><span style="color: #FF5A00">广</span>东链家房地产经纪有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+		
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;"> <img class="shop-img go" id="ranking-2329"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2329"><span style="color: #FF5A00">广</span>州方圆地产顾问有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+		
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2314"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2314">保利地产投资顾问有限公司 </div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+		
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2330"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2330"><span style="color: #FF5A00">广</span>州中地行房产代理有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2321"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2321"><span style="color: #FF5A00">广</span>州美联港置房地产代理有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2327"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2327"><span style="color: #FF5A00">广</span>州市乐有家房产经纪有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 如果需要导航按钮 -->
+					<div class="swiper-button-prev arrow-btn">&lt;</div>
+					<div class="swiper-button-next arrow-btn">&gt;</div>
+				</div>
+			</div>
+		</div>
+		<div class="ranking-container">
+			<div class="ranking-title" style="background:url(type_1.png)">
+				<div class="ranking-title-contianer">
+					<div class="ranking-title-text" id="75">19年<span style="color: #FF5A00">广</span>州市房产中介</div>
+					<div class="ranking-title-static">十大商家排行榜</div>
+				</div>
+			</div>
+			<div class="container">
+		
+				<div class="content">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;">
+									<img class="shop-img go" id="ranking-2326" src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2326">
+										<span style="color: #FF5A00">广</span>东邦华集团有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title="">
+										<img class="shop-icon" src="">
+										<span>暂未填写</span>
+									</div>
+								</div>
+		
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;">
+									<img class="shop-img go" id="ranking-2326" src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2326">
+										<span style="color: #FF5A00">广</span>东邦华集团有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title="">
+										<img class="shop-icon" src="">
+										<span>暂未填写</span>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;"> <img class="shop-img go" id="ranking-2328"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2328">合富辉煌(中国)房地产顾问有限公司 </div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+		
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2304"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2304"><span style="color: #FF5A00">广</span>东链家房地产经纪有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+		
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px; top: 0px;"> <img class="shop-img go" id="ranking-2329"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2329"><span style="color: #FF5A00">广</span>州方圆地产顾问有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+		
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2314"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2314">保利地产投资顾问有限公司 </div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+		
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2330"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2330"><span style="color: #FF5A00">广</span>州中地行房产代理有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2321"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2321"><span style="color: #FF5A00">广</span>州美联港置房地产代理有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="shop" style="margin-right: 15px; margin-bottom: 0px;"> <img class="shop-img go" id="ranking-2327"
+									 src="">
+									<div class="shop-title needEllipsis go need-text-overflow" id="ranking-2327"><span style="color: #FF5A00">广</span>州市乐有家房产经纪有限公司
+									</div>
+									<div class="shop-ranking need-text-overflow" title=""> <img class="shop-icon" src="">
+										<span>暂未填写</span> </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 如果需要导航按钮 -->
+					<div class="swiper-button-prev arrow-btn">&lt;</div>
+					<div class="swiper-button-next arrow-btn">&gt;</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+			$(".container").each(function() {
+				var that = $(this).find('.swiper-container')
+				var swiper = new Swiper(that, {
+					slidesPerView: 'auto',
+					loopedSlides: 4,
+					navigation: {
+						nextEl: $(this).find('.swiper-button-next'),
+						prevEl: $(this).find('.swiper-button-prev'),
+					}
+
+				});
+			});
+		</script>
+	</body>
+</html>

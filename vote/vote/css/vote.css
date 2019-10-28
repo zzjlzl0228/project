@@ -1,0 +1,1086 @@
+.container {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background-color: .f8fafd;
+	margin-bottom: 1.3rem;
+}
+
+.bannerContainer {
+	width: 100%;
+	height: 3rem;
+	/* background-color: #D4F5FD; */
+}
+.tk-center:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 4.54rem;
+    height: 5.34rem;
+    background: #fff;
+    z-index: -1;
+    left: 0.9rem;
+    border-radius: 0 0 0.2rem 0.2rem;
+}
+.bannerContent {
+	width: 100%;
+	height: 2.84rem;
+	margin: auto;
+	background: url(../img/m_toupiao_banner_img.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+}
+
+.bannerContent .banner-title {
+	/* width: 32.93%; */
+	height: 0.34rem;
+	font-size: 0.36rem;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: rgba(249, 224, 97, 1);
+	padding: 1.49rem 0rem 1.01rem 1.19rem;
+
+}
+
+.bannerContent .search-button {
+	width: 0.58rem;
+	height: 0.60rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.bannerContent .search-button img {
+	width: 0.6rem;
+	height: 0.6rem;
+}
+
+.bannerContent .right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.bannerContainer .right img {
+	width: 3.3rem;
+	height: 3.5rem;
+}
+
+.countdown {
+	width: 100%;
+	height: 1.26rem;
+	margin-bottom: 0.33rem;
+	background: url(../img/toupiao_daojishi_bg.png) no-repeat;
+	background-size: 100% 100%;
+	padding: 0.59rem 1.11rem 0.17rem 2.75rem;
+}
+
+.countdown-text {
+	width: 3.5rem;
+	height: 0.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.countdown-text .time,
+.countdown-text .branch,
+.countdown-text .second,
+.countdown-text .lastTime {
+	width: 0.5rem;
+	height: 0.5rem;
+	background: linear-gradient(-32deg, rgba(240, 183, 91, 1), rgba(255, 227, 132, 1));
+	border-radius: 0.03rem;
+	font-size: 0.30rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timeText,
+.branchText,
+.secondText {
+	width: 0.22rem;
+	height: 0.22rem;
+	font-size: 0.24rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(248, 206, 75, 1);
+	opacity: 0.6;
+}
+
+/* 通知 */
+.content {
+	width: 90%;
+	margin: auto;
+}
+
+.noticeContainer {
+	width: 100%;
+	height: 1rem;
+	padding: 0.18rem 0;
+}
+
+.noticeContent {
+	width: 100%;
+	height: 0.6rem;
+	background: #fff;
+	padding: 0.17rem 0.17rem 0.16rem 0.17rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.notice {
+	width: 1.08rem;
+	height: 0.26rem;
+}
+
+.cencal {
+	width: 0.28rem;
+	height: 0.28rem;
+}
+
+.noticeContent .center-content {
+	width: 4.76rem;
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	margin-left: 0.26rem;
+}
+
+.listContainer {
+	width: 100%;
+	margin: auto;
+	margin-bottom: 0.3rem;
+}
+
+.listContainer .item {
+	width: 100%;
+}
+
+.listContainer .item .top {
+	width: 100%;
+	height: 0.4rem;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.listContainer .item .top img {
+	width: 0.4rem;
+	height: 0.4rem;
+}
+
+.listContainer .item .top .top-title {
+	width: 0.65rem;
+	height: 0.21rem;
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: rgba(22, 83, 165, 1);
+	margin-left: 0.05rem;
+	padding-top: 0.1rem;
+}
+
+/* 背景图片 */
+/* 投票进行中的背景图片 */
+/* 前三名 */
+.ran_on {
+	background: url(../img/m_no.1_bg_img.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 第四到第10名 */
+.item .raning {
+	background: url(../img/m_no.4_bg_img.png) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+
+/* 10名以后 */
+.ranings {
+	background: url(../img/m_no.11_bg_img.png) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+
+/* 未开始和已经结束的背景图 */
+.ranings {
+	background: url(../img/m_no.11_bg_img.png) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+
+/* 已经揭榜的背景图 */
+/* 前三名 */
+.expose_o {
+	background: url(../img/m_no.1_bg_yijiebang_img.png) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+
+/* 4-10名 */
+.expose_f {
+	background: url(../img/m_no.4_bg_yijiebang_img.png) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+
+.listContainer .item .bottom {
+	width: 100%;
+	height: 1.88rem;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+.item .bottom .left {
+	padding: 0.3rem 0.42rem 0.4rem 0.45rem;
+}
+
+.item .bottom .left-logo {
+	width: 2rem;
+	height: 1.06rem;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0rem 0rem 0.24rem 0rem rgba(22, 83, 165, 0.25);
+	border-radius: 0.02rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.item .bottom .left-logo img {
+	filter: #fff;
+	width: 2rem;
+	height: 0.75rem;
+}
+
+.item .bottom .left-bottom {
+	position: absolute;
+	top: 0.69rem;
+	left: 0;
+}
+
+.item .bottom .left-bottom img {
+	width: 2.7rem;
+	height: 1.07rem;
+}
+
+.item .bottom .center {
+	padding-top: 0.4rem;
+}
+
+.item .bottom .center .project-name {
+	/* width: 64rem; */
+	height: 0.31rem;
+	font-size: 0.32rem;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	margin-bottom: 0.29rem;
+}
+
+.item .bottom .center .votes {
+	/* width: 148rem; */
+	height: 0.27rem;
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(22, 83, 165, 1);
+}
+
+.item .bottom .right {
+	width: 1.4rem;
+	height: 0.6rem;
+	background: rgba(22, 83, 165, 1);
+	box-shadow: 0rem 0rem 0.16rem 0rem rgba(22, 83, 165, 0.45);
+	border-radius: 0.02rem;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.52rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.item .bottom .right .right-text {
+	/* width: 0.56rem; */
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+
+/* 揭榜状态的投票按钮 */
+.right-text-ex {
+	width: 1.4rem;
+	height: 0.6rem;
+	background: linear-gradient(0deg, rgba(203, 124, 24, 1), rgba(245, 207, 144, 1));
+	box-shadow: 0.04rem 0.03rem 0.12rem 0 rgba(196, 120, 1, 0.4);
+	border-radius: 0.02rem;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.52rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.right-text-ex .right-text {
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+}
+
+/* 不能点击的状态按钮 */
+.right-text-no {
+	width: 1.4rem;
+	height: 0.6rem;
+	background: rgba(206, 222, 239, 1);
+	border-radius: 0.02rem;
+	position: absolute;
+	right: 0.3rem;
+	top: 0.52rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.right-text-no .right-text {
+	/* width: 0.56rem; */
+	font-size: 0.28rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: #1653A5;
+}
+
+
+.item .bottom-four {
+	background: url(../img/m_no.4_bg_img.png) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+
+.item .bottom .right-time {
+	width: 1.4rem;
+	height: 0.6rem;
+	background: rgba(206, 222, 239, 1);
+	border-radius: 0.02rem;
+}
+
+.item .bottom-eleven {}
+
+.fot_bom {
+	width: 7.5rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.footer_img {
+	position: absolute;
+	width: 7.5rem;
+	/* height: 0.36rem; */
+	margin: 0;
+	padding: 0;
+	/* background-color: #FFFFFF; */
+}
+
+.footer_img img {
+	position: absolute;
+	z-index: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.footer {
+	width: 100%;
+	height: 1.2rem;
+	background: rgba(255, 255, 255, 1);
+	/* box-shadow: 0rem 0rem 0.24rem 0rem rgba(141, 147, 159, 0.25); */
+	/* padding: 0rem 0.7rem 0.2rem 0.58rem; */
+	display: flex;
+	justify-content: space-between;
+	/* margin-top: 0.5rem; */
+}
+
+.firstPage {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.firstPage img {
+	width: 0.46rem;
+	height: 0.46rem;
+}
+
+
+.firstPage .firstPage-text {
+	/* width: 48rem; */
+	height: 0.24rem;
+	font-size: 0.24rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(122, 126, 147, 1);
+	margin-top: 0.09rem;
+	text-align: center;
+
+}
+
+/* 已揭榜的底部背景 */
+.expose_bg {
+	width: 7.5rem;
+	height: 3rem;
+	background-image: url(../img/yijiebang_xf_bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	text-align: center;
+}
+
+.expose_bg img {
+	margin-top: 2rem;
+	width: 2.72rem;
+	height: 0.84rem;
+}
+
+/* 遮罩 */
+.mas {
+	display: flex;
+	justify-content: center;
+}
+
+.mask {
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 7.5rem;
+	height: 100vh;
+	background: rgba(51, 53, 53, 0.8);
+}
+
+.mask_top {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-top: 0.2rem;
+	width: 7.2rem;
+	margin-left: 0.3rem;
+}
+
+.mask_left {
+	width: 6.2rem;
+	height: 0.72rem;
+	line-height: 0.72rem;
+	background: rgba(246, 246, 246, 1);
+	border-radius: 0.36rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mask_left input {
+	background: rgba(246, 246, 246, 1);
+	width: 5rem;
+	height: 0.72rem;
+	margin-left: 0.1rem;
+}
+
+.mask_left img {
+	height: 0.36rem;
+	width: 0.36rem;
+
+}
+
+.mask_right {
+	margin-left: 0.17rem;
+	width: 0.5rem;
+	height: 0.72rem;
+	line-height: 0.72rem;
+}
+
+.mask_right img {
+	margin-bottom: 0.11rem;
+	width: 0.5rem;
+	height: 0.5rem;
+}
+
+.mask_bottom {
+	position: fixed;
+	bottom: 1.75rem;
+	left: 0.75rem;
+}
+
+.mask_bottom img {
+	width: 6rem;
+	height: 1.3rem;
+}
+
+/* 通知遮罩 */
+.notice_mask {
+	display: flex;
+	justify-content: center;
+}
+
+.not_center {
+	width: 6rem;
+	height: 7.3rem;
+	margin-top: 2rem;
+	margin-left: 0.75rem;
+	background-image: url(../img/toupiao_tongzhi_red_bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.not_c_top {
+	width: 6rem;
+	text-align: center;
+	font-size: 0.46rem;
+	padding-top: 0.73rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(131, 0, 2, 1);
+}
+
+.not_c_p {
+	font-size: 0.30rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 1);
+	opacity: 0.6;
+	display: flex;
+	justify-content: center;
+}
+
+.not_time {
+	margin-top: 0.2rem;
+	font-size: 0.60rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(99, 99, 99, 1);
+	opacity: 0.1;
+	text-align: center;
+}
+
+.time {
+	text-align: center;
+	font-size: 0.30rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 1);
+	line-height: 0.6rem;
+	margin-bottom: 0.2rem;
+}
+
+.not_bottom {
+	position: relative;
+	top: -0.4rem;
+	margin-left: 0.49rem;
+	width: 5.03rem;
+	margin-top: 0;
+	font-size: 0.24rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(89, 89, 89, 1);
+	line-height: 0.38rem;
+	opacity: 0.6;
+	padding-bottom: 1.2rem;
+}
+
+.bottom_sw {
+	margin-left: 1.1rem;
+	width: 3.8rem;
+	font-size: 0.24rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(254, 254, 254, 1);
+	opacity: 0.8;
+	position: relative;
+	bottom: 0;
+	/* margin-top: 0.3rem; */
+}
+
+/* 客服遮罩 */
+.customer {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: center;
+}
+
+.customer_mask_center {
+	width: 6rem;
+	height: 6rem;
+	background-image: url(../img/kefu_beijing.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-top: 3.32rem;
+}
+
+.customer_top {
+	width: 5.44rem;
+	height: 1.84rem;
+	background-image: url(../img/kefu_tele_btn.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-top: 1.9rem;
+	margin-left: 0.3rem;
+	font-size: 0.3rem;
+	padding-top: 0.42rem;
+	padding-left: 0.27rem;
+	font-family: Source Han Sans CN;
+}
+
+.customer_bottom {
+	margin-top: 0.16rem;
+	width: 5.44rem;
+	height: 1.03rem;
+	display: flex;
+	margin-left: 0.30rem;
+	/* justify-content: center; */
+}
+
+.customer_qq {
+	width: 2.64rem;
+	height: 1.03rem;
+	background-image: url(../img/kefu_qq_btn.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	font-size: 0.30rem;
+	font-family: Source Han Sans CN;
+	font-weight: 500;
+	color: rgba(20, 84, 139, 1);
+	padding-left: 1.05rem;
+	padding-top: 0.24rem;
+	/* margin-left: 0.3rem; */
+}
+
+.customer_a {
+	width: 6rem;
+	text-align: center;
+	margin-top: 0.3rem;
+	font-size: 0.3rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.6);
+	line-height: 0.6rem
+		/* opacity: 0.6; */
+}
+
+.recommend_center {
+	width: 5.7rem;
+	height: 6.06rem;
+	margin-top: 2.7rem;
+	/* max-height: 7.39rem; */
+	background-image: url(../img/recommed_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.recommend_center_top {
+	width: 5.7rem;
+	height: 2.43rem;
+	background-image: url(../img/share_top_bg.png);
+}
+
+.recommend_center_c {
+	width: 5.3rem;
+	margin-left: 0.2rem;
+	background-image: url(../img/share_bg2_img.png);
+	background-size: 100% 100%;
+	padding-top: 0.33rem;
+	padding-bottom: 0.33rem;
+}
+
+.recommend_list {
+	width: 4.78rem;
+	height: 0.94rem;
+	background-image: url(../img/share_list_bg.png);
+	/* margin-top: 0.33rem; */
+	margin-left: 0.25rem;
+	text-align: center;
+	font-size: 0.30rem;
+	font-family: Source Han Sans CN;
+	font-weight: 500;
+	line-height: 0.94rem;
+	color: rgba(2, 55, 121, 1);
+}
+
+.recommend_center_bottom {
+	position: relative;
+	bottom: -0.30rem;
+	width: 5.7rem;
+	height: 0.54rem;
+	background-image: url(../img/share_dibu_img.png);
+}
+
+/* 投票弹框 */
+.tkContainer {
+	width: 100%;
+	height: 100vh;
+	max-width: 7.5rem;
+	margin: auto;
+	background: rgba(0, 0, 0, .6);
+	position: fixed;
+	top: 0;
+	z-index: 300;
+}
+
+.tkContent {
+	width: 84.13%;
+	margin: auto;
+}
+
+.tkTop {
+	width: 100%;
+	height: 3.32rem;
+	margin: auto;
+}
+
+.tk-center {
+	width: 100%;
+	margin: auto;
+	height: 5.54rem;
+	position: relative;
+}
+
+.tkbanner {
+	width: 74%;
+	height: 2.9rem;
+	margin: auto;
+	background: url(../images/tanc_ditu_img.png) no-repeat;
+	background-size: 100% 100%;
+	/* position: relative; */
+}
+
+.tkbanner-top {
+	width: 1005;
+	margin-left: 0.22rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.jiangbei {
+	width: 1.38rem;
+	height: 1.45rem;
+	margin-top: -0.36rem;
+}
+
+.tkbanner-bottom {
+	width: 100%;
+	padding-left: 0.29rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.tkbanner-bottom img {
+	width: 2rem;
+	height: 1.06rem;
+
+}
+
+.tkbanner-text {
+	/* width: 138px; */
+	height: 0.33rem;
+	font-size: 0.34rem;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 0rem 0.04rem 0.10rem rgba(24, 62, 120, 0.38);
+	margin-left: 0.3rem;
+}
+
+.tkBottom-content {
+	width: 100%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: -0.21rem;
+}
+
+.tkInput {
+	width: 2.76rem;
+	height: 0.88rem;
+	background: rgba(238, 245, 255, 1);
+	border: 1px solid rgba(198, 201, 204, 1);
+	border-radius: 0.06rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#smscode {
+	width: 85%;
+	height: 0.30rem;
+	font-size: 0.30rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	line-height: 0.36rem;
+	border: none;
+	outline: none;
+	background: #EEF5FF;
+}
+
+.tkcode {
+	width: 1.9rem;
+	height: 0.88rem;
+	border-radius: 0.06rem;
+	margin-left: 0.22rem;
+	position: relative;
+}
+
+.toupiao {
+	width: 3.63rem;
+	height: 0.99rem;
+	margin: auto;
+	margin-top: 0.66rem;
+	background: url(../images/tanc_toup_btn.png) no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.32rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 0.36rem;
+	padding: 0.24rem 0 0.44rem;
+	cursor: pointer;
+}
+
+#verifyCanvas {
+	width: 1.6rem;
+	height: 0.88rem;
+	position: absolute;
+	right: 4px;
+	border: 1px solid rgba(198, 201, 204, 1);
+	border-radius: 0.06rem;
+}
+
+/* 投票成功提示弹框 */
+.tipsContainer {
+	width: 100%;
+	max-width: 7.5rem;
+	margin: auto;
+	height: 100vh;
+	background: rgba(0, 0, 0, .6);
+	position: fixed;
+	top: 0;
+	z-index: 400;
+}
+
+.tipsContent {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	/* height: 6.06rem; */
+	padding: 1.84rem 0.97rem 0rem 0.93rem;
+}
+	
+.tipsBottom-top img{
+	width: 1.1rem;
+}
+.tipsContent:after {
+    content: "";
+    position: absolute;
+    width: 5.6rem;
+    height: 6.3rem;
+    background: #ffff;
+    top: 1.88rem;
+    left: 0.93rem;
+    z-index: -1;
+    border-radius: 0.20rem 0.20rem;
+}
+.tipsTop {
+	width: 100%;
+	height: 2.9rem;
+	background: url(../images/tanc_ditu_img.png) no-repeat;
+	background-size: 100% 100%;
+
+}
+
+.tipsImg {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.23rem;
+}
+
+.tipsTop .tipsImg1 {
+	width: 1.8rem;
+	height: 1.87rem;
+	margin-left: 0.33rem;
+	margin-top: -0.35rem;
+}
+
+.tipsImg-right {
+	display: flex;
+	flex-direction: column;
+}
+
+.tipsClose {
+	width: 0.26rem;
+	height: 0.26rem;
+	margin-top: 0.26rem;
+	margin-left: 2rem;
+
+}
+
+.tipsTitle {
+	width: 2.46rem;
+	height: 0.81rem;
+	margin-top: 0.78rem;
+	margin-right: 0.13rem;
+}
+
+.tips {
+	width: 85%;
+	margin: auto;
+	height: 0.29rem;
+	font-size: 0.3rem;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 0px 0.06rem 0.12rem rgba(24, 62, 120, 0.64);
+}
+
+/* 投票成功弹框 */
+.successContainer {
+	width: 100%;
+	max-width: 7.5rem;
+	margin: auto;
+	height: 100vh;
+	background: rgba(0, 0, 0, .6);
+	position: fixed;
+	top: 0;
+	z-index: 500;
+}
+
+.successContent {
+	width: 84.13%;
+	margin: auto;
+}
+
+.successTop {
+	width: 100%;
+	height: 3.32rem;
+
+}
+.successTop img{
+	width: 6.31rem;
+}
+.succContet {
+	width: 89%;
+	height: 6.26rem;
+	margin: auto;
+	    background: #fff;
+    border-radius: 0.2rem;
+}
+.tipsBottom-bottom img{
+	width: 1.1rem;
+}
+.succContet-top {
+	width: 100%;
+	height: 2.9rem;
+	background: url(../images/tanc_ditu_img.png) no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 0.35rem;
+}
+
+.sc-top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.ten {
+	width: 1.32rem;
+	height: 1.16rem;
+	margin-top: -0.35rem;
+}
+
+.success-close {
+	width: 0.26rem;
+	height: 0.26rem;
+	margin-top: 0.26rem;
+	margin-right: 0.26rem;
+}
+
+.sc-center {
+	width: 100%;
+	margin-top: 0.13rem;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.companyLogo {
+	width: 2rem;
+	height: 1.06rem;
+	margin-right: 0.3rem;
+}
+
+.sc-right {
+	display: flex;
+	flex-direction: column;
+}
+
+.sc-right p {
+	/* width:1.38rem; */
+	height: 0.33rem;
+	font-size: 0.34rem;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 1);
+	text-shadow: 0rem 0.04rem 0.10rem rgba(24, 62, 120, 0.38);
+}
+
+.sc-right p:last-child {
+	/* width:2.05rem; */
+	height: 0.28rem;
+	font-size: 0.30rem;
+	margin-top: 0.3rem;
+}
+
+.sc-bottom {
+	/* width: 2.71rem; */
+	height: 0.25rem;
+	font-size: 0.26rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(82, 93, 102, 1);
+	margin-top: 0.53rem;
+}
+
+.succContet-bottom {
+	width: 100%;
+	height: 3.36rem;
+	padding: 0.22rem 0.19rem 0 0.26rem;
+}
+
+.scBottom-top {
+	width: 100%;
+	height: 0.62rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

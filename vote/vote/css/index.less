@@ -1,0 +1,261 @@
+html,
+body {
+
+}
+
+body {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #fff;
+	font-size: .15rem;
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 2.28rem;
+	font-size: .32rem;
+	background-image:url(../imgs/ppxq_top_bg.png);
+	background-size: 100% 100%;
+	padding: 0.3rem .3rem 0 .3rem;
+	
+	.colse{
+		width:.26rem;
+		height:.26rem;
+	}
+	.title{
+		height:.3rem;
+		font-size:.32rem;
+		font-family:Source Han Sans CN;
+		font-weight:400;
+		color:rgba(255,255,255,1);
+	}
+	.set{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: .5rem;
+		.dot{
+			margin-left: .1rem;
+			width: .1rem;
+			height: .1rem;
+			border-radius: 50%;
+			background:#fff;
+		}
+	}
+}
+
+.wrap{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: -.60rem;
+	.info{
+		position: relative;
+		background-image:url(../imgs/ppxq_xinxi_bg.png); 
+		background-size:100% 100%;
+		width: 6.9rem;
+		padding:.3rem .3rem 1rem .3rem;
+		.item1{
+			display: flex;
+			justify-content: space-between;
+			padding: 0 .1rem;
+			.title{
+				font-size:.4rem;
+				font-family:FZZhengHeiS-EB-GB;
+				font-weight:800;
+				color:rgba(2,97,177,1);
+				background:linear-gradient(0deg,rgba(2,97,177,0) 0%, rgba(5,48,106,1) 100%);
+				-webkit-background-clip:text;
+				-webkit-text-fill-color:transparent;
+			}
+			.logo{
+				padding:.3rem .1rem;
+				background: #fff;
+				color: #000;
+				font-size:20px; 
+				margin-top: .2rem;
+			}
+			.save-card{
+				font-size:.22rem;
+				font-family:PingFang SC;
+				font-weight:500;
+				color:rgba(102,102,102,1);
+			}
+		}
+		.item2{
+			.title{
+				text-align:center;
+				margin-top: .24rem;
+				padding-bottom: .2rem;
+				border-bottom: 0.01rem solid rgba(217,218,219,1);
+				font-size:.34rem;
+				font-family:PingFang SC;
+				font-weight:800;
+				color:rgba(51,51,51,1);
+			}
+			.company-adrees{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 0.01rem solid rgba(217,218,219,1);
+				padding-bottom: .24rem;
+				.left{
+					.title2{
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						margin:.22rem 0;
+						span{
+							font-size:.24rem;
+							font-family:PingFang SC;
+							font-weight:bold;
+							color:#0260B1;
+						}
+						.btn{
+							width:.54rem;
+							height:.34rem;
+							background:rgba(2,97,177,1);
+							border-radius:0.06rem;
+							text-align: center;
+							line-height:.34rem;
+							font-size:.1rem;
+							color: #fff;
+							margin-left: .4rem;
+						}
+						.blue{
+							margin-right: .2rem;
+							width:0.04rem;
+							height:.18rem;
+							background:rgba(2,97,177,1);
+							border-radius:0.02rem;
+						}
+						.name{
+							font-size:.28rem;
+							font-family:PingFang SC;
+							font-weight:500;
+							color:rgba(51,51,51,1);
+							
+						}
+					}
+					.adrees{
+						width:3.34rem;
+						font-size:.24rem;
+						font-family:PingFang SC;
+						font-weight:500;
+						color:rgba(102,102,102,1);
+					}
+				}
+				.right{
+					img{
+						width: .9rem;
+						height: .9rem;
+					}
+				}
+			}
+			
+		}
+		// 快速投票按钮
+		.fast-vote{
+			position: absolute;
+			bottom: 0;
+			width: 2.54rem;
+			height: .96rem;
+			margin-bottom: -.4rem;
+			margin-left: 2rem;
+		}
+	}
+	.brand-introduction{//品牌介绍
+		width: 6.90rem;
+		height: 4.03rem;
+		background:rgba(255,255,255,1);
+		border:0.02rem solid rgba(85,199,239,1);
+		box-shadow:0 0 .16rem 0 rgba(3,84,158,0.18);
+		opacity:0.9;
+		margin-top: .7rem;
+		padding: 0 .3rem;
+		border-radius:0 .2rem 0 .2rem;
+		.title3{
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin:.22rem 0;
+			.blue3{
+				margin-right: .2rem;
+				width:0.04rem;
+				height:.18rem;
+				background:rgba(2,97,177,1);
+				border-radius:0.02rem;
+			}
+			.name3{
+				font-size:.28rem;
+				font-family:PingFang SC;
+				font-weight:500;
+				color:rgba(51,51,51,1);
+				
+			}
+			.edit{
+				margin-left: 4rem;
+				span{
+					font-size:.28rem;
+					font-family:PingFang SC;
+					font-weight:500;
+					color:rgba(2,97,177,1);
+				}
+				img{
+					width:.28rem;
+					height:.28rem;
+				}
+			}
+		}
+		.text{
+			width:6.13rem;
+			height:1.93rem;
+			font-size:.24rem;
+			font-family:PingFang SC;
+			font-weight:500;
+			color:rgba(102,102,102,1);
+			img{
+				width: 4.12rem;
+				height: 3.12rem;
+				margin-left: 1.9rem;
+				margin-top: -.2rem;
+			}
+		}
+		.btn{
+			position: relative;
+			text-align: center;
+			margin-left: 2.3rem;
+			width:1.7rem;
+			height:.6rem;
+			line-height:.6rem;
+			border:0.01rem solid rgba(2,97,177,1);
+			box-shadow:0px 0.06rem .11rem 0.02rem rgba(2,94,173,0.11);
+			border-radius:.1rem;
+			.btn-txt{
+				font-size:.22rem;
+				font-family:PingFang SC;
+				font-weight:bold;
+				color:rgba(2,97,177,1);
+			}
+			.btn-img{
+				width: .13rem;
+				height: .13rem;
+			}
+		}
+	}
+	.bottom-img{
+		height: 1.74rem;
+		width: 7.5rem;
+		margin: .17rem;
+	}
+	.disclaimer{
+		width:6.2rem;
+		height:1.09rem;
+		font-size:.2rem;
+		font-family:PingFang SC;
+		font-weight:500;
+		color:rgba(229,242,254,1);
+	}
+}

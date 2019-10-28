@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>弹窗</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.openContainer {
+				width: 100%;
+				max-width: 7.5rem;
+				height: 12.5rem;
+				margin: auto;
+				height: 100vh;
+				background: rgba(51, 53, 53, .8);
+			}
+
+			.openContent {
+				width: 100%;
+				padding: 1.44rem 0.9rem 2.5rem 0.9rem;
+
+			}
+
+			.close {
+				width: 0.6rem;
+				height: 0.6rem;
+
+			}
+
+			.opCont {
+				width: 100%;
+				height: 6.06rem;
+				background: url(images/pc-m_bg_img.png) no-repeat;
+				background-size: 100% 100%;
+				margin-top: 0.31rem;
+			}
+
+			.opContTitle {
+				/* width:2.22rem; */
+				height: 0.30rem;
+				font-size: 0.32rem;
+				font-family: Source Han Sans CN;
+				font-weight: 500;
+				color: rgba(255, 255, 255, 1);
+				padding: 1.13rem 0.27rem 0.85rem 3rem;
+
+			}
+
+			.erweima {
+				width: 0.81rem;
+				height: 0.8rem;
+				margin-left: 4.59rem;
+			}
+
+			.openText {
+				/* width: 1.78rem; */
+				height: 0.43rem;
+				font-size: 0.20rem;
+				font-family: Source Han Sans CN;
+				font-weight: 400;
+				color: rgba(255, 255, 255, 1);
+				text-align: right;
+				margin-right:0.17rem ;
+			}
+			.opCont_bottom{
+				width: 2.52rem;
+				height: 0.8rem;
+				background-image: url(images/fuzhi_btn.png);
+				background-size: 100% 100%;
+				font-size:0.28rem;
+				line-height: 0.8rem;
+				padding-left: 0.92rem;
+				font-family:Source Han Sans CN;
+				font-weight:500;
+				color:rgba(255,255,255,1);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="openContainer">
+			<div class="openContent">
+
+				<img src="images/quxiao_icon.png" class="close">
+
+				<div class="opCont">
+					<div class="opContTitle">
+						酸奶发酵剂行业
+					</div>
+					<img src="images/code.png" class="erweima">
+					<div class="openText">
+						<p>使用微信</p>
+						<p>识别二维码进行投票</p>
+					</div>
+					<img src="images/code.png" class="erweima" style=" margin-left: 4.58rem;
+    margin-top: 0.35rem;">
+		<div class="openText">
+			<p>使用微信</p>
+			<p>小程序进行投票</p>
+		</div>
+				</div>
+				<div style="display: flex; justify-content:space-between;margin-top: 0.34rem;">
+				<div class="opCont_bottom">复制链接</div>
+				<div class="opCont_bottom" style="background-image: url(images/save_btn.png); background-size: 100% 100%;">保存图片</div>
+		    </div>
+			</div>
+		</div>
+	</body>
+</html>

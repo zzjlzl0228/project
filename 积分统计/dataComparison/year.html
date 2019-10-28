@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="layui/css/layui.css" rel="stylesheet">
+		<script src="layui/layui.js" type="text/javascript">
+		</script>
+		<script charset="utf-8" src="jquery.js" type="text/javascript">
+		</script>
+		<script charset="utf-8" src="echarts.js" type="text/javascript">
+		</script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.container {
+				width: 100%;
+				min-width: 1200px;
+				height: 960px;
+				margin: auto;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.right {
+				width: 80%;
+				height: 960px;
+				display: flex;
+				flex-direction: column;
+			}
+
+
+			.right .bottom {
+				width: 100%;
+				margin-top: 50px;
+			}
+
+			.right .detail {
+				width: 50%;
+				height: 50px;
+				margin: auto;
+				display: flex;
+				justify-content: flex-start;
+				padding-left: 60px;
+			}
+
+			.right .detail .button {
+				width: 180px;
+				height: 40px;
+				background: #f6f6f6;
+				border-radius: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 20px;
+				cursor: pointer;
+			}
+
+			.active {
+				background: #666666 !important;
+			}
+
+			.chartsContainer {
+				width: 100%;
+				margin: 50px 0;
+			}
+
+			.chartsContent {
+				width: 90%;
+				height: 700px;
+				margin: auto;
+				border: 1px solid #ccc;
+			}
+
+			.chartsContent .nav {
+				width: 100%;
+				padding: 0 30px;
+				height: 40px;
+				background: #f6f6f6;
+				border-bottom: 1px solid #ccc;
+				display: flex;
+				align-items: center;
+				font-size: 16px;
+				font-weight: 400;
+			}
+
+			.year {
+				width: 80%;
+				margin: auto;
+				padding-top: 50px;
+				/* padding-left: 100px; */
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.year .layui-form-label {
+				padding: 0;
+				padding-top: 10px;
+			}
+
+			#test {
+				cursor: pointer;
+				width: 275px;
+				display: inline-block;
+				background: url(img/rili.png) no-repeat 240px;
+				background-size: 20px 20px;
+			}
+
+			.chartsContent .chart {
+				width: 90%;
+				margin: auto;
+				height: 530px;
+				position: relative;
+			}
+
+			#main {
+				display: flex;
+				justify-content: center;
+			}
+
+			#main>div {
+				overflow: visible !important;
+			}
+
+			.chartsContent .chart img {
+				width: 40px;
+				height: 40px;
+			}
+
+			.chart .prev {
+				position: absolute;
+				top: 50%;
+				left: 0;
+			}
+
+			.chart .after {
+				position: absolute;
+				top: 50%;
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="right">
+				<div class="bottom">
+					<!-- 统计图表 -->
+					<div class="chartsContainer">
+						<div class="chartsContent">
+							<div class="nav">
+								公司现金账花销情况
+							</div>
+							<!-- 年份选择 -->
+							<div class="year">
+								<form action="" class="layui-form">
+									<div class="layui-form-item">
+										<label class="layui-form-label label-style">
+											选择年份：
+										</label>
+										<div class="layui-input-inline">
+											<input class="layui-input writedate" id="test" lay-verify="required|date" name="writedate" type="text">
+											</input>
+										</div>
+									</div>
+								</form>
+								<!-- 右侧底部上方的按钮 -->
+								<div class="detail">
+									<div class="button">
+										行业
+									</div>
+									<div class="button active">
+										品牌
+									</div>
+								</div>
+							</div>
+							<!-- 统计图 -->
+							<div class="chart">
+								<div id="main" style="width: 90%; height: 95%; margin: auto;">
+								</div>
+								<div class="prev">
+									<img src="img/xiangzuojiantou.png">
+									</img>
+								</div>
+								<div class="after">
+									<img src="img/xiangyoujiantou.png">
+									</img>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			// 定义全局变量year,将类别固定品为品牌
+			var year = ''
+			var leibie = '品牌';
+			// 类别按钮
+			$('.button').click(function(index, item) {
+				$(this).parent().find('.button').removeClass('active')
+				$(this).addClass('active')
+				leibie = $(".active").text()
+				load(year, leibie);
+			})
+
+			// 定义layui日期年份
+			function layDate(year) {
+				layui.use(['form', 'laydate', 'jquery', 'layer'], function() {
+					var form = layui.form;
+					var laydate = layui.laydate;
+					var $ = layui.$;
+					var layer = layui.layer;
+					laydate.render({
+						elem: '#test',
+						type: 'year',
+						value: year,
+						isInitValue: true,
+						done: function(value, date, endDate) {
+
+							load(value,$(".active").text())
+						}
+					});
+				})
+			}
+
+			// 加载图表渲染数据
+			function load(year, leibie) {
+				var myChart = echarts.init(document.getElementById('main'));
+				myChart.showLoading();
+				// 发送ajax请求 此时的shuju为返回的ret新数组,shuju[0]为data,shuju[1][0]为names(x轴的坐标值)
+				var shuju = ajaxGet(year, leibie)
+				console.log(shuju)
+				loadLine(myChart, shuju[0], shuju[1][0])
+				myChart.hideLoading()
+			}
+			
+			// 在页面最开始调用时获取时间加载折线图渲染数据
+			$(function() {
+				var myDate = new Date;
+				var time = myDate.getFullYear();
+				year = time
+				load(year,leibie)
+				layDate(time)
+			})
+
+			// 绘制加载图表得基本样式
+			function loadLine(myChart, arr, names) {
+				myChart.setOption({
+					color: colors,
+					tooltip: {
+						trigger: 'axis',
+					},
+
+					legend: {
+						x: 'center',
+						y: 'bottom',
+					},
+					grid: {
+						top: 50,
+						bottom: 60,
+						left: 50,
+						right: 50
+					},
+					xAxis: [{
+							name: '月份',
+							type: 'category',
+							axisTick: {
+								show: false
+							},
+							axisLine: {
+								onZero: false,
+								lineStyle: {
+									color: '#675bba'
+								}
+							},
+							axisPointer: {
+								label: {
+									formatter: function(params) {
+										return $(".active").text() + params.value;
+									}
+								}
+							},
+							data: names
+						},
+						{
+							type: 'category',
+							axisTick: {
+								alignWithLabel: true
+
+							},
+
+							axisPointer: {
+								label: {
+									formatter: function(params) {
+										return $(".active").text() + params.value;
+									}
+								}
+							}
+						}
+					],
+					yAxis: [{
+						name: '金额',
+						type: 'value',
+						axisTick: {
+							show: false
+						},
+						axisLine: {
+							onZero: false,
+							lineStyle: {
+								color: '#675bba'
+							}
+						},
+					}],
+					series: arr
+				});
+				//myChart.showLoading(); //数据加载完之前先显示一段简单的loading动画
+			}
+
+			// 发送ajax请求获取数据
+			function ajaxGet(year, leibie) {
+				var arr = []
+				var names = []
+				$.ajax({
+					type: 'get',
+					url: 'layui/json/echarts/line/lineOne.json', //请求数据的地址
+					dataType: "json", //返回数据形式为json
+					data: {
+						date: year,
+						leibie: leibie
+					},
+					async: false,
+					success: function(result) {
+						colors = ['#4ba1de', '#8d3137', '#d9398c', '#a239d9', '#5039d9', '#39d7d9', '#39d9a2', '#3dd939', '#d0d764',
+							'#f0a709'
+						];
+						for (var key in result.year) {
+							$.each(result.year, function(i, item) {
+								var arr4 = [];
+								var arr5 = [];
+								if (i === key) {
+									$.each(item, function(key, value) {
+										arr5.push(value.date)
+										arr4.push(value.zonge)
+									})
+									names.push(arr5)
+									json = {
+										name: key,
+										type: 'line',
+										smooth: true,
+										itemStyle: {
+											normal: {
+												color: colors[n]
+											}
+										},
+										symbol: 'circle',
+										data: arr4
+									}
+								}
+							})
+							arr.push(json)
+						}
+						var length = Object.keys(result.year).length;
+						var n = length - 1
+						year = (names[0][names[0].length - 1]).slice(0,4);
+						return year;
+					},
+					error: function(errorMsg) {
+						//请求失败时执行该函数
+						alert("图表请求数据失败!");
+						myChart.hideLoading();
+					},
+				});
+				var ret = new Array();
+				ret.push(arr)
+				ret.push(names)
+				return ret;
+			}
+			
+			$('.prev').click(function(){
+				//获取当前年份并减一年
+				year = year - 1
+				load(year, leibie);
+				layDate(year)
+			})
+			
+			$('.after').click(function(){
+				year = year + 1
+				load(year, leibie);
+				layDate(year)
+			})
+		</script>
+	</body>
+</html>
