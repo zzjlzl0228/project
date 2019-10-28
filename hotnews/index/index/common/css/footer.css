@@ -1,0 +1,82 @@
+/*椤甸潰搴曢儴*/
+
+.index-footer {
+	position: absolute;
+	border: none;
+	width: 6.4rem;
+	height: .9rem;
+}
+
+.back_to_top {
+	position: fixed;
+	bottom: 2rem;
+	right: .6rem;
+	width: .68rem;
+	height: .68rem;
+	display: none;
+	z-index: 999;
+}
+
+.back_to_top img {
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+	height: 2.79rem;
+	width: 7.5rem;
+	background: rgba(245, 247, 249, 1);
+	padding: .42rem 0;
+	text-align: center;
+	font-size: 0;
+}
+
+footer a:hover,
+footer a:focus,
+footer a:active {
+	color: #fff;
+}
+
+footer a,
+footer .copyright {
+	color: #C0C6CD;
+	background: rgba(245, 247, 249, 1);
+	font-size: 0.24rem;
+	/* line-height: 0.26rem; */
+
+}
+footer a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+footer a img {
+	width: 0.25rem;
+	height: 0.25rem;
+	margin-right: 0.09rem;
+} 
+footer a:nth-child(2) {
+	margin: 0 0.92rem 0 0.89rem ;
+}
+
+footer .copyright {
+	height:1rem;
+	font-size:0.26rem;
+	font-family:Source Han Sans CN;
+	font-weight:400;
+	line-height:1rem;
+	color:rgba(157,165,174,1);
+	opacity:1;
+}
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.42rem 0 0.39rem;
+	border-bottom: 1px solid rgba(230,237,241,1);
+}
+.pinpaiwang-logo {
+	margin-top: 0.32rem;
+	width: 1.2rem;
+	height: 0.35rem;
+}

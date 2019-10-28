@@ -1,0 +1,729 @@
+/*头部搜索*/
+header {
+	position: fixed;
+	z-index: 999;
+	height: .6rem;
+	max-width: 6.4rem;
+	width: 100%;
+	padding: .15rem 0;
+}
+
+.head {
+	height: .6rem;
+	width: 5.8rem;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: .3rem;
+	box-shadow: 0 0 .05rem rgba(0, 0, 0, .3) inset;
+	overflow: hidden;
+}
+
+header .search-box {
+	width: .26rem;
+	height: .26rem;
+	margin-top: .175rem;
+	margin-left: .6rem;
+	position: relative;
+	background-image: url(../images/static/m_qita_icon.png);
+	background-size: 1.59rem .52rem;
+	background-position: 0 0;
+}
+
+header input {
+	position: absolute;
+	top: -.175rem;
+	outline: none;
+	border: none;
+	font-size: .24rem;
+	margin-left: .42rem;
+	height: .6rem;
+	width: 4.75rem;
+	background-color: transparent;
+}
+
+
+/*banner*/
+
+.banner {
+	width: 100%;
+	height: 3rem;
+	position: relative;
+	overflow: hidden;
+	/* background: url('../images1/static/index_banner.gif') center center; */
+	background-size: 100% 100%;
+
+}
+
+
+/*选项列表*/
+
+.option-lists {
+	background-color: #fff;
+	display: flex;
+	display: -webkit-flex;
+	padding: .1rem 0;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	font-size: .24rem;
+}
+.option-lists ul {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 0.47rem;
+}
+
+.option-lists ul li {
+	width: 100%;
+	/* height: 1.37rem; */
+}
+
+.img {
+	/* width: 0.9rem; */
+	height: 0.9rem;
+	margin-bottom: 0.1rem;
+}
+
+.option-lists .img img {
+	width: 0.9rem;
+	height: 0.9rem;
+}
+
+.option-lists ul li a .navText {
+	/* 	width: 1.04rem;
+	height: 0.37rem; */
+	font-size: 0.26rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	line-height: 0.89rem;
+	color: rgba(0, 63, 135, 1);
+	opacity: 1;
+}
+
+
+/*广播循环*/
+
+.broadcast {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 5.8rem;
+	padding: 0 .2rem;
+	height: .65rem;
+	overflow: hidden;
+	margin: .2rem auto 0;
+	border-radius: .1rem;
+	background-color: #fff;
+	font-size: .24rem;
+}
+
+.broadcast i {
+	width: .4rem;
+	height: .44rem;
+	background-size: 100% 100%;
+}
+
+.broadcast .scroll {
+	height: .65rem;
+}
+
+.broadcast li {
+	width: 4.4rem;
+	height: .65rem;
+	list-style: none;
+	line-height: .65rem;
+}
+
+.scroll {
+	height: 0.65rem;
+	width: 4.45rem;
+	overflow: hidden;
+	color: #565855;
+	float: left;
+	position: relative;
+}
+
+.scroll ul {
+	width: 4.45rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.scroll span {
+	font-size: 0.24rem;
+	height: 0.3rem;
+	color: #353535;
+}
+
+.scroll li {
+	height: 0.65rem;
+	line-height: 0.65rem;
+	font-size: 0.23rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.scroll ul li a {
+	color: #353535;
+	font-size: 0.24rem;
+	line-height: 0.65rem;
+	text-decoration: none;
+}
+
+.more {
+	position: relative;
+	color: #0261b1;
+}
+
+.more:before {
+	position: absolute;
+	top: 0;
+	left: -0.2rem;
+	width: 0;
+	height: .3rem;
+	border-left: 1px solid #353535;
+	content: "";
+}
+
+
+/*最新榜单*/
+
+.brand-lists,
+.recent-lists {
+	background-color: #fff;
+	padding: .3rem;
+	margin-top: .2rem;
+}
+
+.recent-lists {
+	padding: .2rem;
+}
+
+.lists-title {
+	font-size: .4rem;
+	line-height: .4rem;
+	height: 0.4rem;
+	font-weight: 600;
+}
+
+.lists-title>span {
+	color: #0261B1;
+}
+
+.lists-title>a {
+	display: block;
+	height: 100%;
+	line-height: 0.36rem;
+	font-weight: 500;
+	font-size: 0.26rem;
+	color: #666;
+	float: right;
+	display: flex;
+	align-items: center;
+}
+
+.lists-title>a img {
+	margin-left: 0.1rem;
+}
+
+
+/*行业热度榜*/
+.hotJobTop {
+	width: 100%;
+	height: 7.15rem;
+	background: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+.hotJobTop.autoHeight {
+	height: auto;
+}
+
+.hotJobTop>p {
+	font-size: 0.4rem;
+	color: #333;
+	line-height: 0.8rem;
+	margin-left: 0.2rem;
+	font-weight: 600;
+}
+
+.hotJobTop>#tab_nav {
+	width: 100%;
+	height: 0.6rem;
+	margin-left: 0.2rem;
+	overflow: hidden;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.hotJobTop>#tab_nav>li {
+	/* float: left;
+	margin-left: 0.38rem;
+	height: 0.6rem;
+	box-sizing: border-box;
+	border-bottom: 0.02rem solid transparent; */
+	width: 1.26rem;
+	height: 0.50rem;
+	border-radius: 0.25rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-right: 0.4rem; */
+}
+
+.hotJobTop>#tab_nav>li.on {
+	background: rgba(2, 97, 177, 0.1);
+	border-radius: 0.25rem;
+}
+
+.hotJobTop>#tab_nav>li.on>a {
+	color: rgba(2, 97, 177, 1);
+}
+
+
+.hotJobTop>#tab_nav>li:nth-child(2) {
+	width: 1.5rem;
+}
+
+.hotJobTop>#tab_nav>li>a {
+	display: block;
+	width: auto;
+	height: 100%;
+	font-size: 0.28rem;
+	color: #666;
+	line-height: 0.5rem;
+}
+
+.hotJobTop>#myChart {
+	width: 100%;
+	height: 4.2rem;
+}
+
+.hotJobTop>#jobBox {
+	width: 100%;
+	height: auto;
+	padding: 0 0.2rem 0.6rem;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 0.5rem;
+}
+
+.hotJobTop>#jobBox>li {
+	width: 1.86rem;
+	height: 0.52rem;
+	border-radius: 0.26rem;
+	margin-bottom: 0.2rem;
+	overflow: hidden;
+}
+
+.hotJobTop>#jobBox>li.on>a {
+	color: #fff;
+	background: #0261B1;
+}
+
+.hotJobTop>#jobBox>li>a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #E7EEF4;
+	color: #333;
+	font-size: 0.2rem;
+	line-height: 0.52rem;
+	text-align: center;
+}
+
+.hotJobTop>span {
+	position: absolute;
+	color: #0261B1;
+	display: block;
+	width: 100%;
+	font-size: 0.24rem;
+	line-height: 0.6rem;
+	text-align: center;
+	bottom: -0.07rem;
+}
+
+.hotJobTop>span.shadowLine {
+	/* padding-top: 0.6rem; */
+	/* background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1))); */
+	background: #fff;
+}
+
+/* 最新榜单 */
+.latestList {
+	margin-top: 0.3rem;
+}
+
+.latestList li {
+	width: 100%;
+	height: 2.73rem;
+	background: url(../img/home_zxbd_img.png) no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 0.16rem;
+}
+
+/* 揭榜日期 */
+.announce {
+	padding: 0.78rem 0 0 0.3rem;
+}
+
+.grayLine {
+	width: 2.30rem;
+	height: 0.16rem;
+	background: rgba(241, 190, 68, 1);
+	opacity: 0.4;
+	border-radius: 0.04rem;
+}
+
+.date {
+	/* width: 2.16rem; */
+	height: 0.28rem;
+	font-size: 0.20rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	line-height: 0.24rem;
+	color: rgba(255, 255, 255, 1);
+	opacity: 1;
+	margin-top: -0.25rem;
+	/* margin-left: 0.1rem; */
+}
+
+.announceBottom {
+	height: auto;
+	padding: 0.46rem 0.5rem 0.49rem 1.46rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.announceTitle {
+	width: 4.35rem;
+	height: 0.48rem;
+	font-size: 0.34rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	line-height: 0.3rem;
+	color: rgba(51, 51, 51, 1);
+	opacity: 1;
+}
+
+.needEllipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.announceText {
+	width: 1.44rem;
+	height: 0.33rem;
+	font-size: 0.24rem;
+	font-family: PingFang SC;
+	font-weight: 400;
+	line-height: 0.24rem;
+	color: rgba(153, 153, 153, 1);
+	opacity: 1;
+}
+
+.nextBtn {
+	width: 0.3rem;
+	height: 0.38rem;
+	opacity: 1;
+}
+
+section.indexBanner2 {
+	width: 100%;
+	height: 1.6rem;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	margin: auto;
+}
+
+/*品牌百科*/
+.jobEncy,
+.nowNews {
+	width: 100%;
+	height: auto;
+	background: #fff;
+}
+
+
+
+.jobEncy>p,
+.nowNews>p {
+	width: 100%;
+	height: 0.8rem;
+	font-weight: 600;
+	font-size: 0.4rem;
+	line-height: 0.8rem;
+	color: #333;
+	padding: 0 0.22rem;
+	box-sizing: border-box;
+}
+
+.jobEncy>p>a,
+.nowNews>p>a {
+	display: block;
+	float: right;
+	color: #666;
+	line-height: 0.8rem;
+	font-size: 0.24rem;
+	font-weight: 500;
+}
+
+.jobEncy>ul,
+.nowNews>.nowNews_nav {
+	width: 100%;
+	height: 0.6rem;
+	background: #fff;
+	padding: 0 0.22rem;
+	box-sizing: border-box;
+}
+
+.jobEncy>ul>li,
+.nowNews>.nowNews_nav>li {
+	width: 1.5rem;
+	height: 0.50rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.25rem;
+	float: left;
+	font-size: 0.26rem;
+	line-height: 0.58rem;
+	border-bottom: 0.02rem solid transparent;
+	color: #666;
+	padding: 0 0.06rem;
+	/* margin-left: 0.64rem; */
+}
+
+/* .nowNews>.nowNews_nav>li {
+	margin-left: 0.4rem;
+} */
+
+.jobEncy>ul>li a:last-child {
+	position: relative;
+}
+
+.jobEncy>ul>li a:last-child img {
+	position: absolute;
+	top: 0px;
+	left: 0.55rem;
+}
+
+.jobEncy>ul>li.on a,
+.nowNews>.nowNews_nav>li.on a {
+	color: #0261B1;
+}
+
+.jobEncy>ul>li.on,
+.nowNews>.nowNews_nav>li.on {
+	background: rgba(2, 97, 177, .1);
+}
+
+
+
+.nowNews>.nowNews_nav>li>a {
+	display: block;
+	width: auto;
+	height: 100%;
+	font-size: 0.28rem;
+	color: #666;
+	line-height: 0.5rem;
+}
+
+.nowNews>.nowNews_nav>li.on>a {
+	color: rgba(2, 97, 177, 1) !important;
+}
+
+#jobEncy_hot,
+#jobEncy_now {
+	display: none;
+	position: relative;
+	padding-bottom: 0.8rem;
+}
+
+#jobEncy_hot.show,
+#jobEncy_now.show {
+	display: block;
+}
+
+#jobEncy_hot>.swiper-container,
+#jobEncy_now>.swiper-container {
+	width: 6rem;
+	height: auto;
+	/* padding: 0.2rem 0; */
+	/* margin: 0.2rem auto 0; */
+	overflow: hidden;
+	background: #fff;
+	border-radius: 10px;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper,
+#jobEncy_now>.swiper-container>.swiper-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	box-sizing: border-box;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li {
+	width: 3.3rem;
+	height: 4.4rem;
+	margin-top: 0.26rem;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 4px 12px rgba(0, 63, 135, 0.11);
+	opacity: 1;
+	border-radius: 10px;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li:first-child,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li:first-child {
+	margin-right: 0.27rem;
+}
+
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* padding: 0.26rem 0.3rem; */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a>img,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a>img {
+	display: block;
+	float: left;
+	width: 1.2rem;
+	height: 1.2rem;
+	border: 1px solid rgba(204, 204, 204, 1);
+	box-sizing: border-box;
+	margin-right: 0.16rem;
+
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a .gsName,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a .gsName {
+	width: 1.12rem;
+	height: 0.37rem;
+	font-size: 0.28rem;
+	font-family: Arial;
+	font-weight: 400;
+	line-height: 0.24rem;
+	color: rgba(51, 51, 51, 1);
+	opacity: 1;
+	margin-top: 0.12rem;
+	text-align: center;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a .gray-line,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a .gray-line {
+	width: 0.20rem;
+	height: 0.10rem;
+	background: rgba(229, 229, 229, 1);
+	opacity: 1;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a .desc,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a .desc {
+	width: 2.70rem;
+	height: 1.80rem;
+	font-size: 0.26rem;
+	font-family: Arial;
+	font-weight: 400;
+	line-height: 0.36rem;
+	color: rgba(102, 102, 102, 1);
+	opacity: 1;
+	margin-top: 0.15rem;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a>p,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a>p {
+	font-size: 0.28rem;
+	color: #333;
+	line-height: 0.32rem;
+	font-weight: 600;
+	float: left;
+	margin-top: 0.06rem;
+	margin-bottom: 0.15rem;
+}
+
+#jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a>span,
+#jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a>span {
+	display: block;
+	float: left;
+	width: 3.6rem;
+	height: 1rem;
+	font-size: 0.24rem;
+	line-height: 0.34rem;
+	color: #666;
+	overflow: hidden;
+}
+
+.swiper-pagination {
+	width: 100%;
+	height: 0.2rem;
+	font-size: 0;
+	line-height: 0.2rem;
+	bottom: 0.4rem;
+}
+
+.swiper-pagination span.swiper-pagination-bullet {
+	width: 0.16rem;
+	height: 0.16rem;
+	margin-left: 0.2rem;
+	border: 0.01rem solid #ccc;
+	box-sizing: border-box;
+	background: #fff;
+	opacity: 1;
+}
+
+.swiper-pagination span.swiper-pagination-bullet-active {
+	border-color: #0261B1;
+	background: #0261B1;
+}
+
+.swiper-pagination span:first-of-type {
+	margin-left: 0;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: wrap;
+}
+.img_show{
+	width: 0.17rem;
+	height: 0.2rem;
+	margin-left: 0.1rem;
+}

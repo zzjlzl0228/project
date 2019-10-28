@@ -1,0 +1,218 @@
+.bdContainer {
+	width: 100%;
+	max-width: 7.5rem;
+	height: 100%;
+	min-height: 100vh;
+	margin: auto;
+	background: #000;
+}
+
+.bdBanner {
+	width: 100%;
+	height: 5.04rem;
+	background: url(../img/bdy_banner_img.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.bdTitle {
+	width: 100%;
+	height: 0.48rem;
+	font-size: 0.48rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(254, 244, 198, 1);
+	text-shadow: 1.7633557319641113px 2.427051067352295px 7px rgba(0, 0, 0, 0.35);
+	opacity: 1;
+	text-align: center;
+	padding-top: 1.5rem;
+}
+
+.bdwz {
+	width: 100%;
+	height: 0.28rem;
+	font-size: 0.2rem;
+	font-family: PingFang SC;
+	font-weight: bold;
+	color: rgba(3, 1, 0, 1);
+	opacity: 1;
+	text-align: center;
+	margin-top: 0.34rem;
+}
+
+.bdContent {
+	width: 92.4%;
+	margin: auto;
+	height: auto;
+	margin-top: -0.8rem;
+	position: relative;
+	z-index: 3;
+}
+
+.item {
+	width: 100%;
+	height: 2.04rem;
+	background: url(../img/bdy_dtfx_img.png) no-repeat center;
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.2rem;
+}
+
+.bdLeft {
+	width: 69%;
+	height: 2.04rem;
+	padding: 0.31rem 0 0.28rem 0.27rem;
+	box-sizing: border-box;
+}
+
+.bdTop {
+	width: 100%;
+	height: 0.53rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.bdTop img {
+	width: 0.6565rem;
+	height: 0.5294rem;
+	margin-right: 0.16rem;
+}
+
+.other {
+	width: 0.59rem;
+	height: 0.48rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-right: 0.33rem;
+}
+
+.other img {
+	width: 0.38rem;
+	height: 0.44rem;
+	margin-right: 0;
+	position: relative;
+}
+
+.other span {
+	/* width:0.16rem; */
+	/* height:0.28rem; */
+	font-size: 0.28rem;
+	font-family: Source Han Sans CN;
+	font-weight: 500;
+	color: rgba(255, 224, 62, 1);
+	opacity: 1;
+	position: relative;
+	z-index: 3;
+	margin-left: -0.29rem;
+}
+
+.five {
+	margin-left: -0.26rem !important;
+}
+
+.ten {
+	margin-left: -0.36rem !important;
+}
+
+.bdTop .gsName {
+	/* height:0.36rem; */
+	font-size: 0.36rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(255, 249, 214, 1);
+	opacity: 1;
+}
+
+.bdLeft p {
+
+	font-size: 0.22rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	line-height: 0.36rem;
+	color: rgba(255, 249, 214, 1);
+	opacity: 1;
+}
+
+.gsdz {
+	margin-top: 0.15rem;
+	margin-bottom: 0.1rem;
+}
+
+.bdRight {
+	width: 2rem;
+	height: 0.95rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bdRight img {
+	width: 1.42rem;
+	height: 0.95rem;
+}
+
+.bdBack {
+	width: 100%;
+	height: 7.78rem;
+	background: url(../img/bdy_dbtp-img.png) no-repeat center;
+	background-size: 100% 100%;
+	margin-top: -6rem;
+	position: relative;
+}
+
+.bdBottom {
+	width: 92.4%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	bottom: 0.84rem;
+	left: 0;
+	right: 0;
+}
+
+.bdBottom-left {
+	width: 2.29rem;
+	height: 1px;
+	/* background:rgba(228,180,111,1); */
+	border-top: 1px solid rgba(228, 180, 111, 1);
+}
+
+.bdBottom-center {
+	width: 2rem;
+	height: 0.20rem;
+	font-size: 0.20rem;
+	font-family: Source Han Sans CN;
+	font-weight: 400;
+	color: rgba(228, 180, 111, 1);
+	opacity: 1;
+	margin-left: 0.08rem;
+	margin-right: 0.16rem;
+}
+
+.reward {
+	width: 2.1rem;
+	margin: auto;
+	height: 2.8rem;
+	position: fixed;
+	z-index: 10;
+	bottom: 0.18rem;
+	left: 0;
+	right: 0;
+}
+
+.reward img {
+	width: 2.18rem;
+	height: 2.8rem;
+}
+
+.needEllipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

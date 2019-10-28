@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>问题反馈</title>
+		<link rel="stylesheet" type="text/css" href="css/fankui.css" />
+		<link rel="stylesheet" type="text/css" href="common/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+		<script src="common/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="common/js/rem.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="common/js/public.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="head_help">
+				<a href="index.html" onclick="backPath()">
+					<i class="head_back"></i>
+					<!--返回图标-->
+				</a>
+				<p class="title_header">问题反馈</p>
+			</div>
+				<!-- 第二种状态的返回图片 -->
+		<div style="width: 7.5rem;" class="head_fanhui">
+		<a href="index.html" class="heap_retreat">
+			<img src="common/img/icon_back_w.png" />
+		</a>
+		</div>
+		<div class="fankuiContainer">
+			<div class="fankuiContent">
+				<div class="fkTitle">
+					请输入手机号码
+				</div>
+				<form action="" method="">
+					<div class="iphone">
+						<input type="text" name="mobile" id="mobile" placeholder="留下电话号码，我们会与您联系哦！" />
+					</div>
+					<div class="errorText" style="display: none;">
+						您输入得手机格式不正确，请重新输入
+					</div>
+					<div id="guestbook_placeholder_div">
+						<textarea class="comment_area" name="post[content]" id="content" placeholder="在此输入您遇见的问题，很抱歉给您带来不好的体验，我们将尽快和您联系…"
+						 onkeyup="num()"></textarea>
+						<p class="num">1/500</p>
+					</div>
+					<div class="uploadImg">
+						<!-- 显示图片 -->
+						<div class="fkImg" style="display: none;">
+						</div>
+						<!-- 上传图片 -->
+						<div class="uploadpic">
+							<img src="img/wtfk_tjtp_icon.png" class="camera">
+							<input type="file" id="file" class="filepath" onchange="changepic(this)" accept="image/jpg,image/jpeg,image/png,image/PNG"
+							 style="opacity: 0;">
+						</div>
+					</div>
+					<p class="imgTips">非必填项</p>
+					<!-- <div class="subBtn" onclick="checkForm()">提交</div> -->
+					<input type="button" name="" id="" value="提交" class="subBtn" onclick="checkForm()" />
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function changepic() {
+				var reads = new FileReader();
+				f = document.getElementById('file').files[0];
+				reads.readAsDataURL(f);
+				reads.onload = function(e) {
+					$('.fkImg').css('display', 'block')
+					var htmlStr = '<img class="showImg" id="img" src="'+this.result +'" alt="" />';
+					htmlStr += '<img src="img/wtfk_svtp_icon.png" class="closeImg" id="img2">'
+					$('.fkImg').append(htmlStr); 
+					$(".closeImg").on('click', function() {
+						$(this).parent().children().remove();
+						 $('#file').val('')
+						$('.fkImg').css('display', 'none');
+						
+					})
+				}
+			}
+			
+
+
+			function num() {
+				var text = $('#content').val()
+				var length = text.length;
+				$('.num').text(length + '/500')
+			}
+
+
+			function checkPhone(string) {
+				var pattern = /^1[34578]\d{9}$/;
+				if (pattern.test(string)) {
+					return true;
+				} else {
+					$('.errorText').css('display', 'block')
+				}
+
+				return false;
+			};
+
+
+			function checkForm() {
+				var mobile = $('#mobile').val()
+				checkPhone(mobile)
+				var text = $('#content').val()
+				var srcImg = $('.showImg').attr('src')
+				console.log(mobile)
+				
+				return true;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+/*头部样式*/
+body{
+
+}
+.head_help{
+    color:#0261b1;
+    font-size:0.36rem;
+    text-align:center;
+    width:6.4rem;
+    margin:0 auto;
+    line-height:0.8rem;
+    height:0.8rem;
+    background: #fff;
+    position:relative;
+}
+
+.head_back{
+    font-size:0.36rem!important;
+    color:#888888;
+    position:absolute;
+    left:0.3rem;
+    top:50%;
+    margin-top:-0.38rem;
+    cursor:pointer;
+}
+
+.classification{
+    font-size:0.36rem!important;
+    color:#888;
+    position:absolute;
+    right:0.3rem;
+    top:50%;
+    margin-top:-0.38rem;
+    cursor:pointer;
+}
+
+/*右边三杠点击菜单样式*/
+
+.menu_vote_nei{
+    position:relative;
+    width:2.35rem;
+
+    margin-left:0.13rem;
+    margin-top:0.16rem;
+
+    background: #fff;
+    box-shadow: 0.01rem 0.02rem 0.06rem  rgba(0,0,0,0.35);
+    border-radius:0.09rem;
+}
+.header_sanjiao{
+    position:absolute;
+    right:0.25rem;
+    top:-0.15rem;
+    width:0.26rem;
+    height:0.15rem;
+    display:block;
+}
+.header_xiala{
+    position:absolute;
+    right:0.15rem;
+    top:0.7rem;
+    display:none;
+	z-index: 100;
+
+}
+
+.register_vote{
+    display:table;
+    margin:auto;
+    height:0.63rem;
+    line-height:0.63rem;
+    font-size:0.24rem;
+    color:#353535;
+    text-decoration: none!important;
+    width:1.96rem;
+    border-bottom:0.01rem dashed #ccc;
+}
+
+.contact_us{
+    border-bottom:none!important
+}
+
+.title_header{
+    width:4.8rem;
+    height:0.8rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    margin: 0 auto;
+
+}

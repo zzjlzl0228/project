@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>新闻资讯</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="common/css/hotnews.css" />
+		<script src="common/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="common/js/rem.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body style="max-width: 7.5rem;margin: auto;">
+		
+		<div class="head_help">
+				<a href="index.html" onclick="backPath()">
+					<i class="head_back"></i>
+					<!--返回图标-->
+				</a>
+				<p class="title_header">新闻资讯</p>
+			</div>
+				<!-- 第二种状态的返回图片 -->
+		<div style="width: 7.5rem;" class="head_fanhui">
+		<a href="index.html" class="heap_retreat">
+			<img src="common/img/icon_back_w.png" />
+		</a>
+		</div>
+		<div class="navContainer">
+			<ul class="lists">
+				<li class="active">
+					<a href="#">热门资讯</a>
+					<div class="blueLine" style="display: block;"></div>
+				</li>
+				<li>
+					<a href="#">公司新闻</a>
+					<div class="blueLine" style="display: none;"></div>
+				</li>
+				<li>
+					<a href="#">行业知识</a>
+					<div class="blueLine" style="display: none;"></div>
+				</li>
+				<li>
+					<a href="#">品牌故事</a>
+					<div class="blueLine" style="display: none;"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="remenContainer index" style="display: block;">
+				<div class="content">
+
+
+					<div class="bannerContainer">
+						<img src="common/img/img1.png">
+					</div>
+
+					<div class="sectionContainer">
+						<div class="section">
+							<div class="section-text ellipsis">恒大粮油集团成立是恒大集团打造立是恒大集团打造</div>
+							<div class="bottom">
+								<div class="section-left">品牌网</div>
+								<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+								<div class="section-right">
+									2019.10.12
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="left">
+								<div class="section-text item-text ellipsis">龙象共舞新篇章习近平印度之行全记录</div>
+								<div class="bottom">
+									<div class="item-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<img src="common/img/img4.png">
+							</div>
+						</div>
+						<!-- <div class="item">
+							<div class="left">
+								<div class="section-text item-text ellipsis">习近平会见尼泊尔总统班达里</div>
+								<div class="bottom">
+									<div class="item-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.14
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<img src="common/img/img5.png">
+							</div>
+						</div>
+						<div class="item">
+							<div class="left">
+								<div class="section-text item-text ellipsis">习近平同尼泊尔总理奥利会谈</div>
+								<div class="bottom">
+									<div class="item-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.14
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<img src="common/img/img2.png">
+							</div>
+						</div>
+						<div class="item">
+							<div class="left">
+								<div class="section-text item-text ellipsis" style="width: 3.8rem;">习近平会见尼泊尔共产党联合主席普拉昌</div>
+								<div class="bottom">
+									<div class="item-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.14
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<img src="common/img/img3.png">
+							</div>
+						</div> -->
+						<div class="news_wait_remzx" style="text-align:center;font-size:0.3rem;line-height:0.52rem;">下拉加载更多</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="newsContainer index" style="display: none;">
+				<div class="content">
+					<div class="sectionContainer">
+						<div class="section">
+							<div class="section-text needEllipsis">
+								恒大粮油集团成立是恒大集团打造立是恒大集团打造...
+							</div>
+							<div class="bottom news-bottom">
+								<div class="section-left">品牌网</div>
+								<div class="section_right">
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="section-text needEllipsis">
+								恒大粮油集团成立是恒大集团打造立是恒大集团打造...
+							</div>
+							<div class="bottom news-bottom">
+								<div class="item-left">品牌网</div>
+								<div class="section_right">
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="section-text needEllipsis">
+								恒大粮油集团成立是恒大集团打造立是恒大集团打造...
+							</div>
+							<div class="bottom news-bottom">
+								<div class="item-left">品牌网</div>
+								<div class="section_right">
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="section-text needEllipsis">
+								恒大粮油集团成立是恒大集团打造立是恒大集团打造...
+							</div>
+							<div class="bottom news-bottom">
+								<div class="item-left">品牌网</div>
+								<div class="section_right">
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="section-text needEllipsis">
+								恒大粮油集团成立是恒大集团打造立是恒大集团打造...
+							</div>
+							<div class="bottom news-bottom">
+								<div class="item-left">品牌网</div>
+								<div class="section_right">
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="section-text needEllipsis">
+								恒大粮油集团成立是恒大集团打造立是恒大集团打造...
+							</div>
+							<div class="bottom news-bottom">
+								<div class="item-left">品牌网</div>
+								<div class="section_right">
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="section-text needEllipsis">
+								恒大粮油集团成立是恒大集团打造立是恒大集团打造...
+							</div>
+							<div class="bottom news-bottom">
+								<div class="item-left">品牌网</div>
+								<div class="section_right">
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="section-text needEllipsis">
+								恒大粮油集团成立是恒大集团打造立是恒大集团打造...
+							</div>
+							<div class="bottom news-bottom">
+								<div class="item-left">品牌网</div>
+								<div class="section_right">
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="news_wait_company" style="text-align:center;font-size:0.3rem;line-height:0.52rem;">下拉加载更多</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hangyeContainer index" style="display: none;">
+				<div class="content">
+					<div class="sectionContainer">
+						<div class="item">
+							<div class="left">
+								<div class="section-text item-text needEllipsis">龙象共舞新篇章习近平印度之行全记录</div>
+								<div class="bottom">
+									<div class="section-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<img src="common/img/img4.png">
+							</div>
+						</div>
+						<div class="item">
+							<div class="left">
+								<div class="section-text item-text needEllipsis">龙象共舞新篇章习近平印度之行全记录</div>
+								<div class="bottom">
+									<div class="item-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<img src="common/img/img4.png">
+							</div>
+						</div>
+						<div class="item">
+							<div class="left">
+								<div class="section-text item-text needEllipsis">龙象共舞新篇章习近平印度之行全记录</div>
+								<div class="bottom">
+									<div class="item-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<img src="common/img/img5.png">
+							</div>
+						</div>
+						<div class="item">
+							<div class="left">
+								<div class="section-text item-text needEllipsis">龙象共舞新篇章习近平印度之行全记录</div>
+								<div class="bottom">
+									<div class="item-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<img src="common/img/img2.png">
+							</div>
+						</div>
+						<div class="item">
+							<div class="left">
+								<div class="section-text item-text needEllipsis">龙象共舞新篇章习近平印度之行全记录</div>
+								<div class="bottom">
+									<div class="item-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<img src="common/img/img3.png">
+							</div>
+						</div>
+						<div class="news_wait_knowledge" style="text-align:center;font-size:0.3rem;line-height:0.52rem;">下拉加载更多</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="storyContainer index" style="display: none;">
+				<div class="content">
+					<div class="bannerContainer">
+						<img src="common/img/img1.png">
+					</div>
+					<div class="section">
+						<div class="section-text needEllipsis">恒大粮油集团成立是恒大集团打造立是恒大集团打造</div>
+						<div class="bottom">
+							<div class="section-left">品牌网</div>
+							<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+							<div class="section-right">
+								2019.10.12
+							</div>
+						</div>
+					</div>
+					<div class="bannerContainer">
+						<img src="common/img/img1.png">
+					</div>
+					<div class="section">
+						<div class="section-text needEllipsis">恒大粮油集团成立是恒大集团打造立是恒大集团打造</div>
+						<div class="bottom">
+							<div class="section-left">品牌网</div>
+							<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+							<div class="section-right">
+								2019.10.12
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="news_wait_story" style="text-align:center;font-size:0.3rem;line-height:0.52rem;">下拉加载更多</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var lists_i = 0;
+				$('.lists li').click(function(event) {
+					$(this).addClass('active');
+					$(this).siblings().removeClass('active');
+					lists_i = $(this).index();
+					$(this).find('.blueLine').css('display', 'block');
+					$(this).find('.blueLine').parent().siblings().find('.blueLine').css('display', 'none');
+					$('.container .index').eq($(this).index()).css('display', 'block');
+					$('.container .index').eq($(this).index()).siblings().css('display', 'none');
+				}).mouseenter(function(e) {
+					if ($(this).hasClass('active')) {
+						return false;
+					}
+					$(this).addClass('active');
+					$(this).find('.blueLine').css('display', 'block');
+				}).mouseleave(function(e) {
+					if (lists_i != $(this).index()) {
+						$(this).removeClass('active');
+						$(this).find('.blueLine').css('display', 'none');
+					}
+				})
+			})
+			// $(function() {
+
+				//截取文字
+				// var max_len = $('.news_one_h2').css('width');
+				// max_len = parseInt(parseInt(max_len) / 16 * 2);
+				// for (var i = 0; i < 10; i++) {
+				// 	var str = $(".news_one_h2").eq(i).text();
+				// 	if (!str) {
+				// 		break;
+				// 	}
+				// 	if (str.length > max_len) {
+				// 		str = str.substring(0, max_len - 1) + '...';
+				// 		$(".news_one_h2").eq(i).text(str);
+				// 	}
+				// }
+				//ajax加载新数据
+			// 	var stop1 = true;
+			// 	var stop2 = true;
+			// 	var stop3 = true;
+			// 	var stop4 = true;
+			// 	var offset_remzx = 10;
+			// 	var offset_company = 10;
+			// 	var offset_knowledge = 10;
+			// 	var offset_story = 10;
+			// 	$(window).scroll(function() {
+			// 		totalheight = parseFloat(window.innerHeight) + parseFloat($(window).scrollTop());
+			// 		if (totalheight == $(document).height()) {
+			// 			var type = $('.sectionContainer').css('display');
+			// 			if (type == 'none') {
+			// 				type = 1;
+			// 				if (stop1 == true) {
+			// 					$('.news_wait_remzx').text('正在加载');
+			// 					stop1 = false;
+			// 					$.post("http://m.10pinping.com/amnew/index.php?action=ceshi", {
+			// 						type: type,
+			// 						offset_remzx: offset_remzx,
+			// 						// max_len: max_len
+			// 					}, function(data) {
+			// 						if (data) {
+			// 							$(".news_wait_remzx").before(data);
+			// 							$('.news_wait_remzx').text('下拉加载更多');
+			// 							offset_remzx += 10;
+			// 							stop1 = true;
+			// 						} else {
+			// 							$('.news_wait_remzx').text('没有更多资讯了');
+			// 						}
+			// 					}, "json");
+			// 				}
+			// 			} else if (type == 'block') {
+			// 				type = 2;
+			// 				if (stop2 == true) {
+			// 					$('.news_wait_company').text('正在加载');
+			// 					stop2 = false;
+			// 					$.post("news_ajax.php", {
+			// 						type: type,
+			// 						offset_company: offset_company
+			// 					}, function(data) {
+			// 						if (data) {
+			// 							$(".news_wait_company").before(data);
+			// 							$('.news_wait_company').text('下拉加载更多');
+			// 							offset_company += 10;
+			// 							stop2 = true;
+			// 						} else {
+			// 							$('.news_wait_company').text('没有更多新闻了');
+			// 						}
+			// 					}, "json");
+			// 				}
+			// 			} else if (type == 'block') {
+			// 				type = 3;
+			// 				if (stop3 == true) {
+			// 					$('.news_wait_knowledge').text('正在加载');
+			// 					stop3 = false;
+			// 					$.post("news_ajax.php", {
+			// 						type: type,
+			// 						offset_knowledge: offset_knowledge
+			// 					}, function(data) {
+			// 						if (data) {
+			// 							$(".news_wait_knowledge").before(data);
+			// 							$('.news_wait_knowledge').text('下拉加载更多');
+			// 							offset_knowledge += 10;
+			// 							stop3 = true;
+			// 						} else {
+			// 							$('.news_wait_knowledge').text('没有更多知识了');
+			// 						}
+			// 					}, "json");
+			// 				}
+			// 			} else if (type == 'block') {
+			// 				type = 4;
+			// 				if (stop4 == true) {
+			// 					$('.news_wait_story').text('正在加载');
+			// 					stop4 = false;
+			// 					$.post("news_ajax.php", {
+			// 						type: type,
+			// 						offset_story: offset_story
+			// 					}, function(data) {
+			// 						if (data) {
+			// 							$(".news_wait_story").before(data);
+			// 							$('.news_wait_story').text('下拉加载更多');
+			// 							offset_story += 10;
+			// 							stop4 = true;
+			// 						} else {
+			// 							$('.news_wait_story').text('没有更多故事了');
+			// 						}
+			// 					}, "json");
+			// 				}
+			// 			}
+			// 		}
+			// 	});
+			// });
+			
+			
+			
+			//获取滚动条当前的位置
+			function getScrollTop() {
+			    var scrollTop = 0;
+			    if(document.documentElement && document.documentElement.scrollTop) {
+			        scrollTop = document.documentElement.scrollTop;
+			    } else if(document.body) {
+			        scrollTop = document.body.scrollTop;
+			    }
+			    return scrollTop;
+			}
+			//获取当前可视范围的高度  
+			function getClientHeight() {
+			    var clientHeight = 0;
+			    if(document.body.clientHeight && document.documentElement.clientHeight) {
+			        clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight);
+			    } else {
+			        clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
+			    }
+			    return clientHeight;
+			}
+			//获取文档完整的高度 
+			function getScrollHeight() {
+			    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+			}
+			window.onscroll = function() {
+			    if(getScrollTop() + getClientHeight() == getScrollHeight()) {
+			        console.log('下拉刷新了')
+			        $.ajax('',{
+								url: 'http://m.10pinping.com/amnew/index.php?action=ceshi',
+			        	dataType:'json',//服务器返回json格式数据
+			        	type:'post',//HTTP请求类型
+			        	timeout:10000,//超时时间设置为10秒；
+			        	success:function(data){
+			        		
+			        	},
+			        	error:function(xhr,type,errorThrown){
+			        		
+			        	}
+			        });
+			    }
+			}
+			
+		</script>
+	</body>
+</html>

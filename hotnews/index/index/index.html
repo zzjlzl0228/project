@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://m.10pinping.com/ -->
+<html lang="en" style="font-size: 100px;">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>品牌网触屏版</title>
+		<meta name="keywords" content="品牌网,触屏版,手机版,2018年度中国十大品牌评选官方网站,十大品牌门户,十大品牌排行,中国十大品牌,十大品牌投票">
+		<meta name="description" content="品牌网是一家专注于为企业推广宣传,为企业提供全方位的解决方案，使企业在激烈的市场竞争中始终保持竞争力，实现企业快速、稳定地发展。">
+		<meta itemprop="name" content="品牌网触屏版">
+		<meta itemprop="description" name="description" content="品牌网是一家专注于为企业推广宣传,为企业提供全方位的解决方案，使企业在激烈的市场竞争中始终保持竞争力，实现企业快速、稳定地发展。">
+		<meta itemprop="image" content="http://img.10pinping.com/skin/10/186/images1/static/fxtt.jpg">
+		<link rel="stylesheet" type="text/css" href="common/css/common.css">
+		<link rel="stylesheet" href="common/css/iconfont.css">
+		<link rel="stylesheet" href="common/css/pinping_header.css">
+		<link rel="stylesheet" type="text/css" href="common/css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="common/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="common/css/hotnews.css" />
+		<!-- <script src="js/hm.js"></script> -->
+		<script type="text/javascript" src="common/js/rem.min.js"></script>
+		<script type="text/javascript" src="common/js/jquery.min.js"></script>
+		<script type="text/javascript" src="common/js/public.js"></script>
+		<script src="common/js/pinping_header.js"></script>
+		<!--头部使用-->
+		<script type="text/javascript" src="js/clipboard.min.js"></script>
+		<script type="text/javascript" src="common/js/echarts.min.js"></script>
+		<script type="text/javascript" src="common/js/swiper.min.js"></script>
+		<meta name="format-detection" content="telephone = no">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width">
+
+		<script>
+			// 禁止复制
+    // document.oncontextmenu = function () {
+    //     event.returnValue = false;
+    // }
+    // document.onselectstart = function () {
+    //     event.returnValue = false;
+    // }
+    // document.oncopy = function () {
+    //     event.returnValue = false;
+    // }
+    function  rembig(){
+        setRemSize();
+        window.addEventListener("resize",setRemSize,false);
+        function setRemSize(){
+            var width = document.documentElement.clientWidth;
+            if (width > 750) {
+                width = 750;
+            }
+            var _clientWidth = width /7.5+'px';
+            document.documentElement.style.fontSize = _clientWidth;
+        };
+    }
+    rembig();
+     
+</script>
+		<style id="tsbrowser_video_independent_player_style" type="text/css">
+			[tsbrowser_force_max_size] {
+				width: 100% !important;
+				height: 100% !important;
+				left: 0px !important;
+				top: 0px !important;
+				margin: 0px !important;
+				padding: 0px !important;
+			}
+
+			[tsbrowser_force_fixed] {
+				position: fixed !important;
+				z-index: 9999 !important;
+				background: black !important;
+			}
+
+			[tsbrowser_force_hidden] {
+				opacity: 0 !important;
+				z-index: 0 !important;
+			}
+
+			[tsbrowser_hide_scrollbar] {
+				overflow: hidden !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<style>
+
+			#goHistory {
+        -webkit-transform: translateZ(0);
+        display: none;
+        width: 1.45rem;
+        height: 1.4rem;
+        position: fixed;
+        z-index: 9999;
+        top: 7.24rem;
+        right: 0.2rem;
+    }
+    
+    #goHistory> img {
+        display: block;
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #scollTopBox{
+        display: none;
+    }
+</style>
+		<div class="wrap">
+			<section id="banner" class="banner" style="background-image: url(img/home_banner_img.png);"></section>
+			<section class="option-lists">
+				<ul class="lis">
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/home_pphd_icon.png">
+							</div>
+							<div class="navText">品牌活动</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/home_zxbd_icon.png">
+							</div>
+							<div class="navText">最新榜单</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/home_zscx_icon.png">
+							</div>
+							<div class="navText">证书查询</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img">
+								<img src="img/home_bzzx-icon.png">
+							</div>
+							<div class="navText">帮助中心</div>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<!--行业热度榜-->
+			<div class="hotJobTop">
+				<p><span style="color: #0261B1;">行业</span>热度榜</p>
+				<ul id="tab_nav">
+					<li class="on" data-tabnav="data-lookNum" data-value="0" data-max_ssid="183"><a href="javascript:;">曝光量</a></li>
+					<li data-tabnav="data-gosNum" data-value="1" data-max_ssid="184" class=""><a href="javascript:;">访问增长</a></li>
+					<li data-tabnav="data-shareNum" data-value="2" data-max_ssid="185" class=""><a href="javascript:;">分享数</a></li>
+				</ul>
+				<div id="myChart" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative;"
+				 _echarts_instance_="ec_1571619808070">
+					<div style="position: relative; overflow: hidden; width: 640px; height: 385px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas
+						 data-zr-dom-id="zr_0" width="640" height="385" style="position: absolute; left: 0px; top: 0px; width: 640px; height: 385px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
+					<div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1), top 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; line-height: 21px; padding: 5px; left: 161px; top: 104px; pointer-events: none;">4月<br><span
+						 style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#1f9fe2;"></span>家居建材五金:
+						1,132,032<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#26cac0;"></span>家饰家纺:
+						852,418<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#b368f2;"></span>健身医药保健:
+						1,106,183<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:#6e6ef0;"></span>交通运输物流:
+						1,948,732</div>
+				</div>
+				<ul id="jobBox">
+					<li class="on" data-looknum="0" data-gosnum="0" data-sharenum="0"><a href="javascript:;">家居建材五金</a></li>
+					<li class="on" data-looknum="1" data-gosnum="1" data-sharenum="1"><a href="javascript:;">家饰家纺</a></li>
+					<li data-looknum="2" data-gosnum="2" data-sharenum="2"><a href="javascript:;">建工化学农用品</a></li>
+					<li data-looknum="3" data-gosnum="3" data-sharenum="3"><a href="javascript:;">服装鞋帽箱包</a></li>
+					<li class="on" data-looknum="4" data-gosnum="4" data-sharenum="4"><a href="javascript:;">健身医药保健</a></li>
+					<li data-looknum="5" data-gosnum="5" data-sharenum="5" class="on"><a href="javascript:;">交通运输物流</a></li>
+					<li data-looknum="6" data-gosnum="6" data-sharenum="6"><a href="javascript:;">生活服务</a></li>
+					<li data-looknum="7" data-gosnum="7" data-sharenum="7"><a href="javascript:;">电器数码办公</a></li>
+					<li data-looknum="8" data-gosnum="8" data-sharenum="8"><a href="javascript:;">食品酒类生鲜</a></li>
+					<li data-looknum="9" data-gosnum="9" data-sharenum="9"><a href="javascript:;">日用百货</a></li>
+					<li data-looknum="10" data-gosnum="10" data-sharenum="10"><a href="javascript:;">母婴文教乐器</a></li>
+					<li data-looknum="11" data-gosnum="11" data-sharenum="11"><a href="javascript:;">机电能源仪器仪表</a></li>
+					<li data-looknum="12" data-gosnum="12" data-sharenum="12"><a href="javascript:;">运动户外钟表</a></li>
+					<li data-looknum="13" data-gosnum="13" data-sharenum="13"><a href="javascript:;">美妆护理珠宝</a></li>
+					<li data-looknum="14" data-gosnum="14" data-sharenum="14"><a href="javascript:;">电气电子制造</a></li>
+				</ul>
+				<span class="shadowLine">
+					展开
+					<img src="img/home_zkgd_icon.png" class="img_show">
+				</span>
+
+			</div>
+			<section class="recent-lists">
+				<p class="lists-title"><span>最新</span>榜单
+					<a href="#">年度总评榜揭晓 <img src="common/img/home_gdmk_icon.png"></a>
+					<ul class="latestList">
+						<a href="#">
+							<li>
+								<!-- 揭榜日期 -->
+								<div class="announce">
+									<div class="grayLine"></div>
+									<div class="date">揭榜日期：2019/09/28</div>
+								</div>
+								<div class="announceBottom">
+									<div class="anText">
+										<div class="announceTitle needEllipsis">中国科技魅力普汇丰噼里啪</div>
+										<div class="announceText">中国十大榜单</div>
+									</div>
+									<img src="img/right-s.png" class="nextBtn">
+								</div>
+							</li>
+						</a>
+						<a href="#">
+							<li>
+								<div class="announce">
+									<div class="grayLine"></div>
+									<div class="date">揭榜日期：2019/09/28</div>
+								</div>
+								<div class="announceBottom">
+									<div class="anText">
+										<div class="announceTitle needEllipsis">中国科技魅力普汇丰噼里啪</div>
+										<div class="announceText">中国十大榜单</div>
+									</div>
+									<img src="img/right-s.png" class="nextBtn">
+								</div>
+							</li>
+						</a>
+						<a href="#">
+							<li>
+								<div class="announce">
+									<div class="grayLine"></div>
+									<div class="date">揭榜日期：2019/09/28</div>
+								</div>
+								<div class="announceBottom">
+									<div class="anText">
+										<div class="announceTitle needEllipsis">中国科技魅力普汇丰噼里啪</div>
+										<div class="announceText">中国十大榜单</div>
+									</div>
+									<img src="img/right-s.png" class="nextBtn">
+								</div>
+							</li>
+						</a>
+					</ul>
+			</section>
+			<section class="indexBanner2" style="background-image: url('img/home_hfgg_img.png')"></section>
+			<!-- 品牌百科 -->
+			<div class="jobEncy">
+				<p><span style="color: #0261B1;">品牌</span>百科<a href="javascript:tongji(189,'http://m.10pinping.com/baike');" style="display: flex;justify-content: center;
+				align-items: center;">更多<img
+						 src="common/img/home_gdmk_icon.png" style="margin-left: 0.1rem;"></a></p>
+				<ul>
+					<li class="on">
+						<a href="javascript:;">十大品牌</a></li>
+					<li><a href="javascript:;">最新<img src="img/ppbk_zxmk_icon.png" style="width: 0.52rem; height: 0.22rem;"></a></li>
+				</ul>
+
+				<!--热门轮播-->
+				<div id="jobEncy_hot" class="show">
+					<div class="swiper-container" style="width: 6.87rem;">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<ul>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">明格文化</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">汉庭</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide">
+								<ul>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">明格文化</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">汉庭</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide">
+								<ul>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">明格文化</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">汉庭</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<!--最新轮播-->
+				<div id="jobEncy_now">
+					<div class="swiper-container" style="width: 6.87rem;">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<ul>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">明格文化</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">汉庭</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide">
+								<ul>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">明格文化</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">汉庭</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide">
+								<ul>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">明格文化</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+											<img src="img/logo.png" class="gs-logo">
+											<div class="gsName">汉庭</div>
+											<div class="gray-line"></div>
+											<div class="desc">
+												这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品牌百科的详情文字，这是一段品...
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+
+			</div>
+
+			<!-- 新闻资讯 -->
+			<div class="nowNews">
+				<p><span style="color: #0261B1;">新闻</span>资讯<a href="javascript:tongji(191,&#39;http://m.10pinping.com/news&#39;);"
+					 style="display: flex;justify-content: center;align-items: center;">更多<img src="common/img/home_gdmk_icon.png"
+						 style="margin-left: 0.1rem;"></a></p>
+				<ul class="nowNews_nav">
+					<li class="active on"><a href="javascript:;">热门资讯</a></li>
+					<li><a href="javascript:;">行业知识</a></li>
+					<li><a href="javascript:;">品牌故事</a></li>
+				</ul>
+				<div class="container">
+					<!--热门资讯-->
+					<div class="remenContainer index" style="display: block;">
+						<div class="content">
+
+
+							<div class="bannerContainer">
+								<img src="common/img/img1.png">
+							</div>
+
+							<div class="sectionContainer">
+								<div class="section">
+									<div class="section-text needEllipsis">恒大粮油集团成立是恒大集团打造立是恒大集团打造</div>
+									<div class="bottom">
+										<div class="section-left">品牌网</div>
+										<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+										<div class="section-right">
+											2019.10.12
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="left">
+										<div class="section-text item-text ellipsis">龙象共舞新篇章习近平印度之行全记录</div>
+										<div class="bottom">
+											<div class="item-left">品牌网</div>
+											<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+											<div class="section-right">
+												2019.10.12
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<img src="common/img/img4.png">
+									</div>
+								</div>
+								<div class="item">
+									<div class="left">
+										<div class="section-text item-text ellipsis">习近平会见尼泊尔总统班达里</div>
+										<div class="bottom">
+											<div class="item-left">品牌网</div>
+											<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+											<div class="section-right">
+												2019.10.14
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<img src="common/img/img5.png">
+									</div>
+								</div>
+								<div class="item">
+									<div class="left">
+										<div class="section-text item-text ellipsis">习近平同尼泊尔总理奥利会谈</div>
+										<div class="bottom">
+											<div class="item-left">品牌网</div>
+											<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+											<div class="section-right">
+												2019.10.14
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<img src="common/img/img2.png">
+									</div>
+								</div>
+								<div class="item">
+									<div class="left">
+										<div class="section-text item-text ellipsis">习近平会见尼泊尔共产党联合主席普拉昌</div>
+										<div class="bottom">
+											<div class="item-left">品牌网</div>
+											<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+											<div class="section-right">
+												2019.10.14
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<img src="common/img/img3.png">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--行业知识-->
+					<div class="hangyeContainer index" style="display: none;">
+						<div class="content">
+							<div class="sectionContainer">
+								<div class="item">
+									<div class="left">
+										<div class="section-text item-text ellipsis">龙象共舞新篇章习近平印度之行全记录</div>
+										<div class="bottom">
+											<div class="section-left">品牌网</div>
+											<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+											<div class="section-right">
+												2019.10.12
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<img src="common/img/img4.png">
+									</div>
+								</div>
+								<div class="item">
+									<div class="left">
+										<div class="section-text item-text ellipsis">龙象共舞新篇章习近平印度之行全记录</div>
+										<div class="bottom">
+											<div class="item-left">品牌网</div>
+											<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+											<div class="section-right">
+												2019.10.12
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<img src="common/img/img4.png">
+									</div>
+								</div>
+								<div class="item">
+									<div class="left">
+										<div class="section-text item-text ellipsis">龙象共舞新篇章习近平印度之行全记录</div>
+										<div class="bottom">
+											<div class="item-left">品牌网</div>
+											<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+											<div class="section-right">
+												2019.10.12
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<img src="common/img/img5.png">
+									</div>
+								</div>
+								<div class="item">
+									<div class="left">
+										<div class="section-text item-text ellipsis">龙象共舞新篇章习近平印度之行全记录</div>
+										<div class="bottom">
+											<div class="item-left">品牌网</div>
+											<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+											<div class="section-right">
+												2019.10.12
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<img src="common/img/img2.png">
+									</div>
+								</div>
+								<div class="item">
+									<div class="left">
+										<div class="section-text item-text ellipsis">龙象共舞新篇章习近平印度之行全记录</div>
+										<div class="bottom">
+											<div class="item-left">品牌网</div>
+											<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+											<div class="section-right">
+												2019.10.12
+											</div>
+										</div>
+									</div>
+									<div class="right">
+										<img src="common/img/img3.png">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 品牌故事 -->
+					<div class="storyContainer index" style="display: none;">
+						<div class="content">
+							<div class="bannerContainer">
+								<img src="common/img/img1.png">
+							</div>
+							<div class="section">
+								<div class="section-text needEllipsis">恒大粮油集团成立是恒大集团打造立是恒大集团打造</div>
+								<div class="bottom">
+									<div class="section-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+							<div class="bannerContainer">
+								<img src="common/img/img1.png">
+							</div>
+							<div class="section">
+								<div class="section-text needEllipsis">恒大粮油集团成立是恒大集团打造立是恒大集团打造</div>
+								<div class="bottom">
+									<div class="section-left">品牌网</div>
+									<img src="common/img/xwzx_sjmk_icon.png" class="section-center">
+									<div class="section-right">
+										2019.10.12
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('.nowNews_nav li').click(function(event) {
+				$(this).addClass('active');
+				$(this).siblings().removeClass('active');
+
+				$('.container').find('.index').eq($(this).index()).css('display', 'block');
+				$('.container').find('.index').eq($(this).index()).siblings().css('display', 'none');
+			})
+		</script>
+		<script type="text/javascript">
+			// 垂直滚动页面 改变搜索框 部分的背景颜色
+			;
+			(function() {
+				var pos = 0;
+				var ticking = false;
+				var header = $("header");
+				var bannerH = $('.banner').height();
+				var headerH = $('header').height();
+				var _height = bannerH - headerH - 15;
+				window.addEventListener("scroll", function(e) {
+					pos = window.scrollY;
+					if (pos > _height && !ticking) {
+						header.css({
+							"backgroundColor": "#cb3529"
+						});
+						ticking = true;
+					}
+					if (pos < _height && ticking) {
+						header.css({
+							"backgroundColor": "transparent"
+						});
+						ticking = false;
+					}
+				});
+			})();
+		</script>
+		<script type="text/javascript" src="common/js/jhuadong.js"></script>
+		<div class="wrap">
+			<footer>
+				<div class="footer">
+					<a href="javascript:;">
+						<img src="common/img/home_gywm_icon.png">
+						<div class="foot-text">
+							关于我们
+						</div>
+					</a>
+					<a href="javascript:;" style="border:none;">
+						<img src="common/img/home_bzzx_icon.png">
+						<div class="foot-text">
+							帮助中心
+						</div>
+					</a>
+					<a href="javascript:;">
+						<img src="common/img/home_wtfk_icon.png">
+						<div class="foot-text">
+							问题反馈
+						</div>
+					</a>
+				</div>
+				<img src="common/img/home_ppw_logo_img.png" class="pinpaiwang-logo">
+				<div class="copyright">Copyright@2019 品牌网</div>
+			</footer>
+			<a href="javascript:;" id="scollTopBox">
+				<div class="back_to_top  back-top" id="back-top" style="display: block;">
+					<img src="./index-files/m_dingb_icon.png">
+				</div>
+			</a>
+
+			<div class="pinping_model" style="display:none;">
+				<div class="pinping_kefukuang">
+					<a href="javascript:;" target="_blank">
+						<p style="color:#0261b1;font-size:0.34rem;text-align:Center;line-height:0.7rem;padding-top:0.22rem;">品牌报名流程</p>
+					</a>
+					<p style="font-size:0.28rem;color:#353535;line-height:0.64rem;text-align:Center;">热线：400-187-8707</p>
+
+					<a data-qq="3067064935" href="javascript:;" target="_blank">
+						<img src="img/m_kfqq1_img.png" alt="" style="width:2.8rem;height:0.66rem;display:table;margin:auto;margin-top:0.3rem;">
+					</a>
+					<a data-qq="171178174" href="javascript:;" target="_blank">
+						<img src="img/m_kfqq2_img.png" alt="" style="width:2.8rem;height:0.66rem;display:table;margin:auto;margin-top:0.06rem;">
+					</a>
+				</div>
+				<img src="img/m_kfgb_icon.png" alt="" style="width:0.44rem;height:0.44rem;cursor:pointer;display:block;position:fixed;left:50%;margin-left:-0.22rem;top:7.8rem;"
+				 class="pinping_bacha">
+			</div>
+			<div class="pinping_kefu pinping_kefu_p" style="background: url(img/m_kefuk_img.png) no-repeat;background-size:0.78rem 1.85rem;width:0.78rem;height:1.85rem;position:fixed;right:0;top:3rem;z-index:1000;cursor:pointer;"></div>
+
+		</div>
+		<style type="text/css">
+			/*QQ客服css*/
+			.pinping_model {
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.3);
+				z-index: 2000;
+				position: fixed;
+				left: 0rem;
+				top: 0rem;
+			}
+
+			.pinping_kefukuang {
+
+				position: fixed;
+				left: 50%;
+				margin-left: -2.4rem;
+				top: 2.5rem;
+				width: 4.8rem;
+				height: 5rem;
+				background: url(img/m_kefubg_img.png) no-repeat;
+				background-size: 4.8rem 5rem;
+				padding-top: 1.3rem;
+			}
+
+			.pinping_kefukuang h6 {
+				font-size: 0.34rem;
+				color: #000;
+				width: 100%;
+				font-weight: 600;
+				height: 0.4rem;
+				line-height: 0.4rem;
+				padding: 0.4rem 0 0.3rem;
+				text-align: center;
+			}
+
+			.pinping_kefukuang h6 span {
+				float: left;
+				display: inline-block;
+				width: 1.15rem;
+				height: 0.02rem;
+				background: #ddd;
+				margin-top: 0.19rem;
+			}
+
+			.pinping_kefukuang h6 span:last-of-type {
+				float: right;
+			}
+
+			.pinping_kefukuang>img {
+				display: block;
+				width: 2.8rem;
+				height: 2.8rem;
+				border: 1px solid #f6f6f6;
+				margin: 0 auto;
+			}
+
+			.pinping_kefukuang>span {
+				display: block;
+				font-size: 0.22rem;
+				color: #666;
+				margin: 0.02rem auto 0.25rem;
+				text-align: center;
+			}
+
+			.pinping_kefukuang>p {
+				font-size: 0.24rem;
+				color: #000;
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript">
+			// 回到顶部
+			function backTop() {
+				$(window).scroll(function() {
+					var height = Math.abs($(this).scrollTop());
+					if (height > 150) {
+						$('#back-top').fadeIn()
+					}
+					if (height < 150) {
+						$('#back-top').fadeOut()
+					}
+				})
+			}
+			backTop();
+			// 客服栏js
+			$(function() {
+				$('.pinping_bacha, .pinping_model').click(function() {
+					$('.pinping_model').css('display', 'none')
+				})
+				$('#scollTopBox').on('click', function() {
+					$("html,body").animate({
+						scrollTop: 0
+					}, 100);
+				})
+				$('.pinping_kefu').click(function(){
+					$('.pinping_model').css('display', 'block')
+				})
+			})
+		</script>
+
+		<div style="display:none;">
+			<a href="https://www.cnzz.com/stat/website.php?web_id=1261204169" target="_blank" title="站长统计">站长统计</a>
+		</div>
+
+
+		<script src="js/shuju.js"></script>
+		<script>
+			// echart折线图
+			var topKindArr = [] //顶部分类概览
+			var xDataArr = [] //x轴底部时间段
+			var seriesArr = [] //显示的种类详细属性
+			var kindObj = {
+				name: null, //名字
+				type: 'line', //线性样式
+				smooth: true, //线性平滑
+				symbol: 'circle', //折点为实心
+				itemStyle: {
+					normal: {
+						areaStyle: {
+							type: 'default'
+						}
+					}
+				}, //焦点样式
+			}
+			// // ————————————————————
+			var kind1, kind2, kind3, kind4;
+			kind1 = $.extend(true, {}, kindObj); //复制对象
+			kind2 = $.extend(true, {}, kindObj); //复制对象
+			kind3 = $.extend(true, {}, kindObj); //复制对象
+			kind4 = $.extend(true, {}, kindObj); //复制对象
+			kind1.itemStyle.normal.color = '#1f9fe2';
+			kind1.itemStyle.normal.lineStyle = {
+				color: '#1f9fe2'
+			};
+			kind1.itemStyle.normal.areaStyle.color = {
+				type: 'linear',
+				x: 0,
+				y: 0,
+				x2: 0,
+				y2: 1,
+				colorStops: [{
+					offset: 0,
+					color: 'rgba(31,159,226,0.5)' // 0% 处的颜色
+				}, {
+					offset: 1,
+					color: 'rgba(31,159,226,0)' // 100% 处的颜色
+				}],
+				global: false
+			};
+			kind2.itemStyle.normal.color = '#26cac0';
+			kind2.itemStyle.normal.lineStyle = {
+				color: '#26cac0'
+			};
+			kind2.itemStyle.normal.areaStyle.color = {
+				type: 'linear',
+				x: 0,
+				y: 0,
+				x2: 0,
+				y2: 1,
+				colorStops: [{
+					offset: 0,
+					color: 'rgba(38,202,192,0.5)' // 0% 处的颜色
+				}, {
+					offset: 1,
+					color: 'rgba(38,202,192,0)' // 100% 处的颜色
+				}],
+				global: false
+			};
+			kind3.itemStyle.normal.color = '#b368f2';
+			kind3.itemStyle.normal.lineStyle = {
+				color: '#b368f2'
+			};
+			kind3.itemStyle.normal.areaStyle.color = {
+				type: 'linear',
+				x: 0,
+				y: 0,
+				x2: 0,
+				y2: 1,
+				colorStops: [{
+					offset: 0,
+					color: 'rgba(179,104,242,0.5)' // 0% 处的颜色
+				}, {
+					offset: 1,
+					color: 'rgba(179,104,242,0)' // 100% 处的颜色
+				}],
+				global: false
+			};
+			kind4.itemStyle.normal.color = '#6e6ef0';
+			kind4.itemStyle.normal.lineStyle = {
+				color: '#6e6ef0'
+			};
+			kind4.itemStyle.normal.areaStyle.color = {
+				type: 'linear',
+				x: 0,
+				y: 0,
+				x2: 0,
+				y2: 1,
+				colorStops: [{
+					offset: 0,
+					color: 'rgba(110,110,240,0.5)' // 0% 处的颜色
+				}, {
+					offset: 1,
+					color: 'rgba(110,110,240,0)' // 100% 处的颜色
+				}],
+				global: false
+			};
+			var myChart = echarts.init(document.getElementById('myChart'));
+			// console.log(kind1);
+			function updataMyChartFn(dataName, k) {
+				var hd = err[k];
+				// console.log(err);
+				kind1.name = $('#jobBox>li.on').eq(0).find('a') ? $('#jobBox>li.on').eq(0).find('a').html() : null;
+				kind2.name = $('#jobBox>li.on').eq(1).find('a') ? $('#jobBox>li.on').eq(1).find('a').html() : null;
+				kind3.name = $('#jobBox>li.on').eq(2).find('a') ? $('#jobBox>li.on').eq(2).find('a').html() : null;
+				kind4.name = $('#jobBox>li.on').eq(3).find('a') ? $('#jobBox>li.on').eq(3).find('a').html() : null;
+				var k1 = $('#jobBox>li.on').eq(0).attr(dataName) ? $('#jobBox>li.on').eq(0).attr(dataName) : '';
+				var k2 = $('#jobBox>li.on').eq(1).attr(dataName) ? $('#jobBox>li.on').eq(1).attr(dataName) : '';
+				var k3 = $('#jobBox>li.on').eq(2).attr(dataName) ? $('#jobBox>li.on').eq(2).attr(dataName) : '';
+				var k4 = $('#jobBox>li.on').eq(3).attr(dataName) ? $('#jobBox>li.on').eq(3).attr(dataName) : '';
+				// 当前月
+				var myDate = new Date();
+				var yue = myDate.getMonth(); //获取当前月份(0-11,0代表1月)
+				// console.log(yue);
+				kind1.data = k1 ? hd[k1].slice(yue - 2, yue + 5) : [];
+				kind2.data = k2 ? hd[k2].slice(yue - 2, yue + 5) : [];
+				kind3.data = k3 ? hd[k3].slice(yue - 2, yue + 5) : [];
+				kind4.data = k4 ? hd[k4].slice(yue - 2, yue + 5) : [];
+				// kind2.data=$('#jobBox>li.on').eq(1).attr(dataName)?$('#jobBox>li.on').eq(1).attr(dataName).split(','):[];
+				// kind3.data=$('#jobBox>li.on').eq(2).attr(dataName)?$('#jobBox>li.on').eq(2).attr(dataName).split(','):[];
+				// kind4.data=$('#jobBox>li.on').eq(3).attr(dataName)?$('#jobBox>li.on').eq(3).attr(dataName).split(','):[];
+				topKindArr = [kind1.name, kind2.name, kind3.name, kind4.name];
+				// console.log(kind1.data)
+				seriesArr = [kind1, kind2, kind3, kind4];
+				// console.log(xData)
+				// var start = yue-2;
+				xDataArr = xData.slice(yue - 2, yue + 5);
+				// console.log(xDataArr)
+				option = {
+					tooltip: {
+						trigger: 'axis' //触发轴(同点对比)
+					},
+					legend: {
+						icon: "circle", //将图例显示为圆点
+						data: topKindArr,
+						top: '6%',
+						left: 'center',
+						textStyle: {
+							fontSize: 12,
+						},
+					},
+					grid: {
+						bottom: "16%",
+						left: '14%',
+						right: '6%',
+					},
+					xAxis: [{
+						type: 'category',
+						boundaryGap: false,
+						data: xDataArr,
+						axisLabel: {
+							show: true,
+							textStyle: {
+								fontSize: '12'
+							}
+						},
+					}],
+					yAxis: [{
+						type: 'value',
+						axisLabel: {
+							show: true,
+							textStyle: {
+								fontSize: '8'
+							}
+						},
+					}],
+					series: seriesArr
+				}
+
+				myChart.setOption(option, true);
+			}
+
+			updataMyChartFn('data-lookNum', 0)
+			// 折线图中的nav切换
+			$('#tab_nav>li').on('click', function() {
+				// console.log($(this).attr('data-value'))
+				var max_ssid = $(this).attr('data-max_ssid');
+				$.post("http://m.10pinping.com/member/tongji.php?action=sj_tj", {
+					max_ssid: max_ssid
+				}, function(data) {
+					// console.log(data);
+				})
+				if ($(this).hasClass('on')) {
+					return;
+				} else {
+					$(this).addClass('on').siblings('li').removeClass('on')
+					updataMyChartFn($(this).attr('data-tabNav'), $(this).attr('data-value'));
+				}
+			})
+			// 折线图下的各个种类的切换
+			$('#jobBox>li').on('click', function() {
+				var tabStr = $('#tab_nav>li.on').attr('data-tabNav')
+				var er = $('#tab_nav>li.on').attr('data-value')
+				if ($(this).hasClass('on')) {
+					$(this).removeClass('on')
+				} else {
+					if ($('#jobBox>li.on').length >= 4) {
+						alert('最多只能选择4种行业展示');
+						return;
+					} else {
+						$(this).addClass('on')
+					}
+				}
+				$.post("http://m.10pinping.com/member/tongji.php?action=sj_tj", {
+					max_ssid: 186
+				}, function(data) {
+					// console.log(data);
+				})
+				updataMyChartFn(tabStr, er)
+			})
+			// 行业热度榜的底下的展开更多
+			$('.hotJobTop>span').on('click', function() {
+				if ($(this).hasClass('on')) {
+					$(this).removeClass('on')
+					$(this).parent().removeClass('autoHeight');
+					$(this).addClass('shadowLine').html('展开<img src="img/home_zkgd_icon.png" class="img_show"/>');
+				} else {
+					$(this).addClass('on')
+					$(this).parent().addClass('autoHeight');
+					$(this).removeClass('shadowLine').text('收起');
+				}
+			})
+			// 行业热度榜的底下的展开更多
+			// $('.hotJobTop>span').on('click',function () {
+			//     $(this).parent().addClass('autoHeight')
+			//     $(this).addClass('hide');
+			// })
+			// 品牌百科首次轮播
+			var jobSwiper = new Swiper('#jobEncy_hot>.swiper-container', {
+				// loop: true, // 循环模式选项
+				// autoplay: {
+				// 	delay: 3000, //1秒切换一次
+				// 	autoplayDisableOnInteraction: false,
+				// },
+				pagination: {
+					el: '#jobEncy_hot .swiper-pagination',
+					// clickable :true,
+				},
+			})
+			// 品牌百科tab切换
+			$('.jobEncy>ul>li').on('click', function() {
+				if ($(this).hasClass('on')) {
+					return false
+				} else {
+					$(this).addClass('on').siblings('li').removeClass('on')
+					if ($(this).index() == 0) {
+						$('#jobEncy_hot').addClass('show');
+						$('#jobEncy_now').removeClass('show');
+						jobSwiper.destroy(false);
+						jobSwiper = new Swiper('#jobEncy_hot>.swiper-container', {
+							loop: true, // 循环模式选项
+							autoplay: {
+								delay: 3000, //1秒切换一次
+								autoplayDisableOnInteraction: false,
+							},
+							pagination: {
+								el: '#jobEncy_hot .swiper-pagination',
+								// clickable :true,
+							},
+						})
+					} else if ($(this).index() == 1) {
+						$('#jobEncy_now').addClass('show');
+						$('#jobEncy_hot').removeClass('show');
+						jobSwiper.destroy(false);
+						jobSwiper = new Swiper('#jobEncy_now>.swiper-container', {
+							loop: true, // 循环模式选项
+							autoplay: {
+								delay: 3000, //1秒切换一次
+								autoplayDisableOnInteraction: false,
+							},
+							pagination: {
+								el: '#jobEncy_now .swiper-pagination',
+								// clickable :true,
+							},
+						})
+					}
+				}
+			})
+			// 最新资讯切换
+			$('.nowNews>.nowNews_nav>li').on('click', function() {
+				if ($(this).hasClass('on')) {
+					return;
+				} else {
+					$(this).addClass('on').siblings('li').removeClass('on');
+					if ($(this).index() == 0) {
+						$('.nowNews>.newsPro').eq(0).addClass('show').siblings('.newsPro').removeClass('show')
+					} else if ($(this).index() == 1) {
+						$('.nowNews>.newsPro').eq(1).addClass('show').siblings('.newsPro').removeClass('show')
+					}
+				}
+			})
+			$('#scollTopBox').off('click');
+			$('#scollTopBox').on('click', function() {
+				$("html,body").animate({
+					scrollTop: 0
+				}, 200);
+			});
+
+			// 统计
+			function tongji(max_ssid, url) {
+				$.post("http://m.10pinping.com/member/tongji.php?action=sj_tj", {
+					max_ssid: max_ssid
+				}, function(data) {
+					// console.log(data);
+				})
+				window.location.href = url;
+			}
+		</script>
+		<script>
+			var ssid = 40; //分享分类的id
+		</script>
+		<script language="javascript" src="js/jweixin-1.0.0.js"></script>
+		<!--微信js-->
+		<script type="text/javascript" src="js/fenxiang7.12.js"></script>
+		<!-- 投票页返回按钮 -->
+		<script type="text/javascript" src="js/storages.js"></script>
+		<script>
+			// 投票返回的判断
+			if (LsySession.getItem('voting')) {
+				$('#goHistory').css('display', 'block').attr('href', LsySession.getItem('voting'));
+			} else {
+				$('#goHistory').css('display', 'none');
+			}
+		</script>
+	</body>
+</html>
