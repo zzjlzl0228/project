@@ -323,7 +323,7 @@
 .upload_succ,
 .upload_pass,
 .order_init {
-	width: 100%;
+	width: 2.42rem;
 	border: 1px solid #D6DBE6;
 	background: #F7F8FA;
 	box-sizing: border-box;
@@ -400,7 +400,8 @@
 .upload_main_1halfX .upload_error,
 .upload_main_1halfX .upload_succ,
 .upload_main_1halfX .upload_pass {
-	top: 0.42rem;
+	top: 0rem;
+	left: 3.6rem;
 }
 
 .upload_ing_img {

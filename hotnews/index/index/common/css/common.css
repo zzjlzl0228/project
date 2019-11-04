@@ -1,7 +1,10 @@
 /* 公共部分设置 */
 
 body,div,ul,ol,li,p{ margin:0; padding:0; }
-a {  text-decoration:none; }
+a {  text-decoration:none;
+/* 去除a标签的阴影 */
+-webkit-tap-highlight-color: transparent; 
+}
 a:hover { text-decoration:underline; }
 img { border:none; }
 ol,ul,li { list-style:none; }

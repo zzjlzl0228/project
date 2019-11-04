@@ -539,6 +539,7 @@ section.indexBanner2 {
 	font-size: 0.28rem;
 	color: #666;
 	line-height: 0.5rem;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .nowNews>.nowNews_nav>li.on>a {
@@ -626,15 +627,15 @@ section.indexBanner2 {
 	float: left;
 	width: 1.2rem;
 	height: 1.2rem;
-	border: 1px solid rgba(204, 204, 204, 1);
+	/* border: 1px solid rgba(204, 204, 204, 1); */
 	box-sizing: border-box;
-	margin-right: 0.16rem;
+	/* margin-right: 0.16rem; */
 
 }
 
 #jobEncy_hot>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a .gsName,
 #jobEncy_now>.swiper-container>.swiper-wrapper>.swiper-slide>ul>li>a .gsName {
-	width: 1.12rem;
+	/* width: 1.12rem; */
 	height: 0.37rem;
 	font-size: 0.28rem;
 	font-family: Arial;

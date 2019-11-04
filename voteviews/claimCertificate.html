@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/main1.1.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="js/main1.1.js" type="text/javascript" charset="utf-8"></script> -->
 	</head>
 	<body>
 		<!-- 认领证书容器 -->
@@ -31,6 +31,7 @@
 					
 					<div class="upload_main upload_main_1halfX">
 						<!-- 初始化状态 -->
+						
 						<div class="applyProve">
 							<div class="proveContent">
 								<div class="proveTitle">奖牌证书认领证明</div>
@@ -44,10 +45,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="proveImg">
+							<div class="proveImg upload_init">
 								<img src="img/enroll_jiangpai_img.png">
-								<input type="hidden" name="thumb1" id="thumb1">
-								<input type="file" attr="thumb1" class="upload_init_file">
+								<input type="hidden" name="yingye" id="yingye">
+								<input type="file" attr="yingye" class="upload_init_file">
 							</div>
 						</div>
 						<!-- 上传中状态 -->
@@ -184,12 +185,6 @@
 								<input type="file" attr="shangbiao" class="upload_init_file">
 							</div>
 						</div>
-						<!-- <div class="upload_init" data-type="2">
-							<div class="upload_init_bg"></div>
-							<p class="upload_init_text">点击上传</p>
-							<input type="hidden" name="shangbiao" id="shangbiao">
-							<input type="file" attr="shangbiao" class="upload_init_file">
-						</div> -->
 						<!-- 上传中状态 -->
 						<div class="upload_ing">
 							<div class="upload_ing_img">
@@ -292,7 +287,7 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			function check() {
 				f = 'zhengming';
 				l = Dd(f).value.length;
@@ -362,7 +357,7 @@
 				}
 			}
 			<!-- //短信验证码验证 -->
-			function checksmscode() {
+			<!-- function checksmscode() {
 				// 获取输入得手机号
 				var mobile = $('#phone').val();
 				// 获取输入得短信验证码
@@ -392,6 +387,139 @@
 					}
 				});
 				return ischecksmscode;
+			}
+		</script> -->
+		<script type="text/javascript">
+			// 上传图片
+			var modifyZhengming = 0;
+			var modifyYingye = 0;
+			var modifyShangbiao = 0;
+			$('.upload_init').on('change','.upload_init_file',function(){
+				// imgUrl为上传图片的图片地址
+				var imgUrl = $(this).val()
+				var lookImgSrc = window.URL.createObjectURL(this.files[0])
+				// 图片类型 其中的substring为截取字符串
+				var urlType = imgUrl.substring(imgUrl.lastIndexOf('.')).toLowerCase()
+				// 判断当上传的图片类型不是.png|.jpg|.jpeg时,弹出上传错误
+				if (!urlType.match(/.png|.jpg|.jpeg/)) {
+					alert('上传错误');
+					return
+				} else {
+					var that = $(this)
+					files = this.files;
+					file = files[0]
+					// 判断文件的尺寸大小
+					var fileSize = Math.floor(file.size / 1024 / 1024);
+					if (fileSize >= 4) {
+						alert('请上传小于4M的图片');
+						return
+					}
+					
+					// 调用ajax之前显示上传的div
+					$(this).parents('.upload_main').removeClass('upload_main_error upload_main_bad upload_main_good').addClass('upload_main_ing')
+					var type = $(this).parents('upload_init').attr('data-type');
+					if (type == 1) {
+						if (modifyZhengming == 0) {
+							if (edit == 0) {
+								if (iGongSiRenZheng == 0) {
+									count(18)
+								}
+							} else {
+								if (iGongSiRenZheng == 0) {
+									count(206)
+								}
+							}
+							modifyZhengming = 1
+						}
+					} else if (type == 2) {
+						if (modifyYingye == 0) {
+							if (edit == 0) {
+								if (iGongSiRenZheng == 0) {
+									count(19)
+								} else {
+									count(28)
+								}
+							} else {
+								if (iGongSiRenZheng == 0) {
+									count(207)
+								} else {
+									count(213)
+								}
+							}
+							modifyYingye == 1
+						}
+					} else if (type == 2) {
+						if (modifyShangbiao == 0) {
+							if (edit == 0) {
+								if (iGongSiRenZheng == 0) {
+									count(20)
+								} else {
+									count(29)
+								}
+							} else {
+								if (iGongSiRenZheng == 0) {
+									count(208)
+								} else {
+									count(214)
+								}
+							}
+							modifyShangbiao == 1
+						}
+					}
+					ajaxUpload(file, $(this))
+				}
+			})
+			function ajaxUpload(file,_this) {
+				_this.parents('.publicPic').removeClass('imgError').addClass('imgLoading')
+				var formdata = new FormData();
+				formdata.append("upthumb",file);
+				formdata.append("fid",_this.attr("attr"));
+				// 发送ajax请求
+				$.ajax({
+					url: "http://m.10pinping.com/venroll/upload.php",
+					type: "post",
+					data: formdata,
+					dataType: 'json',
+					processData: false,
+					contentType: false,
+					success: function(data) {
+						if (data.type) {
+							$("#" + _this.attr("attr")).val(data.img)
+							_this.parents('.upload_main').addClass('upload_main_good').removeClass('upload_main_ing').children('.upload_succ').chilldren('.upload_succ_img').find('img').attr('src',data.img)
+						} else {
+							_this.parents('.upload_main').removeClass('upload_mian_ing upload_main_good').addClass('upload_main_bad');
+							_this.parents('.upload_main').find('.upload_succ_img').find('img').attr('src', '')
+							_this.val('');
+							console.log(_this.val)
+						}
+					},
+					error: function(XMLHttpRequest,textStatus,errorThrown){
+						_this.parents('.upload_main').removeClass('upload_main_ing upload_main_good').addClass('upload_main_bad');
+						_this.parents('.upload_main').find('.upload_succ_img').find('img').attr('src', '')
+						_this.val('');
+					}
+				})
+			}
+			// 上传成功的删除
+			$('.upload_succ').on('click', '.nemu_btn_remove', function() {
+				$(this).parents('.upload_succ').find('.upload_succ_img').find('img').attr('src', '');
+				$(this).parents('.upload_main').removeClass('upload_main_good').children('.upload_init').find('input').val('')	
+			})
+			// 上传成功的上传
+			$('.upload_succ').on('click', '.nemu_btn_upload', function() {
+				$(this).parents('.upload_succ').siblings('.upload_init').find('.upload_init_file').click()
+			})
+			
+			//   上传失败中的重新上传
+			$('.upload_error').on('click', '.upload_error_btn', function() {
+				$(this).parents('.upload_error').siblings('.upload_init').find('.upload_init_file').click()
+			})
+			function count(id) {
+				$.post("http://m.10pinping.com/member/tongji.php?action=sj_tj", {
+					max_ssid: id
+				},function(data){
+					
+				})
 			}
 		</script>
 	</body>
