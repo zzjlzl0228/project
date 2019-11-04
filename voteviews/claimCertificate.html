@@ -484,6 +484,7 @@
 					contentType: false,
 					success: function(data) {
 						if (data.type) {
+							// 获取数据中的img,并将img赋值给类名为upload_succ_img下的img的src
 							$("#" + _this.attr("attr")).val(data.img)
 							_this.parents('.upload_main').addClass('upload_main_good').removeClass('upload_main_ing').children('.upload_succ').chilldren('.upload_succ_img').find('img').attr('src',data.img)
 						} else {
