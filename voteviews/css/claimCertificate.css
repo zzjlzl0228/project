@@ -197,7 +197,7 @@
 
 .iphone-left {
 	width: 0.8rem;
-	height: 0.4rem;
+	/* height: 0.4rem; */
 	padding-left: 0.18rem;
 	font-size: 0.28rem;
 	font-family: Source Han Sans CN;
@@ -313,4 +313,69 @@
 	z-index: 100;
 	top: 0;
 	opacity: 0;
+}
+
+/* 二维码窗 */
+.erCodeTip {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+	z-index: 100;
+}
+.erCodeTipMain {
+	width: 4.8rem;
+	height: 3rem;
+	background: #fff;
+	padding: 0.3rem;
+	border-radius: 10px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.erCodeTipMain > a{
+	display: block;
+	width: 0.26rem;
+	height: 0.26rem;
+	float: right;
+}
+.erCodeTipMain a img {
+	/* 必须将img转化为块级元素 */
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.erCodeTipMain input {
+	display: block;
+	width: 2.11rem;
+	height: 0.24rem;
+	padding: 0.18rem 0.12rem;
+	border: 1px solid #ccc;
+	font-size: 0.24rem;
+	color: #666;
+	margin-top: 0.7rem;
+	float: left;
+}
+.erCodeTipMain button {
+	width: 4.2rem;
+	box-sizing: content-box;
+	background: #2974B4;
+	padding: 0.18rem 0;
+	border: none;
+	outline: none;
+	display: block;
+	border-radius: 10px;
+	color: #fff;
+	margin: 0.44rem auto 0;
+}
+.erCodeTipMain .erCodeImg {
+	width: 1.65rem;
+	height: 0.6rem;
+	border: 1px solid #ccc;
+	margin-top: 0.45rem;
+	display: block;
 }

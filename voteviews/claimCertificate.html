@@ -7,9 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/claimCertificate.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/layer.css"/>
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
-		<!-- <script src="js/main1.1.js" type="text/javascript" charset="utf-8"></script> -->
+		<script src="js/jhuadong.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<!-- 认领证书容器 -->
@@ -253,7 +254,7 @@
 					<div class="mobileContent">
 						<div class="iphone">
 							<div class="iphone-left">+86</div>
-							<input type="text" name="iphone" id="" placeholder="请输入手机号" class="cellphone" />
+							<input type="text" name="iphone" id="iphone" placeholder="请输入手机号" class="cellphone" />
 						</div>
 						<div class="errorText" style="display: none;">
 							<div class="label"></div>
@@ -262,10 +263,8 @@
 					</div>
 					<div class="captchaContent">
 						<div class="captcha">
-							<input type="text" name="iphone" id="" placeholder="请输入验证码" class="cellphone" />
-							<div class="codeBtn">
-								获取验证码
-							</div>
+							<input type="text" name="iphone" id="code" placeholder="请输入验证码" class="cellphone" />
+							<div class="codeBtn">发送短信</div>
 						</div>
 
 						<div class="errorText" style="display: none;">
@@ -389,7 +388,28 @@
 				return ischecksmscode;
 			}
 		</script> -->
+		<!-- 二维码窗 -->
+		<div class="erCodeTip" style="display: none;">
+			<div class="erCodeTipMain">
+				<a href="javascript:;" class="closeXBtn">
+					<img src="images/icon_back_e.png" >
+				</a>
+				<input type="text" name="captcha" id="captchaHJ" value="点击显示" placeholder="请输入验证码"  />
+				<a href="javascript:;" class="erCodeImg" style="display: none;">
+					<img class="captchapngHJ" src="http://www.10pinping.com/api/captchas.png.php?rnd=m4528119284739305" title="验证码,看不清楚?请点击刷新字母不区分大小写" alt="" align="absmiddle"id="captchapngHJ" onclick="reloadcaptcha('HJ');" style="cursor:pointer;">
+				</a>
+				<div style="clear:both;"></div>
+				<button type="button" onclick="sendMessage()">确认</button>
+			</div>
+		</div>
+		<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script type="text/javascript">
+			// 0 首次报名 1 再次报名
+			var iGongSiRenZheng = 0; 
+			//是否修改,未修改为0,修改后为1
+			var edit = 0; 
+			var flag = true;
 			// 上传图片
 			var modifyZhengming = 0;
 			var modifyYingye = 0;
@@ -522,6 +542,187 @@
 					
 				})
 			}
+			
+			// 点击获取验证码发送短信验证
+			// var timer = null;
+			$('.codeBtn').click(function(){
+				if ($(this).html() == '发送短信') {
+					// 验证手机号,手机号正确显示汉字验证码得弹窗
+					var mobile = $('#iphone').val();
+					if (mobile == '') {
+						layer.msg('请填写手机号码！',{
+							offset: ['50%'],
+						})
+						return
+					}else {
+						$('.erCodeTip').css('display','block')
+					}
+					var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+					if (!myreg.test(mobile)) {
+						layer.msg('手机号码格式不正确！',{
+							offset: ['50%'],
+						})
+						return
+					}
+					
+				}
+			})
+			
+		</script>
+		<script type="text/javascript">
+			$('#captchaHJ').click(function(){
+				$('.erCodeImg').css('display','block')
+				$('#captchaHJ').attr('value','')
+			})
+		
+			// 文字图片验证码得显示
+			function getRand() {
+				return 'm' + Math.random().toString().substr(2);
+			}
+			function Dd(i) {
+				return document.getElementById(i)
+			}
+			//显示验证码
+			function showcaptcha(Login) {
+				ischeckcaptcha = false;
+				if (Dd('captchapng' + Login).style.display == 'none') {
+					Dd('captchapng' + Login).style.display = '';
+				}
+				$('.erCodeImg').show();
+				if (Dd('captchapng' + Login).src.indexOf('loading.gif') != -1) {
+					rnd = getRand();
+					Dd('rnd').value = rnd;
+					Dd('captchapng' + Login).src = DTPath + 'api/captchas.png.php?rnd=' + rnd;
+				}
+				if (Dd('captcha' + Login).value == '点击显示') {
+					Dd('captcha' + Login).value = '';
+					rnd = getRand();
+					Dd('rnd').value = rnd;
+					Dd('captchapng' + Login).src = DTPath + 'api/captchas.png.php?rnd=' + rnd;
+			
+				}
+			
+			}
+			//重新载入验证码
+			function reloadcaptcha(Login) {
+				ischeckcaptcha = false;
+				rnd = getRand();
+				Dd('rnd').value = rnd;
+				Dd('captchapng' + Login).src = DTPath + 'api/captchas.png.php?rnd=' + rnd;
+				Dd('captcha' + Login).value = '';
+			}
+			//验证码检查
+			function checkcaptcha(s, Login) {
+				if (ischeckcaptcha) {
+					return;
+				} else {
+					ischeckcaptcha = true;
+				}
+				if (!is_captcha(s) || s.length != 4) {
+					ischeckcaptcha = false;
+					return;
+				}
+				$.ajax({
+					type: "get",
+					async: false,
+					url: DTPath + 'member/m.reglogin.php?action=checkcaptcha&captcha=' + s + '&rnd=' + rnd,
+					dataType: "jsonp",
+					jsonp: "callbackparam",
+					jsonpCallback: "_checkcaptcha",
+					success: function(json) {
+						console.log(json);
+						if (json == '0') {
+							erCode = true;
+							erCode = false;
+							ischeckcaptcha = false;
+						}
+					},
+					error: function() {}
+				});
+			
+			}
+		
+			// 点击确认验证手机号，文字验证码
+			var phoneReg = /^1\d{10}$/;
+			// 点击确认按钮后60s倒计时
+			var count = 60;
+			// timer变量,控制时间
+			var InterVslObj1;
+			// 剩余得s数
+			var curCount1;
+			var erCode = false;
+			
+			// 验证码弹窗关闭按钮
+			$('.closeXBtn').click(function(){
+				$(this).parents('.erCodeTip').hide();
+				$(".erCodeImg").css('display', 'none');
+				$('#captchaHJ').val('点击显示');
+			})
+			function sendMessage() {
+				
+				curCount1 = count;
+				var phone = $.trim($('#iphone').val())
+				// 输入得汉字验证码得汉字
+				var then = $('#captchaHJ').val();
+				// 判断当汉字验证码不正确得几种情况
+				if ( then == '点击显示' || then == '' || then.length != 4) {
+					// alert('验证码不正确')
+					layer.msg('验证码不正确！',{
+						offset: ['50%'],
+					})
+					return false;
+				} else {
+					layer.msg('验证成功！',{
+						offset: ['50%'],
+					})
+					$(".codeBtn").css("pointer-events", "none");
+					$(".codeBtn").text(+curCount1 + "秒再获取");
+					$('.codeBtn').css('background', '#aaaaaa');
+					InterValObj1 = window.setInterval(SetRemainTime1, 1000); //启动计时器，1秒执行一次
+					$('.closeXBtn').parents('.erCodeTip').hide();
+					$(".erCodeImg").css('display', 'none');
+					$('#captchaHJ').val('点击显示');
+					
+				}
+			}
+			
+			function SetRemainTime1() {
+				if (curCount1 == 0) {
+					window.clearInterval(InterValObj1)
+					$(".codeBtn").css("pointer-events", "true"); //启用按钮
+					$(".codeBtn").text("重新发送");
+					$('.codeBtn').css('background', '#2974B4');
+					var erCode = false;
+				}else {
+					curCount1--;
+					erCode = false;
+					$(".codeBtn").text(+curCount1 + "秒再获取");
+				}
+			}
+			
+			// 验证短信验证码
+			function isCheckDX(){
+				var code = $('#code').val()
+				if (code === '') {
+					layer.msg('请输入短信验证码！',{
+						offset: ['50%'],
+					})
+					return
+				}
+				if (code.length != 4) {
+					layer.msg('短信验证码不正确！',{
+						offset: ['50%'],
+					})
+					return
+				}
+				if ($('.errorText').css('display',block)) {
+					layer.msg('短信验证码不正确！',{
+						offset: ['50%'],
+					})
+					return
+				}
+			}
+			
 		</script>
 	</body>
 </html>
