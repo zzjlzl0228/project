@@ -3,7 +3,10 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+a {
+	/* 去掉a标签得阴影 */
+	-webkit-tap-highlight-color: transparent;
+}
 .remenContainer,
 .newsContainer,
 .hangyeContainer,
