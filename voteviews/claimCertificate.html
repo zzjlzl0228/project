@@ -422,7 +422,9 @@
 				var urlType = imgUrl.substring(imgUrl.lastIndexOf('.')).toLowerCase()
 				// 判断当上传的图片类型不是.png|.jpg|.jpeg时,弹出上传错误
 				if (!urlType.match(/.png|.jpg|.jpeg/)) {
-					alert('上传错误');
+					layer.msg('上传错误!',{
+						offset: ['50%'],
+					})
 					return
 				} else {
 					var that = $(this)
@@ -496,13 +498,14 @@
 				formdata.append("fid",_this.attr("attr"));
 				// 发送ajax请求
 				$.ajax({
-					url: "http://m.10pinping.com/venroll/upload.php",
+					url: "json/img.json",
 					type: "post",
 					data: formdata,
 					dataType: 'json',
 					processData: false,
 					contentType: false,
 					success: function(data) {
+						console.log(data.img)
 						if (data.type) {
 							// 获取数据中的img,并将img赋值给类名为upload_succ_img下的img的src
 							$("#" + _this.attr("attr")).val(data.img)
@@ -672,9 +675,6 @@
 					})
 					return false;
 				} else {
-					layer.msg('验证成功！',{
-						offset: ['50%'],
-					})
 					$(".codeBtn").css("pointer-events", "none");
 					$(".codeBtn").text(+curCount1 + "秒再获取");
 					$('.codeBtn').css('background', '#aaaaaa');

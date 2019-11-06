@@ -1,16 +1,14 @@
-﻿.container {
-	width: 100%;
-	max-width: 7.5rem;
+.container {
+	width: 7.5rem;
 	height: 100%;
 	margin: auto;
 	background-color: #f8fafd;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1.2rem;
 }
 
 .bannerContainer {
 	width: 100%;
 	height: 3rem;
-	/* background-color: #D4F5FD; */
 }
 
 .bannerContent {
@@ -23,7 +21,6 @@
 }
 
 .bannerContent .banner-title {
-	/* width: 32.93%; */
 	height: 0.34rem;
 	font-size: 0.36rem;
 	font-family: PingFang SC;
@@ -38,7 +35,6 @@
 	height: 0.60rem;
 	z-index: 999;
 	position: fixed;
-	left: 0;
 	top: 0;
 }
 
@@ -141,7 +137,6 @@
 .listContainer {
 	width: 100%;
 	margin: auto;
-	margin-bottom: 0.3rem;
 }
 
 .listContainer .item {
@@ -271,25 +266,37 @@
 	background: url(../img/m_no.11_bg_img.png) no-repeat !important;
 	background-size: 100% 100% !important;
 }
-
+.toupiao_daodil_bg {
+    width: 4.1rem;
+    height: 0.74rem;
+    margin-left: 1.4rem;
+    background-image: url(../img/toupiao_daodil_bg.png);
+    font-size: 0.28rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: rgba(132, 148, 169, 1);
+    text-align: center;
+    line-height: 0.58rem;
+}
 .footer {
-	width: 100%;
+	width: 7.5rem;
+	margin: auto;
 	height: 1.2rem;
 	background: rgba(255, 255, 255, 1);
-	box-shadow: 0rem 0rem 0.24rem 0rem rgba(141, 147, 159, 0.25);
-	padding: 0.21rem 0.7rem 0.2rem 0.58rem;
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
 	bottom: 0;
 	margin-top: 0.5rem;
+	left: 50%;
+	transform: translate(-50% ,0);
 }
 
 .footer .back {
 	width: 100%;
 	height: 0.36rem;
 	position: absolute;
-	top: -0.3rem;
+	top: -0.35rem;
 	left: -0.06rem;
 	right: 0;
 }
@@ -300,6 +307,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	flex: 1;
 }
 
 .firstPage img {
