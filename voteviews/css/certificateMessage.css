@@ -1,0 +1,243 @@
+.rna-banner {
+	width: 7.5rem;
+	height: 3.6rem;
+	margin: 0 auto;
+	background: url(../img/aut_information_banner2x.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.rna-content {
+	width: 7.5rem;
+	margin: 0 auto;
+	position: relative;
+	box-shadow: 0 0 0.15rem #ccc;
+}
+
+.rna-content .title {
+	width: 6.9rem;
+	height: 1.34rem;
+	background: url(../img/aut_information_head_bg2x.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: -1.3rem;
+	left: 0.3rem;
+}
+
+.word-box {
+	width: 4rem;
+	height: 0.7rem;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 0.7rem;
+	font-size: 0.36rem;
+	font-weight: 500;
+	color: rgba(80, 108, 145, 1);
+}
+
+.word-box i {
+	display: inline-block;
+	width: 0.32rem;
+	height: 0.34rem;
+	line-height: 0.34rem;
+	padding: 0 .05rem;
+}
+
+.word-box i img {
+	display: block;
+	width: 0.32rem;
+	height: 0.32rem;
+	transform: translateY(.05rem);
+}
+
+/* 表单input框 */
+.input-box {
+	width: 6.9rem;
+	position: relative;
+	margin: 0 auto;
+	top: -0.3rem;
+}
+
+.biankuang {
+	width: 6.9rem;
+	margin: auto;
+	background: #fff;
+	border-radius: 0 0 0.1rem 0.1rem;
+	padding-bottom: 0.1rem;
+}
+
+/* 每一个input框 */
+.input-item {
+	width: 6.9rem;
+	margin: 0.19rem auto;
+}
+
+/* input框得样式 */
+.input-style {
+	width: 6.32rem;
+	height: 0.82rem;
+	margin: 0 auto;
+	background: rgba(248, 249, 250, 1);
+	border: 1px solid rgba(215, 222, 227, 1);
+	border-radius: 0.04rem;
+}
+
+/* input框得标题 */
+.input-style .title2 {
+	width: 1.22rem;
+	height: 0.4rem;
+	padding: 0.2rem;
+	font-size: 0.28rem;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	border-right: 1px solid rgba(217, 225, 231, 1);
+	float: left;
+}
+
+.input-style input {
+	float: right;
+	width: 4.2rem;
+	height: .82rem;
+	line-height: .82rem;
+	font-size: .28rem;
+	padding: 0 .2rem;
+	color: rgba(51, 51, 51, 1);
+
+}
+
+/* 错误信息提示 */
+.wrong-msg {
+	display: none;
+	width: 6.3rem;
+	margin: 0 auto;
+	line-height: 0.5rem;
+	font-size: 0.26rem;
+	color: #E12727;
+}
+
+/* 手机验证 */
+.signUp_phoneReg {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.signUp_phoneReg h6 {
+	font-size: 0.28rem;
+	line-height: 0.6rem;
+	color: #232F49;
+	text-align: center;
+	font-weight: 500;
+}
+
+/* 手机验证码输入框 */
+.signUp_input {
+	width: 5.1rem;
+	height: 0.6rem;
+	margin: 0 auto 0.22rem;
+	margin-top: 0.15rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.signUp_input_main {
+	width: 55%;
+	height: 0.7rem;
+	border: 1px solid #ccc;
+	border-radius: 0.1rem;
+	margin-right: 0.2rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.input_icon {
+	display: block;
+	width: 0.25rem;
+	height: 0.28rem;
+	margin: 0.21rem 0.16rem;
+	background: url(../img/enroll_icon.png) no-repeat;
+	background-size: 1.94rem 0.28rem;
+}
+
+.input_content {
+	width: 1.5rem;
+	display: block;
+	height: 0.3rem;
+	border: none;
+	outline: none;
+	margin-top: 0.2rem;
+	border-left: 1px solid #ccc;
+	padding-left: 0.2rem;
+	font-size: 0.24rem;
+	line-height: 0.3rem;
+	border-radius: 0;
+}
+
+/* input框错误提示 */
+.input_tips {
+	display: block;
+	/* float: right; */
+	width: 0.2rem;
+	height: 0.2rem;
+	margin: 0.25rem 0.2rem 0.05rem 0.1rem;
+}
+
+.input_tips img {
+	display: none;
+	width: 0.2rem;
+	height: 0.2rem;
+}
+
+/* 验证码 */
+.signUp_phoneReg_img {
+	width: 40%;
+	height: 0.68rem;
+	float: right;
+	border: 1px solid #ccc;
+	border-radius: 0.1rem;
+}
+
+.signUp_phoneReg_img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.1rem;
+}
+
+/* 填表须知 */
+.tips {
+	width: 6.9rem;
+	font-size: 0.26rem;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	line-height: 0.38rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.3rem;
+}
+
+/* 下方客服 */
+.kefu {
+	width: 6.9rem;
+	height: 0.9rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.kefu img {
+	width: 0.9rem;
+	height: 0.9rem;
+	display: block;
+}
+
+.kefu .tijiao {
+	width: 5.6rem;
+	height: 0.88rem;
+	line-height: 0.88rem;
+	background: #C4C4C4;
+	border-radius: 0.1rem;
+	font-size: 0.3rem;
+	font-weight: 600;
+	color: #fff;
+}
+

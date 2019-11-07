@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>电子认证证书</title>
+		<link rel="stylesheet" type="text/css" href="css/certificateMessage.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 头 -->
+		<div class="head_help">
+			<a href="certificate.html">
+				<i class="iconfont head_back"></i>
+				<!--返回图标-->
+			</a>
+			<p class="title_header">电子认证证书</p>
+		</div>
+		<div class="rna-banner"></div>
+		<div class="rna-content">
+			<div class="title">
+				<div class="word-box">
+					<i>
+						<img src="img/aut_information_tianxie_icon2x.png">
+					</i>
+					填写信息
+				</div>
+			</div>
+			<form action method="post" class="input-box">
+				<div class="biankuang">
+					<div class="input-item industry">
+						<div class="input-style">
+							<div class="title2">参与行业</div>
+							<input type="text" name="industry" id="industry" value="军需用品" readonly="readonly" onloadedmetadata="catname" placeholder="请输入参与行业" />
+						</div>
+						<div class="wrong-msg"></div>
+					</div>
+					<div class="input-item brandName">
+						<div class="input-style">
+							<div class="title2">品牌名称</div>
+							<input type="text" name="brandName" id="brandName" onloadedmetadata="catname" placeholder="请输入品牌名称" />
+						</div>
+						<div class="wrong-msg"></div>
+					</div>
+					<div class="input-item phoneNum">
+						<div class="input-style">
+							<div class="title2">联系电话</div>
+							<input type="text" name="phoneNum" id="phoneNum" onloadedmetadata="catname" placeholder="请输入联系电话" />
+						</div>
+						<div class="wrong-msg"></div>
+					</div>
+					<div class="input-item email">
+						<div class="input-style">
+							<div class="title2">邮箱</div>
+							<input type="text" name="email" id="email" onloadedmetadata="catname" placeholder="请输入邮箱" />
+						</div>
+						<div class="wrong-msg"></div>
+					</div>
+					<div class="input-item weixin">
+						<div class="input-style">
+							<div class="title2">微信号</div>
+							<input type="text" name="weixin" id="weixin" onloadedmetadata="catname" placeholder="请输入微信号" />
+						</div>
+						<div class="wrong-msg"></div>
+					</div>
+					<div class="input-item website">
+						<div class="input-style">
+							<div class="title2">官方网址</div>
+							<input type="text" name="website" id="website" onloadedmetadata="catname" placeholder="请输入官方网址" />
+						</div>
+						<div class="wrong-msg"></div>
+					</div>
+					<!-- 手机验证 -->
+					<div class="signUp_phoneReg">
+						<h6>验证码</h6>
+						<div class="signUp_input">
+							<div class="signUp_input_main ">
+								<span class="input_icon" style="background-position: right center"></span>
+								<input type="text" name="captcha" id="captcha" class="input_content" placeholder="请输入验证码" />
+								<span class="input_tips"><img src="http://img.10pinping.com/skin/10//186/baomingv2/img/enroll_no_icon.png" alt=""></span>
+							</div>
+							<div class="signUp_phoneReg_img">
+								<img class="phoneReg_img_code captchapngL" src="http://m.10pinping.com/captcha/captcha.png.php?rnd=m8138295377544724"
+								 id="captchapng" alt="" style="cursor: pointer;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="tips">填表须知：请认真谨慎填写表格信息，您填写的信息将影响到您是否能成功领取电子证书！</p>
+				<div class="kefu">
+					<img src="img/enroll_kefu_btn2x.png" id="kefu">
+					<input class="tijiao" type="button" value="提交">
+				</div>
+			</form>
+		</div>
+		<!-- 客服 -->
+		<div class="customer" style="display: none;">
+			<div class="customer_mask_center">
+				<a href="tel:400-187-8707">
+					<div class="customer_top">
+						<p style="color: #8FA4BE;">咨询热线</p>
+						<p style="color: #14548B;">400-187-8707</p>
+					</div>
+				</a>
+				<div class="customer_bottom">
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=171178174&amp;site=qq&amp;menu=yes" target="_blank"><div class="customer_qq"><span>客服小品</span></div></a>
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3067064935&amp;site=qq&amp;menu=yes" target="_blank"><div class="customer_qq"><span>客服小牌</span></div></a>
+				</div>
+				<div class="customer_a">
+					<a style="color: #fff;" href="http://m.10pinping.com/amhelp/baoming.php">品牌报名流程 &gt;</a>
+				</div>
+				<div class="close-customer">
+					<img src="img/icon_back_a.png" >
+				</div>
+			</div>
+		</div>
+		<script src="js/certificateMessage.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

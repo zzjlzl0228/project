@@ -1,0 +1,109 @@
+.certificateContainer {
+	width: 7.5rem;
+	height: 100vh;
+	min-height: 13rem;
+	margin: auto;
+	background: url(../img/aut_introduce_di_bg2x.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.certificateContainer::after {
+	content: '';
+	width: 7.5rem;
+	height: 3.72rem;
+	background: url(../img/aut_introduce_di2_bg2x.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+
+}
+
+.zsTextDescrption {
+	width: 6rem;
+	height: 1.4rem;
+	font-size: 0.3rem;
+	font-weight: 400;
+	color: #EBEFF4;
+	line-height: 0.46rem;
+	margin: 4rem auto 0;
+	position: relative;
+}
+
+.zsTextDescrption span::after {
+	content: '';
+	width: 1.08rem;
+	height: 0.04rem;
+	position: absolute;
+	top: -0.27rem;
+	left: 0.04rem;
+	background: rgba(233, 200, 129, 1);
+}
+
+.mini-auth-img {
+	width: 6.1rem;
+	height: 6.24rem;
+	display: block;
+	margin: 0.34rem auto 0;
+}
+
+.bottomBox {
+	width: 7.5rem;
+	height: 4.34rem;
+	position: absolute;
+	bottom: 0;
+	background: url(../img/aut_introduce_xinfeng_bg2x.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.bottomBox .descrption {
+	width: 5.96rem;
+	height: 1.06rem;
+	font-size: 0.26rem;
+	font-weight: 400;
+	line-height: 0.38rem;
+	color: rgba(235, 239, 244, 1);
+	margin: 1.4rem auto 0;
+	position: relative;
+}
+
+.bottomBox .descrption::after {
+	content: '';
+	width: 0.28rem;
+	height: 0.18rem;
+	background: url(../img/aut_introduce_xiala_icon2x.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: -0.44rem;
+	left: 2.9rem;
+	animation: moving 1.8s linear infinite;
+}
+
+@keyframes moving {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(0.1rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.get-btn {
+	width: 6.5rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	font-size: 0.34rem;
+	font-weight: 600;
+	color: rgba(11,22,47,1);
+	letter-spacing: 1px;
+	text-align: center;
+	margin: 0.75rem auto 0;
+	background: url(../img/aut_introduce_but2x.png) no-repeat;
+	background-size: 100% 100%;
+}
