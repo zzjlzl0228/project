@@ -613,10 +613,14 @@
 			</div>
 		</div>
 		<script type="text/javascript">
+			document.body.addEventListener('touchmove', function(e) {
+				e.preventDefault();
+			}, {
+				passive: false
+			});
 			$('.nowNews_nav li').click(function(event) {
 				$(this).addClass('active');
 				$(this).siblings().removeClass('active');
-
 				$('.container').find('.index').eq($(this).index()).css('display', 'block');
 				$('.container').find('.index').eq($(this).index()).siblings().css('display', 'none');
 			})
@@ -796,8 +800,14 @@
 				})
 				$('.pinping_kefu').click(function() {
 					$('.pinping_model').css('display', 'block')
+					jzgd()
 				})
 			})
+			function jzgd() {
+				document.body.style.overflow = "hidden";
+				document.querySelector("html").style.overflow = "hidden";
+			}
+
 		</script>
 
 		<div style="display:none;">
@@ -907,6 +917,7 @@
 				global: false
 			};
 			var myChart = echarts.init(document.getElementById('myChart'));
+
 			function updataMyChartFn(dataName, k) {
 				// hd为所有得数据
 				var hd = err[k];
@@ -1067,26 +1078,27 @@
 				$(jobBox3).addClass('on')
 				tabStrChange()
 			}
-			
-			$('#myChart').mouseenter(function(){
+
+			$('#myChart').mouseenter(function() {
 				clearInterval(tabTime)
 			})
-			$('#myChart').mouseleave(function(){
+			$('#myChart').mouseleave(function() {
 				tabTime = setInterval('tabLi()', 5000)
 			})
-			
-			function tabStrChange(){
+
+			function tabStrChange() {
 				var tabStr = $('#tab_nav>li.on').attr('data-tabNav')
 				var er = $('#tab_nav>li.on').attr('data-value')
-				
+
 			}
-			
+
 			// 品牌百科tab切换
 			$('.jobEncy>ul>li').on('click', function() {
 				if ($(this).hasClass('on')) {
 					return false
 				} else {
 					$(this).addClass('on').siblings('li').removeClass('on')
+					// 品牌百科中得导航栏通过下标来进行判断
 					if ($(this).index() == 0) {
 						$('#jobEncy_hot').addClass('show');
 						$('#jobEncy_now').removeClass('show');
