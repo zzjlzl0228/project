@@ -5,7 +5,6 @@ var email = $('#email').val();
 var weixin = $('#weixin').val();
 var website = $('#website').val();
 // 获取输入得图片验证码
-var code = $('.input_content').val();
 
 // 表单input框添加鼠标失焦事件，若内容为空，显示错误信息
 $('.input-item input').blur(function() {
@@ -44,9 +43,16 @@ $('.input-item input').blur(function() {
 	}
 })
 
+// 验证图片验证码
 $('.input_content').blur(function() {
+	var code = $('.input_content').val();
+	var length = code.length;
+	var myReg = /^[a-zA-Z]$/;
+	if (!myReg.test(code)) {
+		$('.input_tips').css('display', 'block');
+	}
 	// 判断显示错误得条件（用户输入得不正确得情况）
-	if (code == '' || code.length != 4) {
+	if (code == '' || length != 4 ) {
 		$('.input_tips').css('display', 'block');
 	} else {
 		$('.input_tips').css('display', 'none');

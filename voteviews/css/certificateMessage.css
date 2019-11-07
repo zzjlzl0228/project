@@ -147,7 +147,7 @@
 	border-radius: 0.1rem;
 	margin-right: 0.2rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 .input_icon {
@@ -183,7 +183,7 @@
 }
 
 .input_tips img {
-	display: none;
+	display: block;
 	width: 0.2rem;
 	height: 0.2rem;
 }
