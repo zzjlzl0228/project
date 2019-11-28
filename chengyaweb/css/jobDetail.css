@@ -1,0 +1,248 @@
+html,
+body {
+	min-width: 320px;
+}
+.header-m,.header {
+	background: #fff;
+}
+.banner .top {
+	background: rgba(255, 255, 255, 1);
+	opacity: 1;
+}
+
+.item a {
+	color: #000000;
+}
+
+.jobContainer {
+	width: 100%;
+	background: rgba(247, 247, 247, 1);
+	padding: 0.4rem 0 0.7rem;
+
+}
+
+.jobContent {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.leftContainer {
+	width: 70%;
+}
+
+.oneContainer {
+	width: 100%;
+	background: rgba(255, 255, 255, 1);
+	padding: 0.4rem 0.41rem 0.52rem 0.35rem;
+	position: relative;
+}
+
+.oneContainer .top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.oneContainer .top h3 {
+	font-size: 0.3rem;
+	font-weight: bold;
+	line-height: 0.38rem;
+	color: rgba(51, 51, 51, 1);
+}
+
+.oneContainer .top p {
+	font-size: 0.44rem;
+	font-family: Arial;
+	font-weight: bold;
+	line-height: 0.45rem;
+	color: rgba(255, 133, 43, 1);
+}
+
+.oneContainer .top span {
+	font-size: 0.2rem;
+	font-weight: 400;
+	line-height: 0.25rem;
+	margin-left: 0.08rem;
+}
+
+.oneContainer .bottom,
+.oneContainer .di {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.oneContainer .bottom li {
+	font-size: 0.18rem;
+	font-weight: 400;
+	line-height: 0.23rem;
+	color: rgba(153, 153, 153, 1);
+	opacity: 1;
+	margin-right: 0.12rem;
+}
+
+.oneContainer .bottom .line {
+	width: 1px;
+	height: 0.18rem;
+	background: rgba(219, 219, 219, 1);
+}
+
+.oneContainer .di {
+	margin-top: 0.2rem;
+	font-size: 0.14rem;
+	font-weight: 400;
+	line-height: 0.18rem;
+	color: rgba(153, 153, 153, 1);
+	opacity: 1;
+}
+
+.oneContainer .di li:nth-child(2) {
+	margin: 0 0.14rem 0 0.08rem;
+}
+
+.twoContainer,
+.threeContainer {
+	width: 100%;
+	background: #fff;
+	margin-top: 0.2rem;
+	padding: 0.2rem 0.25rem;
+	padding-bottom: 0.51rem;
+}
+
+
+h3 {
+	font-size: 0.25rem;
+	font-weight: bold;
+	line-height: 0.25rem;
+	color: rgba(51, 51, 51, 1);
+	opacity: 1;
+	margin-bottom: 0.38rem;
+}
+
+.twoContainer ul {
+	display: flex;
+	flex-direction: column;
+}
+
+h4 {
+	font-size: 0.2rem;
+	font-family: Microsoft YaHei UI;
+	font-weight: 400;
+	line-height: 0.25rem;
+	color: rgba(51, 51, 51, 1);
+	opacity: 1;
+}
+
+.twoContainer ul li:first-child {
+	margin-bottom: 0.38rem;
+}
+
+.twoContainer ul li p {
+	font-size: 0.16rem;
+	font-weight: 400;
+	line-height: 0.4rem;
+	color: rgba(153, 153, 153, 1);
+	opacity: 1;
+}
+
+.threeContainer p {
+	font-size: 0.18rem;
+	font-weight: 400;
+	line-height: 0.26rem;
+	color: rgba(51, 51, 51, 1);
+	opacity: 1;
+}
+
+.rightConainer {
+	width: 28%;
+	background: rgba(255, 255, 255, 1);
+	opacity: 1;
+	padding: 0.42rem 0.35rem 0.39rem 0.4rem;
+	position: relative;
+}
+
+.rightConainer .zwtj {
+	margin-top: 0.2rem;
+	width: 100%;
+	border-top: 1px solid rgba(233, 233, 233, 1);
+}
+
+.rightConainer .zwtj li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.39rem;
+	font-size: 0.16rem;
+	font-weight: 400;
+	line-height: 0.18rem;
+	color: rgba(51, 51, 51, 1);
+	opacity: 1;
+}
+.rightConainer .zwtj li {
+	margin-bottom: 0;
+}
+.rightConainer .zwtj li:first-child {
+	margin-top: 0.2rem;
+}
+
+.rightConainer .zwtj li p {
+	line-height: 0.25rem;
+	color: rgba(255, 133, 43, 1);
+}
+
+.rightConainer .zwtj h4 {
+	font-size: 0.18rem;
+	font-weight: 400;
+	line-height: 0.3rem;
+	color: rgba(51, 51, 51, 1);
+	opacity: 1;
+}
+.rightConainer .zwtj li span {
+	font-size: 0.18rem;
+	margin-left: 0.1rem;
+}
+@media (max-width:1200px) {
+	.jobContent {
+		width: 90%;
+	}
+	.rightConainer {
+		padding: 0.42rem 0.2rem 0.39rem 0.2rem;
+	}
+	.rightConainer .zwtj li {
+		font-size: 0.14rem;
+	}
+	.rightConainer .zwtj h4 {
+		font-size: 0.14rem;
+	}
+	.rightConainer .zwtj li span {
+		font-size: 0.16rem;
+		margin-left: 0.02rem;
+	}
+}
+@media (max-width:992px) {
+	.rightConainer .zwtj h4 {
+	  line-height: 0.2rem !important;
+	}
+	.rightConainer .zwtj li span {
+		line-height: 0.2rem !important;
+		font-size: 0.12rem !important;
+	}
+}
+@media (max-width:768px) {
+	.rightConainer .zwtj h4 {
+		margin-bottom: 0.2rem;
+	}
+	.jobContent {
+		display: block;
+		width: 90%;
+	}
+	.leftContainer,.rightConainer {
+	    width: 100%;
+	}
+	.rightConainer {
+		margin-top: 0.3rem;
+	}
+}

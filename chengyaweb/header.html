@@ -1,0 +1,94 @@
+<div class="header">
+	<div class="top">
+		<div class="icon clearfix">
+			<img src="img/common/top_logo_img.png" alt="">
+		</div>
+		<ul class="right-list" style="display: flex;">
+			<li class='item'>
+				<a href='./index.html' class="index">首页</a>
+				<div class="orangeLine" style="display: none;"></div>
+			</li>
+			<li class='item'>
+				<a href='./project.html' class="project">项目案例</a>
+				<div class="orangeLine" style="display: none;"></div>
+			</li>
+			<li class='item'>
+				<a href='./forUs.html' class="forUs">关于我们</a>
+				<div class="orangeLine" style="display: none;"></div>
+			</li>
+			<li class='item'>
+				<a href='./services.html' class="services">服务介绍</a>
+				<div class="orangeLine" style="display: none;"></div>
+			</li>
+			<li class='item'>
+				<a href='./enjoyus.html' class="enjoyus">加入我们</a>
+				<div class="orangeLine" style="display: none;"></div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="header-m">
+	<div class="top">
+		<div class="icon">
+			<img src="img/common/top_logo_img.png" alt="">
+		</div>
+		<div class="right">
+			<img src="img/common/shejimulu.png">
+		</div>
+	</div>
+</div>
+<div class="nav" style="display: none;">
+	<ul>
+		<a href="index.html">
+			<li>
+				<span>首页</span>
+				<img src="img/common/youjiantou.png">
+			</li>
+		</a>
+		<a href="project.html">
+			<li>
+				<span>项目案例</span>
+				<img src="img/common/youjiantou.png">
+			</li>
+		</a>
+		<a href="forUs.html">
+			<li>
+				<span>关于我们</span>
+				<img src="img/common/youjiantou.png">
+			</li>
+		</a>
+		<a href="services.html">
+			<li>
+				<span>服务介绍</span>
+				<img src="img/common/youjiantou.png">
+			</li>
+		</a>
+		<a href="enjoyus.html">
+			<li>
+				<span>加入我们</span>
+				<img src="img/common/youjiantou.png">
+			</li>
+		</a>
+	</ul>
+</div>
+<script type="text/javascript">
+	// 导航右侧点击事件
+	$('.right').click(function() {
+		console.log(111)
+		// $('.nav').css('display','flex')
+		var het = $('.nav').innerHeight();
+		$('.nav').stop()
+		if (het == 0) {
+			$('.nav').css('display', 'flex');
+			$('.nav').animate({
+				height: 400
+			})
+		} else {
+			$('.nav').animate({
+				height: 0
+			})
+			$('.nav').css('display', 'none')
+		}
+	})
+	
+</script>

@@ -1,0 +1,254 @@
+*,
+body,
+html,
+ul,
+li,
+a,
+div,
+table,
+th,
+tr,
+img {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	color: #646970;
+	vertical-align: middle;
+}
+
+
+html,
+body {
+	width: 100%;
+	/* min-width: 600px; */
+}
+
+.clearfix:after {
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.w {
+	width: 74%;
+	margin: 0 auto;
+}
+
+.content {
+	background: url(../img/enjoyus/join_banner_img.png) no-repeat center;
+	background-size: 100% 100%;
+
+}
+
+.fot {
+	margin-top: 0.7rem;
+	margin-bottom: 0.5rem;
+}
+
+.fot li:first-child {
+	width: 0.4rem;
+	height: 0.14rem;
+	background-color: #FF852B;
+}
+
+.fot :nth-child(2) {
+	font-size: 0.36rem;
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	margin: 0.2rem 0;
+}
+
+.fot li:last-child {
+	font-size: 0.2rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(204, 204, 204, 1);
+}
+
+.staff .showImg {
+	width: 100%;
+	margin-bottom: 0.8rem;
+}
+
+.showImg img {
+	width: 100%;
+}
+
+.job {
+	padding-top: 0.1rem;
+	padding-bottom: 1rem;
+	background-color: #FFFAF7;
+}
+
+td,
+tr,
+th {
+	width: 20.56%;
+	height: 3.5em;
+	text-align: center;
+	border: 0;
+
+}
+
+.jobList {
+	margin-top: 0.69rem !important;
+}
+
+.jobList tr:first-child {
+	background: rgba(255, 230, 211, 1);
+	font-family: Microsoft YaHei;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+}
+
+tr:nth-child(n+1) {
+	font-size: 0.18rem;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: rgba(102, 102, 102, 1);
+}
+
+tr:nth-child(Odd) {
+	background-color: #fff;
+}
+
+tr td:nth-child(2) {
+	color: #FF852B;
+}
+
+
+
+@media screen and (max-width :992px) {
+	.w {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	body {
+		font-size: 0.14rem;
+	}
+
+	.jobList tr:first-child {
+		background: rgba(255, 230, 211, 1);
+		font-size: 0.16rem;
+		font-family: Microsoft YaHei;
+		font-weight: bold;
+		color: rgba(51, 51, 51, 1);
+	}
+
+	tr:nth-child(n+1) {
+		font-size: 0.16rem;
+		font-family: Microsoft YaHei;
+		font-weight: 400;
+		color: rgba(102, 102, 102, 1);
+	}
+
+	.banner .nav {
+		font-size: 0.16rem;
+	}
+}
+
+@media screen and (max-width :768px) {
+	body {
+		font-size: 0.12rem;
+	}
+
+	.jobList tr:first-child {
+		background: rgba(255, 230, 211, 1);
+		font-size: 0.12rem;
+		font-family: Microsoft YaHei;
+		font-weight: bold;
+		color: rgba(51, 51, 51, 1);
+	}
+
+	tr:nth-child(n+1) {
+		font-size: 0.12rem;
+		font-family: Microsoft YaHei;
+		font-weight: 400;
+		color: rgba(102, 102, 102, 1);
+	}
+
+	.banner .nav {
+		font-size: 0.12rem;
+	}
+
+	.fot {
+		margin-top: 0.4rem;
+		margin-bottom: 0.4rem;
+	}
+
+}
+
+
+
+
+@media screen and (max-width :600px) {
+	body {
+		font-size: 10px;
+	}
+
+	.banner .top {
+		height: 38px;
+		line-height: 38px;
+		background: rgba(0, 0, 0, 0.6);
+		opacity: 0.99;
+	}
+
+	.banner .icon img {
+		width: 60px;
+		height: 25px;
+	}
+
+	.banner .nav {
+		width: 60%;
+		float: right;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.banner .nav li {
+		white-space: nowrap;
+		font-family: Microsoft YaHei;
+		padding: 0 4px;
+		box-sizing: border-box;
+		font-weight: 400;
+		color: rgba(255, 255, 255, 1);
+	}
+
+	.banner .bigImg {
+		width: 100%;
+		height: 200px;
+
+	}
+
+	.bigImg img {
+		width: 100%;
+		height: 200px;
+		margin-top: -38px;
+	}
+
+	.fot {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.staff .showImg {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+
+	.job {
+		padding-bottom: 50px;
+	}
+
+}

@@ -1,0 +1,168 @@
+html,
+body {
+	min-width: 320px;
+}
+
+.content {
+	background: url(../img/project/chengya_banner2_img.gif) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.contentBox {
+	width: 100%;
+}
+
+.website,
+.app,
+.xcx {
+	width: 80vw;
+	margin: 0.6rem auto;
+	position: relative;
+}
+
+.swiper-container {
+	padding-top: 0.5rem !important;
+	margin-top: -0.5rem;
+}
+
+.swiper-wrapper {
+	padding-bottom: 22px;
+}
+
+.swiper-slide .image {
+	width: 100%;
+	max-width: 4.61rem;
+	max-height: 3.39rem;
+	box-shadow: 0px 4px 13px 0px rgba(202, 202, 202, 0.41);
+	border-radius: 6px;
+}
+
+.swiper-slide .tag {
+	width: 50%;
+	line-height: 0.5rem;
+	font-size: 0.18rem;
+	text-align: center;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 4px 13px 0px rgba(202, 202, 202, 0.41);
+	border-radius: 0.04rem;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	position: absolute;
+	bottom: -12%;
+	left: 5%;
+}
+
+.swiper-pagination {
+	width: 50px !important;
+}
+
+.swiper-pagination-fraction {
+	right: 0.36rem;
+	top: 0px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	top: 4px !important;
+	right: 0 !important;
+}
+
+.swiper-button-prev img,
+.swiper-button-next img {
+	width: 0.28rem;
+	height: 0.17rem;
+}
+
+.swiper-button-prev {
+	right: 0.95rem !important;
+}
+
+
+.prev img,
+.next img,
+.next1 img,
+.prev1 img,
+.next2 img,
+.prev2 img {
+	width: 100%;
+	height: 100%;
+}
+
+.prev,
+.prev1,
+.prev2 {
+	right: 1rem;
+}
+
+.swiper-slide:hover .tag {
+	background: #FF852B;
+	color: #fff;
+}
+
+@media (max-width: 1200px) {
+	.swiper-slide .tag {
+		line-height: 0.4rem;
+	}
+}
+
+@media (max-width: 904px) {
+	.swiper-slide .tag {
+		line-height: 0.4rem;
+		bottom: -17%;
+		font-size: 0.14rem;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.swiper-container {
+		padding-top: 0.5rem !important;
+		margin-top: -0.5rem;
+	}
+
+	.swiper-button-prev {
+		right: 1.5rem !important;
+	}
+
+	.swiper-slide .tag {
+		width: 2rem !important;
+		line-height: 0.5rem;
+		bottom: -2% !important;
+		font-size: 0.18rem;
+	}
+
+	.swiper-wrapper {
+		padding-bottom: 10px;
+	}
+
+	.container1,
+	.container3,
+	.container5 {
+		display: none !important;
+	}
+
+	.container2,
+	.container4,
+	.container6 {
+		display: block !important;
+		width: 80%;
+		margin: auto;
+	}
+
+	.swiper-pagination-fraction {
+		right: 10% !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.swiper-pagination-fraction {
+		right: 7% !important;
+	}
+}
+
+@media (max-width: 400px) {
+	.swiper-container {
+		padding-top: 1rem !important;
+		margin-top: -1rem;
+	}
+}
