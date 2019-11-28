@@ -613,11 +613,6 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			document.body.addEventListener('touchmove', function(e) {
-				e.preventDefault();
-			}, {
-				passive: false
-			});
 			$('.nowNews_nav li').click(function(event) {
 				$(this).addClass('active');
 				$(this).siblings().removeClass('active');
@@ -788,26 +783,31 @@
 				})
 			}
 			backTop();
+			$('#scollTopBox').on('click', function() {
+				$("html,body").animate({
+					scrollTop: 0
+				}, 100);
+			})
 			// 客服栏js
 			$(function() {
-				$('.pinping_bacha, .pinping_model').click(function() {
-					$('.pinping_model').css('display', 'none')
-				})
-				$('#scollTopBox').on('click', function() {
-					$("html,body").animate({
-						scrollTop: 0
-					}, 100);
-				})
 				$('.pinping_kefu').click(function() {
 					$('.pinping_model').css('display', 'block')
 					jzgd()
 				})
+				$('.pinping_bacha').click(function() {
+					$('.pinping_model').css('display', 'none')
+					yxhd()
+				})
+				
+				
 			})
 			function jzgd() {
 				document.body.style.overflow = "hidden";
-				document.querySelector("html").style.overflow = "hidden";
 			}
-
+			function yxhd() {
+				// 需有一个隐藏滚动条,否则会同时显示两个滚动条
+				document.body.style.overflow = "auto";
+			}
 		</script>
 
 		<div style="display:none;">
@@ -1055,11 +1055,9 @@
 			})
 
 			// 定时器，自动切换随机显示三种行业
-			var tabTime = setInterval('tabLi()', 5000);
-
+			var tabTime = setInterval('tabLi()',5000)
 			function tabLi() {
 				$('#jobBox>li').removeClass('on')
-				// 随机生成3个不同得0-14之间得数字
 				var arr = []
 				var add = 0
 				while (add < 3) {
@@ -1069,7 +1067,6 @@
 						add++
 					}
 				}
-
 				let jobBox1 = $('#jobBox').children('li')[arr[0]]
 				let jobBox2 = $('#jobBox').children('li')[arr[1]]
 				let jobBox3 = $('#jobBox').children('li')[arr[2]]
@@ -1078,18 +1075,18 @@
 				$(jobBox3).addClass('on')
 				tabStrChange()
 			}
-
-			$('#myChart').mouseenter(function() {
+			
+			$('#myChart').mouseenter(function(){
 				clearInterval(tabTime)
 			})
-			$('#myChart').mouseleave(function() {
+			$('#myChart').mouseleave(function(){
 				tabTime = setInterval('tabLi()', 5000)
 			})
-
-			function tabStrChange() {
+			function tabStrChange(){
 				var tabStr = $('#tab_nav>li.on').attr('data-tabNav')
+				// 选中得nav栏得下标
 				var er = $('#tab_nav>li.on').attr('data-value')
-
+				updataMyChartFn(tabStr, er)
 			}
 
 			// 品牌百科tab切换

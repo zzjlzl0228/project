@@ -38,9 +38,10 @@
 				<div class="latestContent">
 					<div class="latSearch">
 						<img src="img/zxbd_icon_ss.png" class="latLeft">
-						<input type="text" name="latesearch" id="latesearch" placeholder="输入行业名称查询榜单" />
+						<input type="text" value="" name="latesearch" id="latesearch" placeholder="输入行业名称查询榜单" oninput="brand_searchs()"
+						 autocomplete="off" class="search" onclick="searches()">
 					</div>
-					<div class="mohu yincang" style="display: block">
+					<div class="mohu yincang" style="display: none">
 						<ul class="xiala">
 							<li>未查询到结果</li>
 						</ul>
@@ -141,5 +142,71 @@
 				</a>
 			</ul>
 		</div>
+		<script type="text/javascript">
+			function searches() {
+				if(!$('#latesearch').val()) {
+					$('.xiala').html('')
+				}
+				only_tongji('575')
+			}
+			
+			$('.clicktotj').click(function(msg) {
+				var ssid = $(this).attr('ssid');
+				only_tongji(ssid)
+			})
+			
+			function only_tongji(ssid) {
+				$.post("http://m.10pinping.com/member/tongji.php?action=sj_tj",{
+					max_ssid:ssid
+				},function(data) {
+					
+				})
+			}
+			function brand_searchs() {
+				var vals = $('#latesearch').val()
+				var val = vals.replace(/(^\s*)|(\s*$)/g,'');
+				if (val.length <1) {
+					$('.yincang').css('display','none');
+					return false
+				} else {
+					$('.yincang').css('display','block')
+				}
+				$.ajax({
+					url: '?',
+					type: 'post',
+					dataType: 'json',
+					data: {
+						keyword: val
+					},
+					success: function(data) {
+						if (data.status) {
+							var str = '';
+							for (var j = 0, len = data.len; j < len; j++) {
+								str += "<li onclick=aloncl('" + data.data[j].sid + "','" + data.data[j].title + "');>" + data.data[j].title +
+									"</li>";
+							}
+							$(".xiala").html(str);
+						} else {
+							var str = '';
+							str += "<li>未查询到结果</li>";
+							$(".xiala").html(str);
+						}
+					}
+				})
+			}
+			function aloncl(sid,title) {
+				window.location.href = "?sid=" + sid + "&title=" + title;
+			}
+			$('.search').click(function(event){
+				event.stopPropagation()
+				$('.mohu').css('display','none')
+			})
+			
+			$('body').click(function(){
+				if($('.mohu').css('display')== 'block') {
+					$('.mohu').hide()
+				}
+			})
+		</script>
 	</body>
 </html>
